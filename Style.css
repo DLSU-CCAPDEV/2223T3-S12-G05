@@ -6,9 +6,16 @@
     --light-green: #7a938c;
     --light-gray: #b8b8b8;
     --dark-gray: #818181;
-    font-family: 'Geologica', sans-serif;
+    font-family: var(--main-font);
 }
 
-.header {
-    
+header {
+   background-color: #1a340d;
+   font-family: 'Geologica', sans-serif;
 }
+
+.navbar-brand {
+    color: white; /* Change the logo text color */
+    font-size: 24px; /* Change the logo font size */
+    font-weight: bold; /* Change the logo font weight */
+  }
