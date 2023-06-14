@@ -1,0 +1,14 @@
+@import url(https://fonts.google.com/noto/specimen/Noto+Sans+JP?preview.text=呼んで&preview.text_type=custom);
+@import url(https://fonts.google.com/specimen/Geologica?preview.text=Yonde&preview.size=52&preview.text_type=custom);
+
+:root {
+    --dark-green: #1a340d;
+    --light-green: #7a938c;
+    --light-gray: #b8b8b8;
+    --dark-gray: #818181;
+    font-family: 'Geologica', sans-serif;
+}
+
+.header {
+    
+}
