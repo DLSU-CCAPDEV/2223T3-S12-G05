@@ -12,10 +12,14 @@
 header {
    background-color: #1a340d;
    font-family: 'Geologica', sans-serif;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   height: 100px;
 }
 
 .navbar-brand {
     color: white; /* Change the logo text color */
     font-size: 24px; /* Change the logo font size */
     font-weight: bold; /* Change the logo font weight */
+    margin: auto;
   }
