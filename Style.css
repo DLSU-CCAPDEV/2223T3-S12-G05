@@ -19,7 +19,7 @@ header {
 
 .navbar-brand {
     color: white; /* Change the logo text color */
-    font-size: 30px; /* Change the logo font size */
+    font-size: 24px; /* Change the logo font size */
     font-weight: bold; /* Change the logo font weight */
     margin: auto;
   }
