@@ -6,20 +6,63 @@
     --light-green: #7a938c;
     --light-gray: #b8b8b8;
     --dark-gray: #818181;
-    font-family: var(--main-font);
+    --main-font: 'Geologica', sans-serif; 
 }
 
-header {
-   background-color: #1a340d;
-   font-family: 'Geologica', sans-serif;
-   padding-top: 20px;
-   padding-bottom: 20px;
-   height: 100px;
+body {
+    font-family: var(--main-font);;
+}
+
+.navbar {
+    background-color: var(--dark-green);
+    display: flex;
+    align-items: flex-end;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
 .navbar-brand {
-    color: white; /* Change the logo text color */
-    font-size: 24px; /* Change the logo font size */
-    font-weight: bold; /* Change the logo font weight */
-    margin: auto;
-  }
+    font-family: var(--main-font);
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: auto;
+    width: calc(100% - 1in);
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.kanji {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.navbar-brand:hover {
+    color: white;
+}
+
+.tagline {
+    font-size: 15px;
+    font-weight: normal;
+    color: var(--light-green);
+    display: inline;
+    margin-left: 10px;
+}
+
+
+/*
+login.nav-item {
+    background-color: white;
+    border: none;
+    color: var(--dark-green);
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 12px;
+}
+}*/
