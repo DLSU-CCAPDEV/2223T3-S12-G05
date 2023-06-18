@@ -1,11 +1,26 @@
-function checkWindowSize() {
-    if (window.innerWidth < 768) {
-      document.getElementById("navbarNav").classList.add("collapse");
-    } else {
-      document.getElementById("navbarNav").classList.remove("collapse");
-    }
-}
 
-// Call the function on page load and window resize
-window.addEventListener("load", checkWindowSize);
-window.addEventListener("resize", checkWindowSize);
+var isScrolling = false;
+
+$(window).on("scroll", function() {
+  if (!isScrolling) {
+    isScrolling = true;
+    requestAnimationFrame(function() {
+      if ($(window).scrollTop() > 50) {
+        $(".navbar").addClass("shrink");
+        $(".kanji").addClass("shrink");
+        $(".tagline").addClass("shrink");
+        $("form-control").addClass("shrink");
+        $("fa-search").addClass("shrink");
+        $("fa-bars").addClass("shrink");
+      } else {
+        $(".navbar").removeClass("shrink");
+        $(".kanji").removeClass("shrink");
+        $(".tagline").removeClass("shrink");
+        $(".form-control").removeClass("shrink");
+        $(".fa-search").removeClass("shrink");
+        $(".fa-bars").removeClass("shrink");
+      }
+      isScrolling = false;
+    });
+  }
+});
