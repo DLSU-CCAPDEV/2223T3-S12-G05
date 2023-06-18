@@ -1,21 +1,87 @@
-/* For background */
-.image-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+@import url(https://fonts.google.com/noto/specimen/Noto+Sans+JP?preview.text=呼んで&preview.text_type=custom);
+@import url(https://fonts.google.com/specimen/Geologica?preview.text=Yonde&preview.size=52&preview.text_type=custom);
+
+:root {
+    --dark-green: #1a340d;
+    --light-green: #7a938c;
+    --light-gray: #f1f1f1;
+    --gray: #b8b8b8;
+    --dark-gray: #818181;
+    --main-font: 'Geologica', sans-serif; 
 }
+
+.grid-container {
+    background-color: var(--dark-gray);
+    width: 100%;
+    max-width: 95%; /* Adjust the max-width value as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 0;
+  }
   
-.image-container img {
-    max-height: 100vh;
-    max-width: 50vw;
-    object-fit: contain;
+
+.grid-x {
+    background-color: var(--light-gray);
 }
-  
-.left-image {
-    margin-right: auto;
+
+.bg {
+    background-image: url(bg1.png), url(bg2.png);
+    background-position-x: left, right;
+    background-repeat: repeat-y, repeat-y;
 }
-  
-.right-image {
-    margin-left: auto;
+
+@media (max-width: 768px) {
+    .bg {
+        background-image: none;
+    }
+}
+
+.cell.medium-8 {
+    font-weight: 300;
+    background-color: white;
+    width: 85%;
+    margin-bottom: 10px;
+    padding: 13px;
+}
+
+.avatar-image {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.avatar-name {
+    font-weight: 300;
+    color: var(--gray);
+    font-size: 12px;
+}
+
+.bi-pencil-square {
+    color: var(--gray);
+    padding: 0;
+}
+
+.bi-pencil-square:hover {
+    color: var(--dark-gray);
+    transition: 0.3s ease-in-out;
+}
+
+.post-title {
+    font-weight: bold;
+    font-size: 22px;
+    margin: 15px 0px;
+}
+
+.post-text {
+    font-weight: 200;
+    font-size: 14px;
+    padding-right: 20px;
+    margin-bottom: 15px;
+    line-height: normal;
+}
+
+.fa-sort-up, .fa-sort-down {
+    color: var(--gray);
+    font-size: 40px;
+    margin: 0px 20px;
 }

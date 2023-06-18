@@ -5,7 +5,7 @@
     --dark-green: #1a340d;
     --light-green: #7a938c;
     --light-gray: #b8b8b8;
-    --dark-gray: #818181;
+    --dark-gray: #b8b8b8;
     --main-font: 'Geologica', sans-serif; 
 }
 
@@ -33,6 +33,34 @@ body {
     color: white;
 }
 
+/* 読んで */
+.kanji {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+/* A Sports Anime Forum */
+.tagline {
+    font-size: 15px;
+    font-style: normal;
+    color: var(--light-green);
+    padding-left: 10px;
+}
+
+/* @media to remove elements when window size is small */
+@media (max-width: 768px) {
+    .tagline {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .kanji {
+        display: none;
+    }
+}
+
 /* For shrink on scroll */
 .navbar.shrink {
     padding-top: 0.5rem;
@@ -52,7 +80,6 @@ body {
 }
 
 /* For shrink on scroll */
-
 .navbar.shrink .navbar-brand {
     font-size: 20px;
 }
@@ -64,6 +91,16 @@ body {
 .navbar.shrink .form-inline .form-control,
 .navbar.shrink .form-inline .fa-search {
     font-size: 10px;
+}
+
+/* For shrink on scroll */
+.navbar.shrink .form-inline .form-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0.8cm;
+    margin-top: 6px;
+    margin-bottom: 5px;
 }
 
 /* For shrink on scroll */
@@ -79,21 +116,6 @@ body {
 /* For shrink on scroll */
 .navbar.shrink .navbar-toggler .fa-bars {
     font-size: 12px;
-}
-
-/* 読んで */
-.kanji {
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 18px;
-    padding-left: 10px;
-}
-
-/* A Sports Anime Forum */
-.tagline {
-    font-size: 15px;
-    font-style: normal;
-    color: var(--light-green);
-    padding-left: 10px;
 }
 
 /* Bar icon color when menu is open */

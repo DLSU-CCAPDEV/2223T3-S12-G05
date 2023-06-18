@@ -26,3 +26,5 @@ $(window).on("scroll", function() {
     });
   }
 });
+
+$(document).foundation();
