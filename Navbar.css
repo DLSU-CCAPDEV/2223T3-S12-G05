@@ -15,6 +15,7 @@ body {
     padding: 0;
 }
 
+/* Navigation Bar */
 .navbar {
     margin: 0;
     background-color: var(--dark-green);
@@ -25,31 +26,38 @@ body {
     transition: 0.4s ease;
 }
 
+/* Yonde */
 .navbar-brand {
     font-weight: bold;
     font-size: 40px;
     color: white;
 }
 
+/* For shrink on scroll */
 .navbar.shrink {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
 
+/* For shrink on scroll */
 .navbar.shrink .navbar-brand,
 .navbar.shrink .kanji,
 .navbar.shrink .tagline,
-.navbar.shrink .nav-lin,
+.navbar.shrink .nav-link,
 .navbar.shrink .form-control,
 .navbar.shrink .fa-search,
-.navbar.shrink .fa-bars {
+.navbar.shrink .fa-bars,
+.navbar.shrink .rounded-pill {
     transition: all 0.4s ease;
 }
+
+/* For shrink on scroll */
 
 .navbar.shrink .navbar-brand {
     font-size: 20px;
 }
 
+/* For shrink on scroll */
 .navbar.shrink .kanji,
 .navbar.shrink .tagline,
 .navbar.shrink .navbar-nav .nav-link,
@@ -58,16 +66,29 @@ body {
     font-size: 10px;
 }
 
+/* For shrink on scroll */
+.navbar.shrink .navbar-nav .rounded-pill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0.5cm;
+    margin-top: 6px;
+    margin-bottom: 5px;
+}
+
+/* For shrink on scroll */
 .navbar.shrink .navbar-toggler .fa-bars {
     font-size: 12px;
 }
 
+/* 読んで */
 .kanji {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 18px;
     padding-left: 10px;
 }
 
+/* A Sports Anime Forum */
 .tagline {
     font-size: 15px;
     font-style: normal;
@@ -75,27 +96,30 @@ body {
     padding-left: 10px;
 }
 
-.fa-bars {
-    background-color: transparent;
-    color: white;
-    text-align: center;
-}
-
-.fa-bars:hover, .fa-bars:focus {
+/* Bar icon color when menu is open */
+.navbar-toggler:not(.collapsed) .fa-bars {
     color: var(--light-green);
-    transition: color 0.3s ease-in-out;
+    transition: 0.3s ease-out;
 }
 
+/* Bar icon orig color */
+.navbar-toggler.collapsed .fa-bars {
+    color: white;
+}
+
+/* Bar icon color on hover */
+.navbar-toggler:hover .fa-bars {
+    color: var(--light-green);
+    transition: 0.3s ease-in-out;
+}
+  
+/* (Bootstrap component) Button for menu */
 .navbar-toggler, .navbar-toggler:hover, .navbar-toggler:active, .navbar-toggler:focus {
     outline: none;
     box-shadow: none;
     border-style: none;
 }
 
-.nav {
-    margin-top: auto;
-    margin-bottom: auto;
-}
 
 .nav-item, .nav-link {
     color: white;
@@ -106,6 +130,7 @@ body {
     color: var(--light-green);
 }
 
+/* All .btn-underline is for the design of Home */
 .btn-underline {
     position: relative;
     color: white;
@@ -136,6 +161,7 @@ body {
     transform-origin: bottom left;
 }
 
+/* Login */
 .rounded-pill {
     display: flex;
     align-items: center;
@@ -149,6 +175,7 @@ body {
     margin-bottom: 3px;
 }
 
+/* Design of Login button */
 .btn-primary:hover, .btm-primary:focus ,.btn-primary:active {
     outline: none;
     box-shadow: none;
@@ -159,15 +186,17 @@ body {
     color: white;
 }
 
+/* Magnifying glass icon */
 .fa-search {
     position: absolute;
     color: var(--light-green);
     font-size: 13px;
 }
 
+/* Search bar */
 .form-inline {
     position: relative;
-  }
+}
 
 .form-inline i.fa-search {
     position: absolute;
@@ -203,25 +232,4 @@ body {
 .form-inline input[type="search"]::-webkit-search-cancel-button,
 .form-inline input[type="search"]::-webkit-search-clear-button {
     display: none;
-}
-
-.image-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-  
-.image-container img {
-    max-height: 100vh;
-    max-width: 50vw;
-    object-fit: contain;
-}
-  
-.left-image {
-    margin-right: auto;
-}
-  
-.right-image {
-    margin-left: auto;
 }

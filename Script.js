@@ -9,9 +9,10 @@ $(window).on("scroll", function() {
         $(".navbar").addClass("shrink");
         $(".kanji").addClass("shrink");
         $(".tagline").addClass("shrink");
-        $("form-control").addClass("shrink");
-        $("fa-search").addClass("shrink");
-        $("fa-bars").addClass("shrink");
+        $(".form-control").addClass("shrink");
+        $(".fa-search").addClass("shrink");
+        $(".fa-bars").addClass("shrink");
+        $(".rounded-pill").addClass("shrink");
       } else {
         $(".navbar").removeClass("shrink");
         $(".kanji").removeClass("shrink");
@@ -19,6 +20,7 @@ $(window).on("scroll", function() {
         $(".form-control").removeClass("shrink");
         $(".fa-search").removeClass("shrink");
         $(".fa-bars").removeClass("shrink");
+        $(".rounded-pill").addClass("shrink");
       }
       isScrolling = false;
     });
