@@ -21,7 +21,8 @@ body{
 }
 
 .container{
-    background-color: var(--light-gray);
+    background-color: white;
+    border: solid 1px (--light-gray);
     margin: auto;
     padding: 40px;
     border-radius: 5px;
@@ -33,4 +34,8 @@ body{
     right: 0;
     width: 500px;
     height: 430px;
+}
+
+.container::before{
+    background-image: ;
 }
