@@ -30,8 +30,12 @@ $(window).on("scroll", function() {
 $(document).foundation();
 
 function toggle(){
-  var blur=document.getElementById('blur', 'blur')
+  var blur=document.getElementById('blur');
   blur.classList.toggle('active');
-  var p=document.getElementById('popup_login');
-  popup_login.classList.toggle('active');
+
+  var blur2=document.getElementById('blur2')
+  blur2.classList.toggle('active');
+
+  var p =document.getElementById('popup_login');
+  p.classList.toggle('active');
 }
