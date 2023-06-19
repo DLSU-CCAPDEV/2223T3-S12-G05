@@ -28,3 +28,10 @@ $(window).on("scroll", function() {
 });
 
 $(document).foundation();
+
+function toggle(){
+  var blur=document.getElementById('blur', 'blur')
+  blur.classList.toggle('active');
+  var p=document.getElementById('popup_login');
+  popup_login.classList.toggle('active');
+}
