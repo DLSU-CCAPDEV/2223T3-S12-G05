@@ -45,20 +45,7 @@ function toggle2(){
   r.classList.toggle('active');
 }
 
-var curr = null;
-
-function open(id){
-  if (curr){
-    curr.style.display = "none";
-  }
-
-  var p = document.getElementById(id);
-  p.style.display = "block";
-  curr = p;
-}
-
-function close(id){
-  var p = document.getElementById(id);
-  p.style.display = "none";
-  curr = null;
+function toggle3(){
+  var f=document.getElementById('popup-forgot');
+  f.classList.toggle('active')
 }

@@ -176,13 +176,14 @@
     cursor: pointer;
 }
 
-.reg-form #email{
+#email{
     margin-top: 5px;
     display: block;
     width: 100%;
     padding: 10px;
     border-radius: 14px;
 }
+
 .reg-form h1{
     text-align: center;
     color: var(--dark-green);
@@ -215,7 +216,7 @@
     line-height: 1.4em;
 }
 
-.elements #username, #password{
+#username, #password, #email{
     margin-top: 5px;
     display: block;
     width: 100%;
