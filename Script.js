@@ -39,3 +39,8 @@ function toggle(){
   var p =document.getElementById('popup_login');
   p.classList.toggle('active');
 }
+
+function toggle2(){
+  var r=document.getElementById('popup-reg');
+  r.classList.toggle('active');
+}

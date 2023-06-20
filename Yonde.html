@@ -196,7 +196,28 @@
           <button id="submit">Login</button>
           <a href="#" id="forgot">Forgot password?</a>
 
-          <p class="signup">Don't have an account? <a href="#" class="signup" id="link">Sign Up</a></p>
+          <p class="signup">Don't have an account? <a href="#" onclick="toggle2()" class="signup" id="link">Sign Up</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="register" id="popup-reg">
+      <div class="close" href="#" onclick="toggle2()">&times;</div>
+
+      <div class="reg-form">
+        <h1>Sign Up</h1>
+
+        <div class="elements">
+          <label for="email">E-mail Address</label>
+          <input type="text" id="email" placeholder="Enter your e-mail address">
+
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter your username">
+          
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter password">
+
+          <button id="submit">Register</button>
         </div>
       </div>
     </div>
