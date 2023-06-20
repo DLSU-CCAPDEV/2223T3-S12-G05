@@ -137,9 +137,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1.25);
-    width: 305px;
-    height: 400px;
-    padding: 20px 30px;
+    width: 303px;
+    margin:auto;
+
+    padding: 20px 20px;
     background: white;
     box-shadow: 2px 2px 5px 5px var(--dark-green);
     border-radius: 5px;
@@ -188,7 +189,7 @@
     text-align: center;
     color: var(--dark-green);
     margin: 10px 0px 20px;
-    font-size: 25px;
+    font-size: 20px;
     font-family: var(--main-font);
     font-weight: 1000;
 }
@@ -216,7 +217,8 @@
     line-height: 1.4em;
 }
 
-#username, #password, #email{
+.login-form .elements #username, 
+.login-form .elements #password {
     margin-top: 5px;
     display: block;
     width: 100%;
@@ -224,12 +226,50 @@
     border-radius: 14px;
 }
 
-#username::-webkit-input-placeholder,
-#password::-webkit-input-placeholder,
-#email::-webkit-input-placeholder{
+.reg-form .elements #username,
+.reg-form .elements #password,
+.reg-form .elements #email{
+    margin-top: 2px;
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding: 4px;
+    border-radius: 20px;
+    line-height: 5px;
+}
+
+#email::-webkit-input-placeholder
+{
     font-family: var(--main-font);
     font-weight: 1px;
-    font-size: 14px;
+    font-size: 10px;
+}
+
+.register .elements #username::-webkit-input-placeholder,
+.register .elements #password::-webkit-input-placeholder{
+    font-family: var(--main-font);
+    font-weight: 1px;
+    font-size: 10px;
+}
+
+.register #submit{
+    font-size: 12px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+.reg-form .elements label{
+    font-family: var(--main-font);
+    font-size: 12px;
+    line-height: 8px;
+}
+
+
+#username::-webkit-input-placeholder,
+#password::-webkit-input-placeholder{
+    font-family: var(--main-font);
+    font-weight: 1px;
+    font-size: 12px;
 }
 
 .check{
@@ -283,16 +323,6 @@
     font-weight: bold;
 }
 
-.elements #forgot{
-    display:block;
-    text-align: right;
-    font-size: 10px;
-    color:var(--dark-green);
-    text-decoration: none;
-    line-height: 2;
-    font-weight: 600;
-}
-
 .signup{
     font-family: var(--main-font);
     font-size: 11px;
@@ -302,7 +332,21 @@
     padding-top: 2.5rem;
 }
 
+.login{
+    font-family: var(--main-font);
+    font-size: 8.5px;
+    color: var(--dark-green);
+    font-weight: bold;
+    text-align: center;
+    padding-top: 1rem;
+    margin-bottom: 1.5px;
+}
+
 .signup:hover{
+    color: var(--dark-green);
+}
+
+.login:hover{
     color: var(--dark-green);
 }
 
@@ -325,8 +369,18 @@
 }
 
 #popup-reg.active{
-    top: 57%;
+    top: 50%;
     visibility: visible;
     opacity: 1;
     transform: 0s;
+}
+
+.reg-form .elements #email,
+.reg-form .elements #username,
+.reg-form .elements #password{
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 8.5px;
+    border-radius: 10px;
 }
