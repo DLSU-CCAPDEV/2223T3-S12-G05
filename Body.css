@@ -171,11 +171,16 @@
 
 .login-form .elements{
     margin: 15px 0px;
+    font-family: var(--main-font);
+    font-size: 14px;
 }
 
 .elements label{
     font-size: 14px;
     color: black;
+    font-family: var(--main-font);
+    font-weight: bold;
+    line-height: 1.4em;
 }
 
 .elements #username, #password{
@@ -186,9 +191,42 @@
     border-radius: 14px;
 }
 
-.elements input[type="checkbox"]{
+.check{
     margin-right: 1px;
     padding: 0;
+    display: flex;
+    padding-bottom: 0.5em;
+}
+
+.elements .check input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    height: 18px;
+    width: 18px;
+    background-color: white;
+    border: 2px solid rgb(196, 193, 193);
+    border-radius: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check input[type="checkbox"]:after{
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 1000;
+    font-size: 12px;
+    color: white;
+    display: none;
+}
+
+.check input[type="checkbox"]:checked{
+    background-color: var(--dark-green);
+}
+
+.check input[type="checkbox"]:checked:after{
+    display: block;
 }
 
  #submit{
@@ -204,7 +242,7 @@
     font-weight: bold;
 }
 
-.elements a{
+.elements #forgot{
     display:block;
     text-align: right;
     font-size: 10px;
@@ -212,6 +250,24 @@
     text-decoration: none;
     line-height: 2;
     font-weight: 600;
+}
+
+.signup{
+    font-family: var(--main-font);
+    font-size: 11px;
+    color: var(--dark-green);
+    font-weight: bold;
+    text-align: center;
+    padding-top: 2.5rem;
+}
+
+.signup:hover{
+    color: var(--dark-green);
+}
+
+#link{
+    text-decoration: underline;
+    color: var(--dark-green);
 }
 
 #blur.active, #blur2.active{
