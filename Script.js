@@ -29,6 +29,13 @@ $(window).on("scroll", function() {
 
 $(document).foundation();
 
+function clickLike() {
+  document.getElementsByClassName("like-button").style = "color: #1a340d";
+}
+function clickDislike() {
+  document.getElementsByClassName("dislike-button").style = "color: red";
+}
+
 function toggle(){
   var blur=document.getElementById('blur');
   blur.classList.toggle('active');

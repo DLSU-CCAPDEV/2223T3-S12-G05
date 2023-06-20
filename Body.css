@@ -95,6 +95,39 @@
     line-height: normal;
 }
 
+.like-comment-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.like-comment-bar .like-num {
+    color: #1a340d;
+}
+
+.like-comment-bar .like-button {
+    color: var(--gray);
+}
+.like-comment-bar .like-button:hover {
+    color: var(--light-green);
+}
+
+.like-comment-bar .dislike-button {
+    color: var(--gray);
+}
+.like-comment-bar .dislike-button:hover {
+    color: rgb(175, 98, 98);
+}
+
+.like-comment-bar .comment-button {
+    color: #1a340d;
+    border-width: 1000px;
+    flex-grow: 3;
+}
+.like-comment-bar .comment-button:hover {
+    background-color: var(--gray);
+}
+
 .fa-sort-up, .fa-sort-down {
     color: var(--gray);
     font-size: 40px;
