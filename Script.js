@@ -44,3 +44,21 @@ function toggle2(){
   var r=document.getElementById('popup-reg');
   r.classList.toggle('active');
 }
+
+var curr = null;
+
+function open(id){
+  if (curr){
+    curr.style.display = "none";
+  }
+
+  var p = document.getElementById(id);
+  p.style.display = "block";
+  curr = p;
+}
+
+function close(id){
+  var p = document.getElementById(id);
+  p.style.display = "none";
+  curr = null;
+}
