@@ -149,8 +149,8 @@
 }
 
 #popup_login{
-    position: absolute;
-    top: 50%;
+    position:absolute;
+    top: 100%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1.25);
     width: 380px;
@@ -324,7 +324,7 @@
 }
 
 #popup-reg.active{
-    top: 50%;
+    top: 57%;
     visibility: visible;
     opacity: 1;
     transform: 0s;
