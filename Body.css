@@ -144,21 +144,7 @@
     border-radius: 5px;
     opacity: 0;
     visibility: hidden;
-    transition: top 0ms ease-in-out 200ms,
-                opacity 200ms ease-in 0ms,
-                transform 20ms ease-in-out 0ms;
 }
-
-/*
-#popup_login.active{
-    transform: translate(-50%, -50%) scale(1.25);
-    opacity: 0;
-    visibility: hidden;
-    transition: top 0ms ease-in-out 200ms,
-                opacity 200ms ease-in 0ms,
-                transform 20ms ease-in-out 0ms;
-}
-*/
 
 .close{
     position: absolute;
@@ -238,5 +224,5 @@
     top: 50%;
     visibility: visible;
     opacity: 1;
-    transform: 0.5s;
+    transform: 0s;
 }
