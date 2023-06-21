@@ -60,3 +60,13 @@ function toggle3(){
 function createPostPage() {
   window.location.href = "createPostPage.html"
 }
+
+function postImage() {
+  var inputContainer = document.getElementsByClassName("text-box");
+  var newInputBox = document.createElement("input");
+  newInputBox.setAttribute("type", "file");
+  newInputBox.setAttribute("id", "image-input");
+  newInputBox.setAttribute("placeholder", "Pick your image");
+  inputContainer.innerHTML = "";
+  inputContainer.appendChild(newInputBox);
+}
