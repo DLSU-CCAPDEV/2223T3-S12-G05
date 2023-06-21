@@ -12,6 +12,7 @@
 
 .postBox {
     position: relative;
+    margin-top: 20px;
     width: 100%;
     height: 5in;
     padding: 10px;
