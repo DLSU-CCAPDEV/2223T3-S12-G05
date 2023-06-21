@@ -12,7 +12,7 @@
 
 .postBox {
     display: flex;
-    flex-direction: column;
+    flex-direction: ;
     justify-content: center;
     align-items:start;
     margin: 30px 0px;
@@ -30,7 +30,7 @@
 .line {
     background-color: var(--dark-green);
     margin-top: 0.5in;
-    flex: 0 0 100%;
+    width: 110%;
     height: 2px;
 }
 
