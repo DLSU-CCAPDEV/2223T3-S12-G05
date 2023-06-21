@@ -12,7 +12,6 @@
 
 .postBox {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: start;
     margin: 30px 0px;
