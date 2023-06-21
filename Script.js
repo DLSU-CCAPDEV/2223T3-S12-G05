@@ -56,3 +56,7 @@ function toggle3(){
   var f=document.getElementById('popup-forgot');
   f.classList.toggle('active')
 }
+
+function createPostPage() {
+  window.location.href = "createPostPage.html"
+}
