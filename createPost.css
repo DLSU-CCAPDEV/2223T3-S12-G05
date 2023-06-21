@@ -25,7 +25,6 @@
 }
 
 .line {
-    position: absolute;
     background-color: var(--dark-green);
     align-self: center;
     width: 85%;
