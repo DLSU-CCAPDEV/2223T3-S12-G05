@@ -30,10 +30,13 @@ $(window).on("scroll", function() {
 $(document).foundation();
 
 function clickLike() {
-  document.getElementsByClassName("like-button").style = "color: #1a340d";
+  var like = document.getElementById("like-button");
+  like.style.color = "#1a340d";
 }
 function clickDislike() {
-  document.getElementsByClassName("dislike-button").style = "color: red";
+  var dislike = document.getElementById("dislike-button");
+  dislike.style.color = "red";
+
 }
 
 function toggle(){
