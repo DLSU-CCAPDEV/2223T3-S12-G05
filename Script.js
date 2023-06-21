@@ -61,12 +61,3 @@ function createPostPage() {
   window.location.href = "createPostPage.html"
 }
 
-const imageButton = document.getElementById('image-button');
-const textBox = document.getElementById('text-box');
-const imageBox = document.getElementById('image-box');
-
-imageButton.addEventListener('click', function() {
-  textBox.style.display = 'none';
-  imageBox.style.display = 'block';
-});
-
