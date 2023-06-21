@@ -25,8 +25,8 @@
     border-color: var(--dark-green);
 
     color: var(--dark-green);
-    font-weight: normal;
-    font-size: 15px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .line {
