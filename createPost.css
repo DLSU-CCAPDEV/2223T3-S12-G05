@@ -31,10 +31,10 @@
     position: relative;
     background-color: var(--dark-green);
     margin-top: 0.5in;
-    width: calc(100% + 40px);
+    width: calc(100% + 20px);
     height: 2px;
-    margin-left: -20px;
-    margin-right: -20px;
+    margin-left: -10px;
+    margin-right: -10px;
 }
 
 @media (max-width: 768px) {
