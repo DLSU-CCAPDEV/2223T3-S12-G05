@@ -61,13 +61,12 @@ function createPostPage() {
   window.location.href = "createPostPage.html"
 }
 
-const uploadButton = document.getElementById('upload-button');
-const imageInput = document.getElementById('image-input');
+const imageButton = document.getElementById('upload-button');
+const postBox = document.getElementsByClassName('post-box');
 
-uploadButton.addEventListener('click', function() {
-  imageInput.click();
-});
+imageButton.addEventListener('click', function() {
+  const uploadBox = document.createElement('div');
+  uploadBox.classList.add('uploadBox');
 
-imageInput.addEventListener('change', function() {
-  // Handle the selected image here, e.g., display it on the page or perform other actions.
+  postBox.replaceChild(uploadBox, inputBox);
 });
