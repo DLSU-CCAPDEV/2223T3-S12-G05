@@ -18,7 +18,7 @@
     margin: 30px 0px;
     width: 85%;
     height: 5in;
-    padding: 20px;
+    padding: 25px;
     border-style: solid;
     border-width: 2px;
     border-radius: 50px;
@@ -29,14 +29,15 @@
     position: relative;
     top: -30px;
     margin-top: 0.5in;
-    width: calc(100% + 40px);
+    width: calc(100% + 50px);
     height: 2px;
-    margin-left: -20px;
-    margin-right: -20px;
+    margin-left: -25px;
+    margin-right: -25px;
     bottom: 2in;
 
     background-color: var(--dark-green);
     color: var(--dark-green);
+    font-weight: 400;
 }
 
 @media (max-width: 768px) {
