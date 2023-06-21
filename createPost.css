@@ -43,9 +43,10 @@
 }
 
 .text-box {
-    min-height: 180px;
-    vertical-align: top;
+    resize: none;
+    overflow-y: auto;
     white-space: pre-wrap;
+    min-height: 180px;
 }
 
 @media (max-width: 768px) {
