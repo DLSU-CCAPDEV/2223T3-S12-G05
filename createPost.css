@@ -30,7 +30,7 @@
 .line {
     background-color: var(--dark-green);
     margin-top: 0.5in;
-    width: 110%;
+    width: 100%;
     height: 2px;
 }
 
