@@ -97,7 +97,7 @@
 
 .postButton {
     display: flex;
-    justify-self: flex-end;
+    margin-left: auto;
     align-items: center;
     justify-content: center;
     border-radius: 50px;
