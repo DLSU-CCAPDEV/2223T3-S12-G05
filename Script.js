@@ -61,12 +61,13 @@ function createPostPage() {
   window.location.href = "createPostPage.html"
 }
 
-function postImage() {
-  var inputContainer = document.getElementsByClassName("post-box");
-  var newInputBox = document.createElement("input");
-  newInputBox.setAttribute("type", "file");
-  newInputBox.setAttribute("id", "image-input");
-  newInputBox.setAttribute("placeholder", "Pick your image");
-  inputContainer.innerHTML = "";
-  inputContainer.appendChild(newInputBox);
-}
+const uploadButton = document.getElementById('upload-button');
+const imageInput = document.getElementById('image-input');
+
+uploadButton.addEventListener('click', function() {
+  imageInput.click();
+});
+
+imageInput.addEventListener('change', function() {
+  // Handle the selected image here, e.g., display it on the page or perform other actions.
+});
