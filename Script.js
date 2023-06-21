@@ -62,7 +62,7 @@ function createPostPage() {
 }
 
 function postImage() {
-  var inputContainer = document.getElementsByClassName("text-box");
+  var inputContainer = document.getElementsByClassName("post-box");
   var newInputBox = document.createElement("input");
   newInputBox.setAttribute("type", "file");
   newInputBox.setAttribute("id", "image-input");
