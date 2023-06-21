@@ -61,12 +61,12 @@ function createPostPage() {
   window.location.href = "createPostPage.html"
 }
 
-const imageButton = document.getElementById('upload-button');
-const postBox = document.getElementsByClassName('post-box');
+const imageButton = document.getElementById('image-button');
+const textBox = document.getElementById('text-box');
+const imageBox = document.getElementById('image-box');
 
 imageButton.addEventListener('click', function() {
-  const uploadBox = document.createElement('div');
-  uploadBox.classList.add('uploadBox');
-
-  postBox.replaceChild(uploadBox, inputBox);
+  textBox.style.display = 'none';
+  imageBox.style.display = 'block';
 });
+
