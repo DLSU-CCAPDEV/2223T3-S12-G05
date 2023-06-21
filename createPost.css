@@ -18,7 +18,7 @@
     margin: 30px 0px;
     width: 85%;
     height: 5in;
-    padding: 10px;
+    padding: 20px;
     border-style: solid;
     border-width: 2px;
     border-radius: 50px;
@@ -29,10 +29,10 @@
     position: relative;
     top: 100px;
     margin-top: 0.5in;
-    width: calc(100% + 20px);
+    width: calc(100% + 40px);
     height: 2px;
-    margin-left: -10px;
-    margin-right: -10px;
+    margin-left: -20px;
+    margin-right: -20px;
     bottom: 2in;
 
     background-color: var(--dark-green);
