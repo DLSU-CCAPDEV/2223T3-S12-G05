@@ -10,16 +10,9 @@
     --main-font: 'Geologica', sans-serif;
 }
 
-h1 {
-    font-family: var(--main-font);
-    font-size: 15px;
-    color: var(--dark-green);
-}
-
 .postBox {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: start;
     margin: 30px 0px;
     width: 85%;
@@ -33,6 +26,7 @@ h1 {
 
 .line {
     position: relative;
+    top: 100px;
     margin-top: 0.5in;
     width: calc(100% + 20px);
     height: 2px;
