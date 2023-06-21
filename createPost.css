@@ -23,6 +23,10 @@
     border-width: 2px;
     border-radius: 50px;
     border-color: var(--dark-green);
+
+    color: var(--dark-green);
+    font-weight: normal;
+    font-size: 15px;
 }
 
 .line {
@@ -36,9 +40,6 @@
     bottom: 2in;
 
     background-color: var(--dark-green);
-    color: var(--dark-green);
-    font-weight: normal;
-    font-size: 15px;
 }
 
 @media (max-width: 768px) {
