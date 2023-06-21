@@ -45,6 +45,8 @@
 .text-box {
     position: relative;
     min-height: 180px;
+    text-align: left;
+    padding: 5px;
 }
 
 .text-box::placeholder {
