@@ -66,6 +66,15 @@
     font-size: 15px;
 }
 
+.postImage:hover {
+    background-color: transparent;
+    color: var(--dark-gray);
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--dark-gray);
+    transition: 0.4s ease-in-out;
+}
+
 @media (max-width: 768px) {
     .bg {
         background-image: none;
