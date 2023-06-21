@@ -51,7 +51,7 @@
     font-weight: 200;
 }
 
-.postImage {
+.imageButton {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,7 +66,7 @@
     font-size: 15px;
 }
 
-.postImage:hover {
+.imageButton:hover {
     background-color: transparent;
     color: var(--dark-gray);
     border-style: solid;
@@ -93,4 +93,28 @@
     border-style: solid;
     border-width: 2px;
     border-color: var(--dark-gray);
+}
+
+.postButton {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    border-radius: 50px;
+    background-color: var(--dark-green);
+    color: white;
+    font-weight: bold;
+    width: 1.2in;
+    height: 0.8cm;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 15px;
+}
+
+.postButton:hover {
+    background-color: transparent;
+    color: var(--dark-green);
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--dark-green);
+    transition: 0.4s ease-in-out;
 }
