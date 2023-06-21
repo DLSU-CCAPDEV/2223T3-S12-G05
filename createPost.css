@@ -1,0 +1,27 @@
+@import url(https://fonts.google.com/noto/specimen/Noto+Sans+JP?preview.text=呼んで&preview.text_type=custom);
+@import url(https://fonts.google.com/specimen/Geologica?preview.text=Yonde&preview.size=52&preview.text_type=custom);
+
+:root {
+    --dark-green: #1a340d;
+    --light-green: #7a938c;
+    --light-gray: #f1f1f1;
+    --gray: #b8b8b8;
+    --dark-gray: #818181;
+    --main-font: 'Geologica', sans-serif; 
+}
+
+.postBox {
+    position: relative;
+    width: 7in;
+    height: 5in;
+    padding: 10px;
+    border-style: solid;
+    border-radius: 50px;
+    border-color: var(--dark-green);
+    font-size: 15px;
+    color: black;
+}
+
+.line {
+
+}
