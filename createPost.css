@@ -10,3 +10,18 @@
     --main-font: 'Geologica', sans-serif; 
 }
 
+.postBox {
+    position: relative;
+    width: 7in;
+    height: 5in;
+    padding: 10px;
+    border-style: solid;
+    border-radius: 50px;
+    border-color: var(--dark-green);
+    font-size: 15px;
+    color: black;
+}
+
+.line {
+
+}
