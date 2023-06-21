@@ -27,6 +27,7 @@
 .line {
     position: absolute;
     background-color: var(--dark-green);
+    align-self: center;
     width: 85%;
     bottom: 50%;
     height: 2px;
