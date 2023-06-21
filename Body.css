@@ -98,15 +98,20 @@
 .like-comment-bar {
     display: flex;
     flex-direction: row;
-    justify-content: space-between
+    justify-content: flex-start;
 }
 
 .like-comment-bar .like-num {
     color: #1a340d;
+    margin-top: 10px;
+    align-content: flex-end;
 }
 
 .like-comment-bar .like-button {
     color: var(--gray);
+    size: 50px;
+    padding: 10px;
+    margin-top: 5px;
 }
 .like-comment-bar .like-button:hover {
     color: var(--light-green);
@@ -114,6 +119,9 @@
 
 .like-comment-bar .dislike-button {
     color: var(--gray);
+    size: 50px;
+    padding: 10px;
+    margin-top: 5px;
 }
 .like-comment-bar .dislike-button:hover {
     color: rgb(175, 98, 98);
@@ -121,8 +129,7 @@
 
 .like-comment-bar .comment-button {
     color: #1a340d;
-    border-width: 1000px;
-    flex-grow: 3;
+    padding: 10px;
 }
 .like-comment-bar .comment-button:hover {
     background-color: var(--gray);
