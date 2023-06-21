@@ -63,4 +63,3 @@ function toggle3(){
 function createPostPage() {
   window.location.href = "createPostPage.html"
 }
-
