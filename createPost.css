@@ -27,7 +27,7 @@
 
 .line {
     position: relative;
-    top: 80px;
+    top: 10px;
     margin-top: 0.5in;
     width: calc(100% + 40px);
     height: 2px;
