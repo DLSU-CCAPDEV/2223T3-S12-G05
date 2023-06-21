@@ -37,6 +37,7 @@
     bottom: 2in;
 
     background-color: var(--dark-green);
+    color: var(--dark-green);
 }
 
 @media (max-width: 768px) {
