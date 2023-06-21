@@ -28,9 +28,9 @@
 
 .line {
     background-color: var(--dark-green);
+    top: 0.5in;
     flex: 0 0 100%;
     height: 2px;
-    bottom: 80px;
 }
 
 @media (max-width: 768px) {
