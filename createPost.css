@@ -45,14 +45,7 @@
 .text-box {
     position: relative;
     min-height: 180px;
-    text-align: left;
-    padding: 5px;
-}
-
-.text-box::placeholder {
-    position: absolute;
-    top: 0;
-    left: 0;
+    vertical-align: text-top;
 }
 
 @media (max-width: 768px) {
