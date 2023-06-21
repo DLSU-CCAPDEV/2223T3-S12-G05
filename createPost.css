@@ -97,8 +97,9 @@
 
 .postButton {
     display: flex;
+    justify-self: flex-end;
     align-items: center;
-    justify-content: right;
+    justify-content: center;
     border-radius: 50px;
     background-color: var(--dark-green);
     color: white;
