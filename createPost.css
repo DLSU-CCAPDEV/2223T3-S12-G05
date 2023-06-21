@@ -45,7 +45,7 @@
 .text-box {
     min-height: 180px;
     vertical-align: top;
-    padding: 5px;
+    white-space: pre-wrap;
 }
 
 @media (max-width: 768px) {
