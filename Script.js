@@ -30,13 +30,16 @@ $(window).on("scroll", function() {
 $(document).foundation();
 
 function clickLike() {
-  var like = document.getElementById("like-button");
-  like.style.color = "#1a340d";
+  let likebtn = document.querySelector("likebtn1");
+  likebtn.addEventListener('click', function() {
+    likebtn.style.backgroundColor = "#1a340d"
+  });
 }
 function clickDislike() {
-  var dislike = document.getElementById("dislike-button");
-  dislike.style.color = "red";
-
+  let dislikebtn = document.querySelector("dislikebtn1");
+  dislikebtn.addEventListener('click', function() {
+    dislikebtn.style.backgroundColor = "#1a340d"
+  });
 }
 
 function toggle(){
