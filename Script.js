@@ -127,8 +127,19 @@ function show(){
   }
 }
 
+function toImgUpload(){
+  var tf = document.getElementById("text-area-container");
+  var iu = document.getElementById("img-upload");
 
+ 
+  if(tf.style.display=="none"){
+    tf.style.display = "block";
+    iu.style.display="none";
+  }else{
+    tf.style.display = "none";
+    iu.style.display="flex";
+  }
 
-
+}
 
 
