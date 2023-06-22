@@ -63,3 +63,69 @@ function toggle3(){
 function createPostPage() {
   window.location.href = "createPostPage.html"
 }
+
+const dropArea = document.querySelector(".drag-upload");
+dragText = dropArea.querySelector("header"),
+btn = dropArea.querySelector("button"),
+input = dropArea.querySelector("input");
+
+let file;
+
+btn.onclick = ()=>{
+  input.click();
+}
+
+input.addEventListener("change", function(){
+  file = this.files[0];
+  show();
+  dropArea.classList.add("active");
+})
+
+dropArea.addEventListener("dragover", ()=>{
+  event.preventDefault();
+  console.log("File is over dragArea");
+  dropArea.classList.add("active");
+
+  dragText.textContent ="Release to Upload File"
+});
+
+dropArea.addEventListener("dragleave", ()=>{
+  console.log("File is outside drag area");
+  dropArea.classList.remove("active");
+
+  dragText.textContent = "Drag & Drop to Upload File";
+});
+
+dropArea.addEventListener("drop", (event)=>{
+  event.preventDefault();
+  file = event.dataTransfer.files[0];
+  show();
+});
+
+function show(){
+  let fileType = file.type;
+  console.log(fileType);
+
+  let allowed = ["image/jpeg", "image/jpg", "image/png"];
+
+  if(allowed.includes(fileType)){
+    let reader = new FileReader();
+    reader.onload = ()=>{
+      let fileURL = reader.result;
+      console.log(fileURL);
+      let imgTag = `<img src="${fileURL}" alt="">`;
+      dropArea.innerHTML= imgTag;
+
+    }
+    reader.readAsDataURL(file);
+  }else{
+    alert("Invalid");
+    dropArea.classList.remove("active");
+  }
+}
+
+
+
+
+
+
