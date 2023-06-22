@@ -343,3 +343,11 @@ function cancel(){
     i.innerHTML = "Text";
   } 
 }
+
+
+function addComment() {
+  var newComment = document.querySelector("#new-comment");
+  var content = document.createElement("p");
+  content.textContent = "aefrdsf a";
+  newComment.append(content);
+}

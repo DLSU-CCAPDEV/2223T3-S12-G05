@@ -112,19 +112,35 @@
                   </div>
 
                     <!--Comments-->
-                    <div class="comments">
-                      <hr>
-                      <div class="create_comment">
-                        <textarea id="comment-box" class="comment-box" rows="5" placeholder="Write comment here . . ."></textarea>
-                        <button type="submit" id="postComment">Comment</button>
+                    <div class="comments-box">
+                      <form class="create-comment" method="post">
+                        <textarea id="comment-box" class="comment-box" rows="3" placeholder="Write comment here . . ." required></textarea>
+                        <button type="submit" id="postComment" onclick="addComment()">Comment</button>
                       </div>
                       <hr>
-                      <div class="existing_comments">
-                        <div class="new_comment">
+                      <div class="existing-comments">
+                        <div class="comment" id="new-comment">
 
                         </div>
-                        <div class="old_comment">
-                          
+                        <div class="comment" id="old-comment1">
+                          <div class="comment-author-time">
+                            <h5 class="author-name">touchgra55</h5>
+                            <h6 class="time-submitted">• 1 day ago</h6>
+                          </div>
+                          <div class="true-comment">
+                            <p class="comment-divider">|</p>
+                            <p class="comment-content">whats "tsurune"</p>
+                          </div>
+                        </div>
+                        <div class="old-comment2">
+                          <div class="comment-author-time">
+                            <h5 class="author-name">decent_person</h5>
+                            <h6 class="time-submitted">• 5 minutes ago</h6>
+                          </div>
+                          <div class="true-comment">
+                            <p class="comment-divider">|</p>
+                            <p class="comment-content">OMG i was actually wanting to check it out for the longest time too! up on this!</p>
+                          </div>
                         </div>
                       </div>
                     </div>
