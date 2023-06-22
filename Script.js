@@ -31,53 +31,62 @@ $(document).foundation();
 
 function clickLike1() {
   let likebtn = document.getElementById("likebtn1");
-  likebtn.addEventListener('click', function() {
-    likebtn.style.color = "#1a340d"
+  let dislikebtn = document.getElementById("dislikebtn1");
+  let likenum = document.getElementById("like-num1");
+
+  likebtn.addEventListener('mousedown', function() {
+    if (likebtn.ariaPressed == false) {
+      likebtn.style.color = "#1a340d";
+      likenum.innerHTML = console.log(parseInt(likenum.innerHTML) + 1);
+      likebtn.ariaPressed = true;
+    } else if (likebtn.ariaPressed == true) {
+
+   }
   });
 }
 function clickDislike1() {
   let dislikebtn = document.getElementById("dislikebtn1");
   dislikebtn.addEventListener('click', function() {
-    dislikebtn.style.color = "red"
+    dislikebtn.style.color = "red";
   });
 }
 
 function clickLike2() {
   let likebtn = document.getElementById("likebtn2");
   likebtn.addEventListener('click', function() {
-    likebtn.style.color = "#1a340d"
+    likebtn.style.color = "#1a340d";
   });
 }
 function clickDislike2() {
   let dislikebtn = document.getElementById("dislikebtn2");
   dislikebtn.addEventListener('click', function() {
-    dislikebtn.style.color = "red"
+    dislikebtn.style.color = "red";
   });
 }
 
 function clickLike3() {
   let likebtn = document.getElementById("likebtn3");
   likebtn.addEventListener('click', function() {
-    likebtn.style.color = "#1a340d"
+    likebtn.style.color = "#1a340d";
   });
 }
 function clickDislike3() {
   let dislikebtn = document.getElementById("dislikebtn3");
   dislikebtn.addEventListener('click', function() {
-    dislikebtn.style.color = "red"
+    dislikebtn.style.color = "red";
   });
 }
 
 function clickLike4() {
   let likebtn = document.getElementById("likebtn4");
   likebtn.addEventListener('click', function() {
-    likebtn.style.color = "#1a340d"
+    likebtn.style.color = "#1a340d";
   });
 }
 function clickDislike4() {
   let dislikebtn = document.getElementById("dislikebtn4");
   dislikebtn.addEventListener('click', function() {
-    dislikebtn.style.color = "red"
+    dislikebtn.style.color = "red";
   });
 }
 
