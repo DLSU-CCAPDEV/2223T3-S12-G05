@@ -75,6 +75,8 @@
     transition: 0.4s ease-in-out;
 }
 
+
+
 @media (max-width: 768px) {
     .bg {
         background-image: none;
