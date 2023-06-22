@@ -110,7 +110,7 @@
 .like-button {
     color: var(--gray);
     size: 50px;
-    padding: 10px;
+    padding: 8px;
     margin-top: 5px;
     margin-left: 10px;
     margin-right: 10px;
@@ -127,7 +127,7 @@
 .dislike-button {
     color: var(--gray);
     size: 50px;
-    padding: 10px;
+    padding: 8px;
     margin-top: 5px;
     margin-left: 10px;
     margin-right: 10px;
