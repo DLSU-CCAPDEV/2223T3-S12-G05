@@ -190,4 +190,12 @@ function toImgUpload(){
 
 }
 
+function cancel(){
+  var i = document.getElementById("img");
 
+  if (i.innerHTML=="Text"){
+    i.innerHTML = "Image";
+  } else{
+    i.innerHTML = "Text";
+  } 
+}
