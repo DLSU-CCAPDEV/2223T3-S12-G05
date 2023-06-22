@@ -120,9 +120,6 @@
 .like-button:hover {
     color: var(--light-green);
 }
-.like-button:active {
-    color: var(--dark-green);
-}
 
 .dislike-button {
     color: var(--gray);
@@ -136,9 +133,6 @@
 }
 .dislike-button:hover {
     color: rgb(175, 98, 98);
-}
-.dislike-button:active {
-    color: red;
 }
 
 .comment-button {
