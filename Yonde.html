@@ -95,7 +95,7 @@
                   <!--The comment and like bar of every post-->
                   <div class="like-comment-bar">
                     <div>
-                      <button type="button" class="like-button" onclick="clickLike()">
+                      <button type="button" class="like-button" id="likebtn1" onclick="clickLike()" >
                         <i class="fa-solid fa-caret-up"></i>
                       </button>
                     </div>
@@ -103,7 +103,7 @@
                       <span>24</span>
                     </div>
                     <div>
-                      <button type="button" class="dislike-button" onclick="clickDislike()">
+                      <button type="button" class="dislike-button" id="dislikebtn1" onclick="clickDislike()" onblur="clickLike()">
                         <i class="fa-solid fa-caret-down"></i>
                       </button>
                     </div>
@@ -381,7 +381,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.js"></script>
 
-
+  <script src="Script.js"></script>
 </body>
 
 </html>

@@ -101,37 +101,51 @@
     justify-content: flex-start;
 }
 
-.like-comment-bar .like-num {
+.like-num {
     color: #1a340d;
     margin-top: 10px;
     align-content: flex-end;
 }
 
-.like-comment-bar .like-button {
+.like-button {
     color: var(--gray);
     size: 50px;
     padding: 10px;
     margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: var(--light-gray);
+    border-radius: 80%;
 }
-.like-comment-bar .like-button:hover {
+.like-button:hover {
     color: var(--light-green);
 }
+.like-button:active {
+    color: var(--dark-green);
+}
 
-.like-comment-bar .dislike-button {
+.dislike-button {
     color: var(--gray);
     size: 50px;
     padding: 10px;
     margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: var(--light-gray);
+    border-radius: 80%;
 }
-.like-comment-bar .dislike-button:hover {
+.dislike-button:hover {
     color: rgb(175, 98, 98);
 }
+.dislike-button:active {
+    color: red;
+}
 
-.like-comment-bar .comment-button {
+.comment-button {
     color: #1a340d;
     padding: 10px;
 }
-.like-comment-bar .comment-button:hover {
+.comment-button:hover {
     background-color: var(--gray);
 }
 
