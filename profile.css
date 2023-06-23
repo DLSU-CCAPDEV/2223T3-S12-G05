@@ -1,0 +1,145 @@
+@import url(https://fonts.google.com/noto/specimen/Noto+Sans+JP?preview.text=呼んで&preview.text_type=custom);
+@import url(https://fonts.google.com/specimen/Geologica?preview.text=Yonde&preview.size=52&preview.text_type=custom);
+
+:root {
+    --dark-green: #1a340d;
+    --light-green: #7a938c;
+    --light-gray: #f1f1f1;
+    --gray: #b8b8b8;
+    --dark-gray: #818181;
+    --main-font: 'Geologica', sans-serif;
+}
+
+.profile-banner-container {
+    width: 100%;
+    min-height: 125px;
+    max-height: 350px;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.profile-banner {
+    width: 100%;
+    min-height: 125px;
+    height: 350px;
+    object-fit: cover;
+    object-position: 20% 10%;
+}
+
+.profile-bar {
+    position: relative;
+    z-index: 2;
+    border-radius: 25px;
+    width: 90%;
+    height: auto;
+    top: -230px;
+    padding: 160px 30px 30px 30px;
+    background-color: white;
+    box-shadow: 0px 0px 30px 1px black;
+}
+
+.profile-head {
+    position: relative;
+    z-index: 3;
+    top: -135px;
+    width: 90%;
+    min-height: 75px;
+    max-height: 275px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: var(--main-font);
+    min-height: 200px;
+}
+
+.profile-icon {
+    max-width: 200px;
+    max-height: 200px;
+    min-width: 175px;
+    min-height: 175px;
+    width: 30%;
+    border: 5px solid white;
+    border-radius: 50%;
+    float: left;
+    box-shadow: 0px 0px 30px 1px #222222;
+    margin-left: 20px;
+    margin-right: 30px;
+}
+
+.profile-head-content {
+    margin-top: 20px;
+    margin-left: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.profile-head-top-content {
+    float: left;
+    margin-bottom: 10px;
+}
+
+.profile-username {
+    color: white;
+    font-size: 40pt;
+    font-weight: bold;
+    font-family: var(--main-font);
+    text-shadow: 0px 0px 15px black;
+}
+
+.profile-id {
+    color: var(--light-gray);
+    font-size: 20pt;
+    font-weight: 500;
+    vertical-align: text-bottom;
+    margin-left: 15px;
+}
+
+.profile-bottom {
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 100%;
+    min-height: 75px;
+    max-height: 275px;
+    font-family: var(--main-font);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.profile-bio-container {
+    font-family: var(--main-font);
+    font-size: 16pt;
+    color: #4a4a4a;
+}
+
+.profile-stats {
+    margin-right: 20px;
+    font-family: var(--main-font);
+    color: #4a4a4a;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: right;
+}
+
+.profile-join {
+    font-size: 16pt;
+    font-style: italic;
+}
+
+.profile-follow-stats {
+    font-size: 18pt;
+}
+
+.follow-num {
+    font-weight: bold;
+    color: #393939;
+    margin-left: 15px;
+}
+
+.profile-navbar {
+    padding-left: 40px;
+    padding-right: 40px;
+}
