@@ -250,14 +250,11 @@ function toggle2(){
   r.classList.toggle('active');
 }
 
-function toggle3(){
-  var f=document.getElementById('popup-forgot');
-  f.classList.toggle('active')
-}
-
 function createPostPage() {
   window.location.href = "createPostPage.html"
 }
+
+//upload photo
 
 const dropArea = document.querySelector(".drag-upload");
 dragText = dropArea.querySelector("header"),
