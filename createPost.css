@@ -75,6 +75,8 @@
     transition: 0.4s ease-in-out;
 }
 
+
+
 @media (max-width: 768px) {
     .bg {
         background-image: none;
@@ -120,3 +122,68 @@
     transition: 0.4s ease-in-out;
 }
 
+.drag-upload{
+    border: 2px dashed var(--dark-green);
+    height: 190px;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.drag-upload .cloud{
+    font-size: 50px;
+    color: var(--dark-green);
+}
+
+.drag-upload header{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dark-green);
+}
+
+.drag-upload span{
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--dark-green);
+    margin: 10px 0 15px 0;
+}
+
+.drag-upload button{
+    padding: 10px 25px;
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: var(--dark-green);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.drag-upload button:hover{
+    background-color: transparent;
+    color: var(--dark-green);
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--dark-green);
+    transition: 0.4s ease-in-out;
+}
+
+.drag-upload.active{
+    border: 2px solid var(--dark-green);
+}
+
+.drag-upload img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.tf{
+    width: 100%;
+    height: 190px;
+}

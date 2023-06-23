@@ -98,15 +98,15 @@
                   <!--The comment and like bar of every post-->
                   <div class="like-comment-bar">
                     <div>
-                      <button type="button" class="like-button" onclick="clickLike()">
+                      <button type="button" class="like-button" aria-pressed="false" id="likebtn1" onclick="clickLike1()">
                         <i class="fa-solid fa-caret-up"></i>
                       </button>
                     </div>
                     <div class="like-num">
-                      <span>24</span>
+                      <span id="like-num1">24</span>
                     </div>
                     <div>
-                      <button type="button" class="dislike-button" onclick="clickDislike()">
+                      <button type="button" class="dislike-button" aria-pressed="false" id="dislikebtn1" onmousedown="clickDislike1()">
                         <i class="fa-solid fa-caret-down"></i>
                       </button>
                     </div>
@@ -148,7 +148,7 @@
               <div class="row">
                 <div class="col">
                   <div class="post-title">
-                    <a href="Post.html" style="color: #1a340d;">
+                    <a href="Post2.html" style="color: #1a340d;">
                     give me ur top recommendations
                     </a>
                   </div>
@@ -158,21 +158,21 @@
                 <!--The comment and like bar of every post-->
                 <div class="like-comment-bar">
                   <div>
-                    <button type="button" class="like-button" onclick="clickLike()">
+                    <button type="button" class="like-button" aria-pressed="false" id="likebtn2" onmousedown="clickLike2()">
                       <i class="fa-solid fa-caret-up"></i>
                     </button>
                   </div>
                   <div class="like-num">
-                    <span>7</span>
+                    <span id="like-num2">7</span>
                   </div>
                   <div>
-                    <button type="button" class="dislike-button" onclick="clickDislike()">
+                    <button type="button" class="dislike-button" aria-pressed="false" id="dislikebtn2" onmousedown="clickDislike2()">
                       <i class="fa-solid fa-caret-down"></i>
                     </button>
                   </div>
                   <div class="comment-button">
                     <button type="button">
-                      <a href="Post.html" style="color: #1a340d">
+                      <a href="Post2.html" style="color: #1a340d">
                       <i class="fa-solid fa-message"></i>
                       <span class="comment-num">1</span>
                       <span> Comments </span>
@@ -207,7 +207,7 @@
               <div class="row">
                 <div class="col">
                   <div class="post-title">
-                    <a href="Post.html" style="color: #1a340d;">
+                    <a href="Post3.html" style="color: #1a340d;">
                     My thoughts on Blue Lock
                     </a>
                   </div>
@@ -228,21 +228,21 @@
                   <!--The comment and like bar of every post-->
                   <div class="like-comment-bar">
                     <div>
-                      <button type="button" class="like-button" onclick="clickLike()">
+                      <button type="button" class="like-button" aria-pressed="false" id="likebtn3" onmousedown="clickLike3()">
                         <i class="fa-solid fa-caret-up"></i>
                       </button>
                     </div>
                     <div class="like-num">
-                      <span>-11</span>
+                      <span id="like-num3">-11</span>
                     </div>
                     <div>
-                      <button type="button" class="dislike-button" onclick="clickDislike()">
+                      <button type="button" class="dislike-button" aria-pressed="false" id="dislikebtn3" onmousedown="clickDislike3()">
                         <i class="fa-solid fa-caret-down"></i>
                       </button>
                     </div>
                     <div class="comment-button">
                       <button type="button">
-                        <a href="Post.html" style="color: #1a340d">
+                        <a href="Post3.html" style="color: #1a340d">
                         <i class="fa-solid fa-message"></i>
                         <span class="comment-num">2</span>
                         <span> Comments </span>
@@ -250,6 +250,7 @@
                       </button>
                     </div>
                   </div>
+                  <!--End of Post-->
 
                 </div>
               </div>
@@ -278,7 +279,7 @@
               <div class="row">
                 <div class="col">
                   <div class="post-title">
-                    <a href="Post.html" style="color: #1a340d;">
+                    <a href="Post4.html" style="color: #1a340d;">
                     Hi! Can't decide on what to draw next so suggest what you'd like to see,
                     anw enjoy this for the meantime
                     </a>
@@ -289,21 +290,21 @@
                 <!--The comment and like bar of every post-->
                 <div class="like-comment-bar">
                   <div>
-                    <button type="button" class="like-button" onclick="clickLike()">
+                    <button type="button" class="like-button" aria-pressed="false" id="likebtn4" onmousedown="clickLike4()">
                       <i class="fa-solid fa-caret-up"></i>
                     </button>
                   </div>
                   <div class="like-num">
-                    <span>0</span>
+                    <span id="like-num4">0</span>
                   </div>
                   <div>
-                    <button type="button" class="dislike-button" onclick="clickDislike()">
+                    <button type="button" class="dislike-button" aria-pressed="false" id="dislikebtn4" onmousedown="clickDislike4()">
                       <i class="fa-solid fa-caret-down"></i>
                     </button>
                   </div>
                   <div class="comment-button">
                     <button type="button">
-                      <a href="Post.html" style="color: #1a340d">
+                      <a href="Post4.html" style="color: #1a340d">
                       <i class="fa-solid fa-message"></i>
                       <span class="comment-num">0</span>
                       <span> Comments </span>
@@ -311,6 +312,7 @@
                     </button>
                   </div>
                 </div>
+                <!--End of Post-->
 
               </div>
             </div>
@@ -384,7 +386,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.js"></script>
 
-
+  <script src="Script.js"></script>
 </body>
 
 </html>
