@@ -89,9 +89,10 @@
 }
 
 .profile-id {
-    color: var(--light-gray);
+    color: white;
     font-size: 20pt;
     font-weight: 500;
+    opacity: 80%;
     vertical-align: text-bottom;
     margin-left: 15px;
 }
@@ -139,7 +140,33 @@
     margin-left: 15px;
 }
 
-.profile-navbar {
+.profile-nav {
     padding-left: 40px;
     padding-right: 40px;
+}
+
+.profile-navbar {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.profile-nav-item {
+    color: var(--dark-green);
+    font-size: 14pt;
+}
+
+.pf-nav-active {
+    background-color: var(--dark-green);
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.pf-nav-item-active {
+    color: white;
+}
+
+.pf-nav-item-active:hover {
+    background-color: white;
+    color: var(--dark-green);
 }
