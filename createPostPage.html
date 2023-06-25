@@ -58,7 +58,7 @@
                 <div class="postBox">
                     Create Post
                     <div class="line"></div>
-                    <input type="text" placeholder="Title" style="font-weight: 200;">
+                    <input id="post-title" type="text" placeholder="Title" style="font-weight: 200;">
                     
                     <div class="tf" id="text-area-container">
                         <textarea id="text-box" class="text-box" placeholder="Text" id="text-field"></textarea>
@@ -70,69 +70,69 @@
                         <span>OR</span>
                 
                         <button>Browse File</button>
-                        <input type="file" hidden>
+                        <input id="img-post" type="file" hidden>
                    </div>
 
                     <button type="button" class="imageButton" id="img" href="#" onclick="toImgUpload(); cancel();" >
                     Image
                     </button>
 
-                    <button type="button" class="postButton">Post</button> 
+                    <button type="submit" class="postButton">Post</button> 
                 </div>
             </div>
         </div>
     </div>
     <!--Login popup-->
-  <div id="popup_login">
+    <div id="popup_login">
 
-    <div class="popup">
+        <div class="popup">
 
-      <div class="close" href="#" onclick="toggle()">&times;</div>
+            <div class="close" href="#" onclick="toggle()">&times;</div>
 
-      <div class="login-form">
-        <h1>Welcome back</h1>
-        <div class="elements">
-          <label for="username">Username</label>
-          <input type="text" id="username" placeholder="Enter your username">
-          
-          <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Enter password">
-          
-          <div class="check">
-            <input type="checkbox" id="remember">
-            <label for="remember">Remember for 3 weeks</label>
-          </div>
+                <div class="login-form">
+                    <h1>Welcome back</h1>
+                    <div class="elements">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Enter your username">
+            
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter password">
+            
+                        <div class="check">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember for 3 weeks</label>
+                        </div>
 
-          <button id="submit">Login</button>
+                        <button id="submit">Login</button>
 
-          <p class="signup">Don't have an account? <a href="#" onclick="toggle2()" class="signup" id="link">Sign Up</a></p>
+                        <p class="signup">Don't have an account? <a href="#" onclick="toggle2()" class="signup" id="link">Sign Up</a></p>
+                 </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <!--Register popup-->
-    <div class="register" id="popup-reg">
-      <div class="close" href="#" onclick="toggle2()">&times;</div>
+        <!--Register popup-->
+        <div class="register" id="popup-reg">
+            <div class="close" href="#" onclick="toggle2()">&times;</div>
 
-      <div class="reg-form">
-        <h1>Sign Up</h1>
+            <div class="reg-form">
+                <h1>Sign Up</h1>
 
-        <div class="elements">
-          <label for="email">E-mail Address</label>
-          <input type="text" id="email" placeholder="Enter your e-mail address">
+                <div class="elements">
+                    <label for="email">E-mail Address</label>
+                    <input type="text" id="email" placeholder="Enter your e-mail address">
 
-          <label for="username">Username</label>
-          <input type="text" id="username" placeholder="Enter your username">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username">
           
-          <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Enter password">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter password">
 
-          <button id="submit">Register</button>
+                    <button id="submit">Register</button>
 
-          <p class="login">Already have an account? <a class="login" id="link" href="#" onclick="toggle2()"> Log In</a></p>
+                    <p class="login">Already have an account? <a class="login" id="link" href="#" onclick="toggle2()"> Log In</a></p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
   </div>
    
 
