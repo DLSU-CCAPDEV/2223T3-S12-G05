@@ -166,6 +166,9 @@
     padding-right: 25px;
     padding-left: 25px;
 }
+.existing-comments {
+    margin-top: 15px;
+}
 
 .fa-sort-up, .fa-sort-down {
     color: var(--gray);
