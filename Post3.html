@@ -58,6 +58,22 @@
       <!--Post-->
       <div class="grid-x align-center">
         <div class="cell medium-8">
+          <!--like column of every post-->
+          <div class="like-column">
+            <div>
+              <button type="button" class="like-button" aria-pressed="false" id="likebtn3" onmousedown="clickLike3()">
+                <i class="fa-solid fa-caret-up"></i>
+              </button>
+            </div>
+            <div class="like-num">
+              <span id="like-num3">-11</span>
+            </div>
+            <div>
+              <button type="button" class="dislike-button" aria-pressed="false" id="dislikebtn3" onmousedown="clickDislike3()">
+                <i class="fa-solid fa-caret-down"></i>
+              </button>
+            </div>
+          </div>
           <div class="blog-post">
             <div class="d-flex justify-content-between align-items-center">
               <div class="d-flex align-items-center">
@@ -65,9 +81,7 @@
                 <span class="avatar-name">Posted by userNotCry&nbsp;1 hour ago</span>
               </div>
 
-              <button type="button">
-                <i class="bi-pencil-square"></i>
-              </button>
+              <!--Edit post button goes here-->
 
             </div>
 
@@ -92,9 +106,10 @@
                     <br>&bull; The story and animation is pretty good.
                     <br>&bull; The anime is superior to the manga. (I have never read manga in my life)
                   </div>
+                </div>
 
-                  <!--The comment and like bar of every post-->
-                  <div class="like-comment-bar">
+                  <!--The comment bar of every post-->
+                  <div class="comment-bar">
                     <div>
                       <button type="button" class="like-button" aria-pressed="false" id="likebtn3" onmousedown="clickLike3()">
                         <i class="fa-solid fa-caret-up"></i>
@@ -118,59 +133,62 @@
                       </button>
                     </div>
                   </div>
-
-                    <!--Comments-->
-                    <div class="comments-box">
-                      <form class="create-comment" method="post">
-                        <textarea id="comment-box" class="comment-box" rows="3" placeholder="Write comment here . . ." required></textarea>
-                        <button type="submit" id="postComment" onclick="addComment()">Comment</button>
-                      </div>
-                      <hr>
-                      <div class="existing-comments">
-                        <div class="comment" id="new-comment">
-
-                        </div>
-                        <div class="comment" id="old-comment1">
-                          <div class="comment-author-time">
-                            <h5 class="author-name">ComSci_talker</h5>
-                            <h6 class="time-submitted">• 15 minutes ago</h6>
-                          </div>
-                          <div class="true-comment">
-                            <p class="comment-divider">|</p>
-                            <p class="comment-content">
-                              Now, this might be the most arguable statement I've heard in my lifetime!
-                              While I am also an avid fan of "BlueLock" because of its innovative story in terms
-                              of breaking the mold on sports anime, your points and arguments cannot be any less objective.
-                              More than thaa, you failed to even mention other sports anime other than Haikyuu. I do agree 
-                              that the volleyball anime does not drive interest through action like other Japanese animations, 
-                              but that does not mean that you could compare the anime's main protagonist to Goku, a completely non-related
-                              anime character, and get away with it!
-                            </p>
-                          </div>
-                        </div>
-                        <div class="comment" id="old-comment2">
-                          <div class="comment-author-time">
-                            <h5 class="author-name">xQcCow</h5>
-                            <h6 class="time-submitted">• 5 minutes ago</h6>
-                          </div>
-                          <div class="true-comment">
-                            <p class="comment-divider">|</p>
-                            <p class="comment-content">
-                              you uhhhh bad
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </div>
+
+        <!--Comments-->
+        <div class="comments-box">
+          <form class="create-comment" method="post">
+            <textarea id="comment-box" class="comment-box" rows="3" placeholder="Write comment here . . ." required></textarea>
+            <button type="submit" id="postComment" onclick="addComment()">Comment</button>
+          </form>
+
+          <div class="existing-comments">
+            <div class="comment" id="new-comment">
+
+            </div>
+            <div class="comment" id="old-comment1">
+              <div class="comment-author-time">
+                <h5 class="author-name">ComSci_talker</h5>
+                <h6 class="time-submitted">• 15 minutes ago</h6>
+              </div>
+              <div class="true-comment">
+                <p class="comment-divider">|</p>
+                <p class="comment-content">
+                  Now, this might be the most arguable statement I've heard in my lifetime!
+                  While I am also an avid fan of "BlueLock" because of its innovative story in terms
+                  of breaking the mold on sports anime, your points and arguments cannot be any less objective.
+                  More than thaa, you failed to even mention other sports anime other than Haikyuu. I do agree 
+                  that the volleyball anime does not drive interest through action like other Japanese animations, 
+                  but that does not mean that you could compare the anime's main protagonist to Goku, a completely non-related
+                  anime character, and get away with it!
+                </p>
+              </div>
+            </div>
+            <div class="comment" id="old-comment2">
+              <div class="comment-author-time">
+                <h5 class="author-name">xQcCow</h5>
+                <h6 class="time-submitted">• 5 minutes ago</h6>
+              </div>
+              <div class="true-comment">
+                <p class="comment-divider">|</p>
+                <p class="comment-content">
+                  you uhhhh bad
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <!--Login popup-->
+        <!--End of comments box-->
+
+      </div>
+
+        </div>
+      </div>
+          
+    <!--Login popup-->
     <div id="popup_login">
 
       <div class="popup">
@@ -221,8 +239,7 @@
               </div>
           </div>
       </div>
-</div>
-      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
       integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
