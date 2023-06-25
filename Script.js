@@ -348,3 +348,18 @@ function addComment() {
   content.textContent = "aefrdsf a";
   newComment.append(content);
 }
+
+//append posts
+$(document).ready(function(){
+  $('.postBox').submit(function(event){
+    event.preventDefault();
+
+    var title = $('#post-title').val();
+    var text = $('#text-box').val();
+    var image = $('#img-post')[0].files[0];
+
+    $('#text-box').val('');
+    $('#img-post').val('');
+    $('#post-title').val('');
+  });
+});
