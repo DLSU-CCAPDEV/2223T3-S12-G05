@@ -154,22 +154,6 @@
     background-color: var(--gray);
 }
 
-.comments-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    font-weight: 300;
-    background-color: white;
-    width: 85%;
-    margin-bottom: 10px;
-    padding: 13px;
-    padding-right: 25px;
-    padding-left: 25px;
-}
-.existing-comments {
-    margin-top: 15px;
-}
-
 .fa-sort-up, .fa-sort-down {
     color: var(--gray);
     font-size: 40px;

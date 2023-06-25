@@ -126,23 +126,31 @@
         </div>
 
         <!--Comments-->
-        <div class="comments-box">
+        <div class="all-comment-box">
           <form class="create-comment" method="post">
             <textarea id="comment-box" class="comment-box" rows="3" placeholder="Write comment here . . ." required></textarea>
-            <button type="submit" id="postComment" onclick="addComment()">Comment</button>
+            <!--might be changed to "submit" type later-->
+            <button type="button" id="postComment" onclick="addComment()">Comment</button> 
           </form>
 
           <div class="existing-comments">
             <div class="comment" id="new-comment">
-
+              <div class="comment-author-time">
+                <h5 class="author-name"></h5>
+                <h6 class="time-submitted"></h6>
+              </div>
+              <div class="true-comment">
+                <p class="comment-content">
+                </p>
+              </div>
             </div>
+            
             <div class="comment" id="old-comment1">
               <div class="comment-author-time">
                 <h5 class="author-name">ComSci_talker</h5>
                 <h6 class="time-submitted">• 15 minutes ago</h6>
               </div>
               <div class="true-comment">
-                <p class="comment-divider">|</p>
                 <p class="comment-content">
                   Now, this might be the most arguable statement I've heard in my lifetime!
                   While I am also an avid fan of "BlueLock" because of its innovative story in terms
@@ -160,7 +168,6 @@
                 <h6 class="time-submitted">• 5 minutes ago</h6>
               </div>
               <div class="true-comment">
-                <p class="comment-divider">|</p>
                 <p class="comment-content">
                   you uhhhh bad
                 </p>

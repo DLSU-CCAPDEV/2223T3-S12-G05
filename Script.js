@@ -234,6 +234,54 @@ function clickDislike4() {
   }
 }
 
+const new_comments_num = 0;
+function addComment() {
+  /*
+  var comments = document.querySelector(".existing-comments");
+  var new_comment = document.createElement("div");
+  new_comment.className = "comment"; 
+  new_comment.id = "new-comment1";
+  new_comments_num += 1;
+
+  var authortimeDiv = document.createElement("div");
+  authortimeDiv.className = "comment-author-time";
+
+  var author_name = document.createElement("h5");
+  author_name.className = "author-name";
+  author_name.innerHTML = "mbc21";
+
+  var time = document.createElement("h6");
+  time.className = "time-submitted";
+  time.innerHTML = "• Just now";
+
+  var true_comment = document.createElement("div");
+  true_comment.className = "true-comment";
+  var content = document.createElement("p");
+  content.className = "comment-content";
+  
+  var user_comment = document.getElementById("comment-box").value;
+  content.innerHTML = user_comment;
+  
+  authortimeDiv.appendChild(author_name);
+  authortimeDiv.appendChild(time);
+  true_comment.appendChild(content);
+  new_comment.appendChild(authortimeDiv);
+  new_comment.appendChild(true_comment);
+  comments.prepend(new_comment);
+  */
+  var author_name = document.querySelector("#new-comment .author-name");
+  author_name.innerHTML = "mbc21";
+
+  var time = document.querySelector("#new-comment .comment-content");
+  time.innerHTML = "• Just now";
+
+  var user_comment = document.querySelector("#new-comment .comment-content");
+  user_comment.innerHTML = document.getElementById("comment-box").value;
+
+  var comment_num = document.querySelector(".comment-bar .comment-num");
+  comment_num.innerHTML = parseInt(comment_num.innerHTML) + 1; 
+}
+
 function toggle(){
   var blur=document.getElementById('blur');
   blur.classList.toggle('active');
@@ -339,12 +387,4 @@ function cancel(){
   } else{
     i.innerHTML = "Text";
   } 
-}
-
-
-function addComment() {
-  var newComment = document.querySelector("#new-comment");
-  var content = document.createElement("p");
-  content.textContent = "aefrdsf a";
-  newComment.append(content);
 }

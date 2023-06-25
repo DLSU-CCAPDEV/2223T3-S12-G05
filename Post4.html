@@ -115,16 +115,25 @@
         </div>
   
         <!--Comments-->
-        <div class="comments-box">
+        <div class="all-comment-box">
           <form class="create-comment" method="post">
             <textarea id="comment-box" class="comment-box" rows="3" placeholder="Write comment here . . ." required></textarea>
-            <button type="submit" id="postComment" onclick="addComment()">Comment</button>
+            <!--might be changed to "submit" type later-->
+            <button type="button" id="postComment" onclick="addComment()">Comment</button> 
           </form>
 
           <div class="existing-comments">
             <div class="comment" id="new-comment">
-
+              <div class="comment-author-time">
+                <h5 class="author-name"></h5>
+                <h6 class="time-submitted"></h6>
+              </div>
+              <div class="true-comment">
+                <p class="comment-content">
+                </p>
+              </div>
             </div>
+            
           </div>
         </div>
         <!--End of comments box-->
