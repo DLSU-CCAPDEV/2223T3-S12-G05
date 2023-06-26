@@ -524,6 +524,7 @@
     visibility: visible;
     opacity: 1;
     transform: 0s;
+    position: fixed;
 }
 
 #popup-reg.active{
