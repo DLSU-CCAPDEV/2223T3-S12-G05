@@ -260,23 +260,23 @@ function addComment() {
   /*
   var comments = document.querySelector(".existing-comments");
   var new_comment = document.createElement("div");
-  new_comment.className = "comment"; 
+  new_comment.classList.add("comment"); 
   new_comment.id = "new-comment1";
   new_comments_num += 1;
 
   var authortimeDiv = document.createElement("div");
-  authortimeDiv.className = "comment-author-time";
+  authortimeDiv.classList.add("comment-author-time");
 
   var author_name = document.createElement("h5");
-  author_name.className = "author-name";
+  author_name.classList.add("author-name");
   author_name.innerHTML = "mbc21";
 
   var time = document.createElement("h6");
-  time.className = "time-submitted";
+  time.classList.add("time-submitted");
   time.innerHTML = "• Just now";
 
   var true_comment = document.createElement("div");
-  true_comment.className = "true-comment";
+  true_comment.classList.add("true-comment");
   var content = document.createElement("p");
   content.className = "comment-content";
   
@@ -290,15 +290,16 @@ function addComment() {
   new_comment.appendChild(true_comment);
   comments.prepend(new_comment);
   */
-  var author_name = document.querySelector("#new-comment .author-name");
+  var author_name = document.querySelector(".comment-author-time .author-name");
   author_name.innerHTML = "mbc21";
 
-  var time = document.querySelector("#new-comment .comment-content");
+  var time = document.querySelector(".comment-author-time .time-submitted");
   time.innerHTML = "• Just now";
 
-  var user_comment = document.querySelector("#new-comment .comment-content");
-  user_comment.innerHTML = document.getElementById("comment-box").value;
-
+  var content = document.querySelector("#new-comment .comment-content");
+  var user_input = document.getElementById("comment-box").value;
+  content.innerHTML = user_input;
+  
   var comment_num = document.querySelector(".comment-bar .comment-num");
   comment_num.innerHTML = parseInt(comment_num.innerHTML) + 1; 
 }
