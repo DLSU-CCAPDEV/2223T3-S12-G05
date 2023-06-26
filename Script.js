@@ -282,6 +282,17 @@ function addComment() {
   comment_num.innerHTML = parseInt(comment_num.innerHTML) + 1; 
 }
 
+function editPostPopup(){
+  var blur = document.getElementById('blur');
+  blur.classList.toggle('active');
+
+  var blur2 = document.getElementById('blur2')
+  blur2.classList.toggle('active');
+
+  var p = document.getElementById('popup_editPost');
+  p.classList.toggle('active');
+}
+
 function toggle(){
   var blur=document.getElementById('blur');
   blur.classList.toggle('active');
