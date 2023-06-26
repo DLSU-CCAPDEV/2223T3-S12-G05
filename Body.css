@@ -191,22 +191,18 @@
 }
 
 #popup_editPost{
-    position:absolute;
+    position:fixed;
+    margin-top: 20px;
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1.25);
-    width: 750px;
+    width: 950px;
     padding: 20px 30px;
     background: white;
     box-shadow: 2px 2px 5px 5px var(--dark-green);
     border-radius: 5px;
     opacity: 0;
     visibility: hidden;
-}
-.editPost-form .elements{
-    margin: 15px 0px;
-    font-family: var(--main-font);
-    font-size: 14px;
 }
 #popup_editPost.active{
     top: 50%;
@@ -215,8 +211,83 @@
     transform: 0s;
 }
 
+.editPost-form .elements{
+    margin: 15px 0px;
+    font-family: var(--main-font);
+    font-size: 14px;
+}
+
+.editPost-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#popup_editPost #deletePostBtn {
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: var(--dark-green);
+    color: white;
+    font-weight: bold;
+    width: 1.2in;
+    height: 0.8cm;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 15px;
+}
+#popup_editPost #cancelPostBtn{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: var(--dark-green);
+    color: white;
+    font-weight: bold;
+    width: 1.2in;
+    height: 0.8cm;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 15px;
+}
+#popup_editPost #editPostBtn{
+    display: flex;
+    margin-left: 5px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: var(--dark-green);
+    color: white;
+    font-weight: bold;
+    width: 1.2in;
+    height: 0.8cm;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 15px;
+}
+
+#popup_editPost #cancelPostBtn:hover,
+#popup_editPost #editPostBtn:hover,
+#popup_editPost #deletePostBtn:hover {
+    background-color: transparent;
+    color: var(--dark-green);
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--dark-green);
+    transition: 0.4s ease-in-out;
+}
+
+.editPost-form #editTitle-box,
+.editPost-form #editBody-box {
+    resize: none;
+    overflow-y: auto;
+    white-space: pre-wrap;
+}
+
 #popup-reg{
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1.25);
@@ -233,7 +304,7 @@
 }
 
 #popup_login{
-    position:absolute;
+    position:fixed;
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1.25);

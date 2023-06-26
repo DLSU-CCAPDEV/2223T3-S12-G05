@@ -306,13 +306,12 @@ function addComment() {
 function editPostPopup() {
   var blur = document.getElementById('blur');
   blur.classList.toggle('active');
-
   var blur2 = document.getElementById('blur2')
   blur2.classList.toggle('active');
-
   var p = document.getElementById('popup_editPost');
   p.classList.toggle('active');
 }
+
 
 function toggle() {
   var blur = document.getElementById('blur');
@@ -334,6 +333,9 @@ function createPostPage() {
   window.location.href = "createPostPage.html"
 }
 
+function backHome() {
+  window.location.href = "Yonde.html"
+}
 //upload photo
 
 const dropArea = document.querySelector(".drag-upload");
@@ -411,12 +413,61 @@ function toImgUpload() {
 
 }
 
-function cancel() {
+function cancel(){
   var i = document.getElementById("img");
 
-  if (i.innerHTML == "Text") {
+  if (i.innerHTML=="Text"){
     i.innerHTML = "Image";
-  } else {
+  } else{
     i.innerHTML = "Text";
-  }
+  } 
+}
+
+function addpost() {
+
+  var getTitle = $("#post-text").val();
+  /*
+  var comments = document.querySelector(".existing-comments");
+  var new_comment = document.createElement("div");
+  new_comment.className = "comment"; 
+  new_comment.id = "new-comment1";
+  new_comments_num += 1;
+
+  var authortimeDiv = document.createElement("div");
+  authortimeDiv.className = "comment-author-time";
+
+  var author_name = document.createElement("h5");
+  author_name.className = "author-name";
+  author_name.innerHTML = "mbc21";
+
+  var time = document.createElement("h6");
+  time.className = "time-submitted";
+  time.innerHTML = "• Just now";
+
+  var true_comment = document.createElement("div");
+  true_comment.className = "true-comment";
+  var content = document.createElement("p");
+  content.className = "comment-content";
+  
+  var user_comment = document.getElementById("comment-box").value;
+  content.innerHTML = user_comment;
+  
+  authortimeDiv.appendChild(author_name);
+  authortimeDiv.appendChild(time);
+  true_comment.appendChild(content);
+  new_comment.appendChild(authortimeDiv);
+  new_comment.appendChild(true_comment);
+  comments.prepend(new_comment);
+  */
+  var name = document.querySelector(".avatar-name");
+  name.innerHTML = "mbc21";
+
+  var title = document.querySelector("#entered-title");
+  time.innerHTML = getTitle;
+
+  var user_comment = document.querySelector("#new-comment .comment-content");
+  user_comment.innerHTML = document.getElementById("comment-box").value;
+
+  var comment_num = document.querySelector(".comment-bar .comment-num");
+  comment_num.innerHTML = parseInt(comment_num.innerHTML) + 1; 
 }
