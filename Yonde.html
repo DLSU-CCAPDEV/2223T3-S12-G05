@@ -54,7 +54,7 @@
   </nav>
 
   <div class="bg" id="blur2">
-    <div class="grid-container">
+    <div class="grid-container" id="cont">
 
       <div class="grid-x align-center">
         <button class="create-button" type="button" onclick="createPostPage()">
@@ -317,6 +317,72 @@
                     </button>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="grid-x align-center">
+        <div class="cell medium-8">
+          <!--like column of every post-->
+          <div class="like-column">
+            <div>
+              <button type="button" class="like-button" aria-pressed="false" id="likebtn1" onclick="clickLike1()">
+                <i class="fa-solid fa-caret-up"></i>
+              </button>
+            </div>
+            <div class="like-num">
+              <span id="like-num1">24</span>
+            </div>
+            <div>
+              <button type="button" class="dislike-button" aria-pressed="false" id="dislikebtn1" onmousedown="clickDislike1()">
+                <i class="fa-solid fa-caret-down"></i>
+              </button>
+            </div>
+          </div>
+          <div class="blog-post" style="width: max-content;">
+            <a href="new post.html"></a>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="mbc21.html">
+                <div class="d-flex align-items-center">
+                  <img class="avatar-image" src="PFPs and Posts/pfp1.png" id="pfp1">
+                  <span class="avatar-name">Posted just now</span>
+                </div>
+              </a>
+
+              <button type="button">
+                <i class="bi-pencil-square" href="#" onclick="editPostPopup()"></i>
+              </button>
+
+            </div>
+
+            <div class="d-flex flex-column">
+              <div class="row">
+                <div class="col">
+                  <div class="post-title">
+                    <a href="new post.html" style="color: #1a340d;" id="entered-title">
+                    </a>
+                  </div>
+                  <div class="post-text">
+                    I've been wanting to watch it for a long time but haven't gotten to it yet, so
+                    can you tell me if it's good lol i want something to look forward to :>
+                  </div>
+                </div>
+
+                  <!--The comment and like bar of every post-->
+                  <div class="comment-bar">
+                    <div class="comment-button">
+                      <button type="button">
+                        <a href="Post.html" style="color: #1a340d">
+                        <i class="fa-solid fa-message"></i>
+                        <span class="comment-num">2</span>
+                        <span> Comments </span>
+                        </a>
+                      </button>
+                    </div>
+                  </div>
               </div>
             </div>
           </div>
