@@ -29,20 +29,27 @@ $(window).on("scroll", function() {
 
 $(document).foundation();
 
-function search_title() {
-  let input = document.getElementsByClassName('searchbar').value
-  input = input.toLowerCase();
-  let x = document.getElementsByClassName('post-title');
+function handleSearch(event) {
+  if (event.key === 'Enter') {
+    const searchInput = document.getElementById('searchBar');
+    const searchTerm = searchInput.value.toLowerCase();
 
-  for (i = 0; i < x.length; i++) { 
-    if (!x[i].innerHTML.toLowerCase().includes(input)) {
-        x[i].style.display="none";
-    }
-    else {
-        x[i].style.display="list-item";                 
+    const postContainers = document.getElementsByClassName('grid-x align-center');
+
+    for (let i = 0; i < postContainers.length; i++) {
+      const postContainer = postContainers[i];
+      const postTitle = postContainer.querySelector('.post-title a');
+
+      if (postTitle && postTitle.innerText.toLowerCase().includes(searchTerm)) {
+        const postURL = postTitle.getAttribute('href');
+        window.open(postURL, '_blank');
+      }
     }
   }
 }
+
+const searchInput = document.getElementById('searchBar');
+searchInput.addEventListener('keydown', handleSearch);
 
 function clickLike1() {
   let likebtn = document.getElementById("likebtn1");
