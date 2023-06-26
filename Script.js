@@ -359,10 +359,11 @@ function addComment() {
 function editPostPopup() {
   var blur = document.getElementById('blur');
   blur.classList.toggle('active');
-  var blur2 = document.getElementById('blur2')
+  var blur2 = document.getElementById('blur2');
   blur2.classList.toggle('active');
-  var p = document.getElementById('popup_editPost');
-  p.classList.toggle('active');
+
+  var ep = document.getElementById('popup_editPost');
+  ep.classList.toggle('active');
 }
 
 
