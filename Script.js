@@ -41,6 +41,17 @@ function filterPosts() {
     const postTitle = postContainer.querySelector('.post-title a').textContent.toLowerCase();
 
     if (postTitle.includes(searchValue)) {
+      postContainer.classList.add('matched-post');
+    } else {
+      postContainer.classList.remove('matched-post');
+    }
+  }
+  
+  // Hide post containers that do not match the search criteria
+  for (let i = 0; i < postContainers.length; i++) {
+    const postContainer = postContainers[i];
+    
+    if (postContainer.classList.contains('matched-post')) {
       postContainer.style.display = 'block';
     } else {
       postContainer.style.display = 'none';
