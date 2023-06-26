@@ -476,14 +476,3 @@ function cancel(){
     i.innerHTML = "Text";
   } 
 }
-$(document).ready(function(){
-  $('.postButton').click(function(){
-    var title = $("post-title").val();
-
-    var home = window.open('Yonde.html', '_blank');
-
-    $(home).on('load', function(){
-      $(".post-title").append("<div>" + title + "</div>");
-    });
-  });
-});
