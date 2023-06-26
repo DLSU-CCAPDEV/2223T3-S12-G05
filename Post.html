@@ -85,7 +85,7 @@
               </a>
 
               <button type="button">
-                <i class="bi-pencil-square"></i>
+                <i class="bi-pencil-square" href="#" onclick="editPostPopup()"></i>
               </button>
 
             </div>
@@ -172,6 +172,31 @@
 
         </div>
       </div>
+
+    <!--Edit Post popup-->
+    <div id="popup_editPost">
+
+      <div class="popup">
+
+        <div class="close" href="#" onclick="editPostPopup()">&times;</div>
+
+        <div class="editPost-form">
+          <h1>Edit Post</h1>
+          <div class="elements">
+            <label for="editTitle-box">Title:</label>
+            <textarea id="editTitle-box" class="editPost-box" rows="1" placeholder="Change Title" required></textarea>
+            <label for="editBody-box">Body:</label>
+            <textarea id="editBody-box" class="editPost-box" rows="6" placeholder="Change Post" required></textarea>
+
+            <div class="editPost-buttons">
+              <button id="deletePostBtn" onclick="deletePost()">Delete</button>
+              <button id="cancelPostBtn" href="#" onclick="editPostPopup()">Cancel</button>
+              <button id="editPostBtn" onclick="editPost()">Edit Post</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!--Login popup-->
     <div id="popup_login">
