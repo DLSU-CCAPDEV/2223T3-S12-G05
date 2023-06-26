@@ -359,10 +359,11 @@ function addComment() {
 function editPostPopup() {
   var blur = document.getElementById('blur');
   blur.classList.toggle('active');
-  var blur2 = document.getElementById('blur2')
+  var blur2 = document.getElementById('blur2');
   blur2.classList.toggle('active');
-  var p = document.getElementById('popup_editPost');
-  p.classList.toggle('active');
+
+  var ep = document.getElementById('popup_editPost');
+  ep.classList.toggle('active');
 }
 
 
@@ -475,14 +476,3 @@ function cancel(){
     i.innerHTML = "Text";
   } 
 }
-$(document).ready(function(){
-  $('.postButton').click(function(){
-    var title = $("post-title").val();
-
-    var home = window.open('Yonde.html', '_blank');
-
-    $(home).on('load', function(){
-      $(".post-title").append("<div>" + title + "</div>");
-    });
-  });
-});
