@@ -62,7 +62,7 @@
     font-size: 15px;
 }
 
-#postComment:hover {
+#postCommentBtn:hover {
     background-color: transparent;
     color: var(--dark-green);
     border-style: solid;

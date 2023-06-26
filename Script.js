@@ -263,7 +263,7 @@ function clickDislike4() {
 const new_comments_num = 0;
 function addComment() {
   /*
-  var comments = document.querySelector(".existing-comments");
+  var comments = document.querySelector(".all-commentbox .existing-comments");
   var new_comment = document.createElement("div");
   new_comment.classList.add("comment"); 
   new_comment.id = "new-comment1";
@@ -283,7 +283,7 @@ function addComment() {
   var true_comment = document.createElement("div");
   true_comment.classList.add("true-comment");
   var content = document.createElement("p");
-  content.className = "comment-content";
+  content.classList.add("comment-content");
   
   var user_comment = document.getElementById("comment-box").value;
   content.innerHTML = user_comment;
