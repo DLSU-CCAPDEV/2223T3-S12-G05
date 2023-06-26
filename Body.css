@@ -192,11 +192,11 @@
 
 #popup_editPost{
     position:fixed;
-    margin-top: 30px;
+    margin-top: 20px;
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1.25);
-    width: 750px;
+    width: 950px;
     padding: 20px 30px;
     background: white;
     box-shadow: 2px 2px 5px 5px var(--dark-green);
