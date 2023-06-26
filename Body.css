@@ -520,6 +520,7 @@
 }
 
 #popup_login.active{
+    position: fixed;
     top: 50%;
     visibility: visible;
     opacity: 1;
@@ -527,6 +528,7 @@
 }
 
 #popup-reg.active{
+    position: fixed;
     top: 50%;
     visibility: visible;
     opacity: 1;
