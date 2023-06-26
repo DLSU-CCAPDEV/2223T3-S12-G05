@@ -39,7 +39,7 @@
     <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
       <form class="form-inline my-lg-0 me-4 justify-content-start justify-content-lg-end">
         <i class="fas fa-search"></i>
-        <input class="form-control mr-sm-2" id="searchBar" onsubmit="event.preventDefault()" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Search" aria-label="Search">
       </form>
 
       <ul class="navbar-nav d-flex justify-content-between">
@@ -64,7 +64,7 @@
       </div>
 
       <!--Post-->
-      <div id="postContainer" class="grid-x align-center">
+      <div class="grid-x align-center">
         <div class="cell medium-8">
           <!--like column of every post-->
           <div class="like-column">
@@ -132,7 +132,7 @@
       </div>
 
       <!--Post-->
-      <div id="postContainer" class="grid-x align-center">
+      <div class="grid-x align-center">
         <div class="cell medium-8">
           <!--like column of every post-->
           <div class="like-column">
@@ -330,9 +330,10 @@
   <div id="popup_editPost">
 
     <div class="popup">
+
       <div class="close" href="#" onclick="editPostPopup()">&times;</div>
 
-      <div class="editPost-form">
+      <div class="login-form">
         <h1>Edit Post</h1>
         <div class="elements">
           <label for="editPost-box"></label>

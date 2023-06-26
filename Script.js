@@ -29,27 +29,33 @@ $(window).on("scroll", function() {
 
 $(document).foundation();
 
-function handleSearch(event) {
-  if (event.key === 'Enter') {
-    const searchInput = document.getElementById('searchBar');
-    const searchTerm = searchInput.value.toLowerCase();
+// Get the search input element
+const searchInput = document.getElementById('searchInput');
 
-    const postContainers = document.getElementsByClassName('grid-x align-center');
+// Add an event listener to the input element for the 'input' event
+searchInput.addEventListener('input', function() {
+  // Get the value of the search input
+  const searchValue = searchInput.value.toLowerCase().trim();
 
-    for (let i = 0; i < postContainers.length; i++) {
-      const postContainer = postContainers[i];
-      const postTitle = postContainer.querySelector('.post-title a');
+  // Get all the grid-x align-center elements
+  const gridElements = document.querySelectorAll('.grid-x.align-center');
 
-      if (postTitle && postTitle.innerText.toLowerCase().includes(searchTerm)) {
-        const postURL = postTitle.getAttribute('href');
-        window.open(postURL, '_blank');
-      }
+  // Loop through each grid element and check if the post title matches the search value
+  gridElements.forEach(function(element) {
+    const postTitle = element.querySelector('.post-title');
+    const titleText = postTitle.textContent.toLowerCase();
+
+    // Check if the title text contains the search value
+    if (titleText.includes(searchValue)) {
+      // If it matches, show the element
+      element.style.display = 'block';
+    } else {
+      // If it doesn't match, hide the element
+      element.style.display = 'none';
     }
-  }
-}
+  });
+});
 
-const searchInput = document.getElementById('searchBar');
-searchInput.addEventListener('keydown', handleSearch);
 
 function clickLike1() {
   let likebtn = document.getElementById("likebtn1");
