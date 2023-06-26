@@ -1,10 +1,10 @@
 
 var isScrolling = false;
 
-$(window).on("scroll", function() {
+$(window).on("scroll", function () {
   if (!isScrolling) {
     isScrolling = true;
-    requestAnimationFrame(function() {
+    requestAnimationFrame(function () {
       if ($(window).scrollTop() > 50) {
         $(".navbar").addClass("shrink");
         $(".kanji").addClass("shrink");
@@ -28,34 +28,6 @@ $(window).on("scroll", function() {
 });
 
 $(document).foundation();
-
-// Get the search input element
-const searchInput = document.getElementById('searchInput');
-
-// Add an event listener to the input element for the 'input' event
-searchInput.addEventListener('input', function() {
-  // Get the value of the search input
-  const searchValue = searchInput.value.toLowerCase().trim();
-
-  // Get all the grid-x align-center elements
-  const gridElements = document.querySelectorAll('.grid-x.align-center');
-
-  // Loop through each grid element and check if the post title matches the search value
-  gridElements.forEach(function(element) {
-    const postTitle = element.querySelector('.post-title');
-    const titleText = postTitle.textContent.toLowerCase();
-
-    // Check if the title text contains the search value
-    if (titleText.includes(searchValue)) {
-      // If it matches, show the element
-      element.style.display = 'block';
-    } else {
-      // If it doesn't match, hide the element
-      element.style.display = 'none';
-    }
-  });
-});
-
 
 function clickLike1() {
   let likebtn = document.getElementById("likebtn1");
@@ -305,12 +277,12 @@ function addComment() {
   var content = document.querySelector("#new-comment .comment-content");
   var user_input = document.getElementById("comment-box").value;
   content.innerHTML = user_input;
-  
+
   var comment_num = document.querySelector(".comment-bar .comment-num");
-  comment_num.innerHTML = parseInt(comment_num.innerHTML) + 1; 
+  comment_num.innerHTML = parseInt(comment_num.innerHTML) + 1;
 }
 
-function editPostPopup(){
+function editPostPopup() {
   var blur = document.getElementById('blur');
   blur.classList.toggle('active');
 
@@ -321,19 +293,19 @@ function editPostPopup(){
   p.classList.toggle('active');
 }
 
-function toggle(){
-  var blur=document.getElementById('blur');
+function toggle() {
+  var blur = document.getElementById('blur');
   blur.classList.toggle('active');
 
-  var blur2=document.getElementById('blur2')
+  var blur2 = document.getElementById('blur2')
   blur2.classList.toggle('active');
 
-  var p =document.getElementById('popup_login');
+  var p = document.getElementById('popup_login');
   p.classList.toggle('active');
 }
 
-function toggle2(){
-  var r=document.getElementById('popup-reg');
+function toggle2() {
+  var r = document.getElementById('popup-reg');
   r.classList.toggle('active');
 }
 
@@ -345,85 +317,85 @@ function createPostPage() {
 
 const dropArea = document.querySelector(".drag-upload");
 dragText = dropArea.querySelector("header"),
-btn = dropArea.querySelector("button"),
-input = dropArea.querySelector("input");
+  btn = dropArea.querySelector("button"),
+  input = dropArea.querySelector("input");
 
 let file;
 
-btn.onclick = ()=>{
+btn.onclick = () => {
   input.click();
 }
 
-input.addEventListener("change", function(){
+input.addEventListener("change", function () {
   file = this.files[0];
   show();
   dropArea.classList.add("active");
 })
 
-dropArea.addEventListener("dragover", ()=>{
+dropArea.addEventListener("dragover", () => {
   event.preventDefault();
   console.log("File is over dragArea");
   dropArea.classList.add("active");
 
-  dragText.textContent ="Release to Upload File"
+  dragText.textContent = "Release to Upload File"
 });
 
-dropArea.addEventListener("dragleave", ()=>{
+dropArea.addEventListener("dragleave", () => {
   console.log("File is outside drag area");
   dropArea.classList.remove("active");
 
   dragText.textContent = "Drag & Drop to Upload File";
 });
 
-dropArea.addEventListener("drop", (event)=>{
+dropArea.addEventListener("drop", (event) => {
   event.preventDefault();
   file = event.dataTransfer.files[0];
   show();
 });
 
-function show(){
+function show() {
   let fileType = file.type;
   console.log(fileType);
 
   let allowed = ["image/jpeg", "image/jpg", "image/png"];
 
-  if(allowed.includes(fileType)){
+  if (allowed.includes(fileType)) {
     let reader = new FileReader();
-    reader.onload = ()=>{
+    reader.onload = () => {
       let fileURL = reader.result;
       console.log(fileURL);
       let imgTag = `<img src="${fileURL}" alt="">`;
-      dropArea.innerHTML= imgTag;
+      dropArea.innerHTML = imgTag;
 
     }
     reader.readAsDataURL(file);
-  }else{
+  } else {
     alert("Invalid");
     dropArea.classList.remove("active");
   }
 }
 
-function toImgUpload(){
+function toImgUpload() {
   var tf = document.getElementById("text-area-container");
   var iu = document.getElementById("img-upload");
 
- 
-  if(tf.style.display=="none"){
+
+  if (tf.style.display == "none") {
     tf.style.display = "block";
-    iu.style.display="none";
-  }else{
+    iu.style.display = "none";
+  } else {
     tf.style.display = "none";
-    iu.style.display="flex";
+    iu.style.display = "flex";
   }
 
 }
 
-function cancel(){
+function cancel() {
   var i = document.getElementById("img");
 
-  if (i.innerHTML=="Text"){
+  if (i.innerHTML == "Text") {
     i.innerHTML = "Image";
-  } else{
+  } else {
     i.innerHTML = "Text";
-  } 
+  }
 }
