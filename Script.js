@@ -366,6 +366,24 @@ function editPostPopup() {
   ep.classList.toggle('active');
 }
 
+function deletePost() {
+  var x = document.getElementById("post1"); //to be changed
+  
+  x.remove();
+  editPostPopup();
+}
+
+function editPost() {
+  var new_title = document.querySelector("#editTitle-box").value;
+  var new_body = document.querySelector("#editBody-box").value;
+  var edited_title = document.querySelector("#post1-title");
+  var edited_body = document.querySelector("#post1-body");
+
+  edited_title.innerHTML = new_title;
+  edited_body.innerHTML = new_body;
+
+  editPostPopup();
+}
 
 function toggle() {
   var blur = document.getElementById('blur');
