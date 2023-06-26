@@ -54,6 +54,7 @@ function clickLike1() {
     dislikebtn.ariaPressed = "false";
   }
 }
+
 function clickDislike1() {
   let likebtn = document.getElementById("likebtn1");
   let dislikebtn = document.getElementById("dislikebtn1");
@@ -211,6 +212,58 @@ function clickDislike4() {
   let likebtn = document.getElementById("likebtn4");
   let dislikebtn = document.getElementById("dislikebtn4");
   let likenum = document.getElementById("like-num4");
+
+  if (likebtn.ariaPressed == "false") {
+    if (dislikebtn.ariaPressed == "false") {
+      dislikebtn.style.color = "red";
+      var x = parseInt(likenum.innerHTML) - 1;
+      likenum.innerHTML = x;
+      dislikebtn.ariaPressed = "true";
+    } else if (dislikebtn.ariaPressed == "true") {
+      dislikebtn.style.color = "#b8b8b8";
+      var x = parseInt(likenum.innerHTML) + 1;
+      likenum.innerHTML = x;
+      dislikebtn.ariaPressed = "false";
+    }
+  } else if (likebtn.ariaPressed == "true") {
+    likebtn.style.color = "#b8b8b8";
+    dislikebtn.style.color = "#b8b8b8";
+    var x = parseInt(likenum.innerHTML) - 1;
+    likenum.innerHTML = x;
+    likebtn.ariaPressed = "false";
+  }
+}
+
+function clickLike5() {
+  let likebtn = document.getElementById("likebtn5");
+  let dislikebtn = document.getElementById("dislikebtn5");
+  let likenum = document.getElementById("like-num5");
+
+  if (dislikebtn.ariaPressed == "false") {
+    if (likebtn.ariaPressed == "false") {
+      likebtn.style.color = "#1a340d";
+      var x = parseInt(likenum.innerHTML) + 1;
+      likenum.innerHTML = x;
+      likebtn.ariaPressed = "true";
+    } else if (likebtn.ariaPressed == "true") {
+      likebtn.style.color = "#b8b8b8";
+      var x = parseInt(likenum.innerHTML) - 1;
+      likenum.innerHTML = x;
+      likebtn.ariaPressed = "false";
+    }
+  } else if (dislikebtn.ariaPressed == "true") {
+    likebtn.style.color = "#b8b8b8";
+    dislikebtn.style.color = "#b8b8b8";
+    var x = parseInt(likenum.innerHTML) + 1;
+    likenum.innerHTML = x;
+    dislikebtn.ariaPressed = "false";
+  }
+}
+
+function clickDislike5() {
+  let likebtn = document.getElementById("likebtn5");
+  let dislikebtn = document.getElementById("dislikebtn5");
+  let likenum = document.getElementById("like-num5");
 
   if (likebtn.ariaPressed == "false") {
     if (dislikebtn.ariaPressed == "false") {
@@ -402,52 +455,14 @@ function cancel(){
     i.innerHTML = "Text";
   } 
 }
+$(document).ready(function(){
+  $('.postButton').click(function(){
+    var title = $("post-title").val();
 
-function addpost() {
+    var home = window.open('Yonde.html', '_blank');
 
-  var getTitle = $("#post-text").val();
-  /*
-  var comments = document.querySelector(".existing-comments");
-  var new_comment = document.createElement("div");
-  new_comment.className = "comment"; 
-  new_comment.id = "new-comment1";
-  new_comments_num += 1;
-
-  var authortimeDiv = document.createElement("div");
-  authortimeDiv.className = "comment-author-time";
-
-  var author_name = document.createElement("h5");
-  author_name.className = "author-name";
-  author_name.innerHTML = "mbc21";
-
-  var time = document.createElement("h6");
-  time.className = "time-submitted";
-  time.innerHTML = "• Just now";
-
-  var true_comment = document.createElement("div");
-  true_comment.className = "true-comment";
-  var content = document.createElement("p");
-  content.className = "comment-content";
-  
-  var user_comment = document.getElementById("comment-box").value;
-  content.innerHTML = user_comment;
-  
-  authortimeDiv.appendChild(author_name);
-  authortimeDiv.appendChild(time);
-  true_comment.appendChild(content);
-  new_comment.appendChild(authortimeDiv);
-  new_comment.appendChild(true_comment);
-  comments.prepend(new_comment);
-  */
-  var name = document.querySelector(".avatar-name");
-  name.innerHTML = "mbc21";
-
-  var title = document.querySelector("#entered-title");
-  time.innerHTML = getTitle;
-
-  var user_comment = document.querySelector("#new-comment .comment-content");
-  user_comment.innerHTML = document.getElementById("comment-box").value;
-
-  var comment_num = document.querySelector(".comment-bar .comment-num");
-  comment_num.innerHTML = parseInt(comment_num.innerHTML) + 1; 
-}
+    $(home).on('load', function(){
+      $(".post-title").append("<div>" + title + "</div>");
+    });
+  });
+});
