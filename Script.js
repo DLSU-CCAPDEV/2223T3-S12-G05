@@ -29,6 +29,27 @@ $(window).on("scroll", function () {
 
 $(document).foundation();
 
+function searchPosts(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+
+    var input = document.getElementById("searchbar").value.toLowerCase();
+    var posts = document.getElementsByClassName("post-container");
+
+    for (var i = 0; i < posts.length; i++) {
+      var title = posts[i].getElementsByClassName("post-title")[0];
+      var titleText = title.textContent.toLowerCase();
+
+      if (titleText.includes(input)) {
+        posts[i].style.display = "block";
+      } else {
+        posts[i].style.display = "none";
+      }
+    }
+  }
+}
+
+
 function clickLike1() {
   let likebtn = document.getElementById("likebtn1");
   let dislikebtn = document.getElementById("dislikebtn1");
