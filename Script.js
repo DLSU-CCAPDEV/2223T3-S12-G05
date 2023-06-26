@@ -29,36 +29,6 @@ $(window).on("scroll", function() {
 
 $(document).foundation();
 
-const searchBar = document.getElementById('searchBar');
-searchBar.addEventListener('input', filterPosts);
-
-function filterPosts() {
-  const searchValue = searchBar.value.toLowerCase();
-  const postContainers = document.getElementsByClassName('blog-post');
-
-  for (let i = 0; i < postContainers.length; i++) {
-    const postContainer = postContainers[i];
-    const postTitle = postContainer.querySelector('.post-title a').textContent.toLowerCase();
-
-    if (postTitle.includes(searchValue)) {
-      postContainer.classList.add('matched-post');
-    } else {
-      postContainer.classList.remove('matched-post');
-    }
-  }
-  
-  // Hide post containers that do not match the search criteria
-  for (let i = 0; i < postContainers.length; i++) {
-    const postContainer = postContainers[i];
-    
-    if (postContainer.classList.contains('matched-post')) {
-      postContainer.style.display = 'block';
-    } else {
-      postContainer.style.display = 'none';
-    }
-  }
-}
-
 function clickLike1() {
   let likebtn = document.getElementById("likebtn1");
   let dislikebtn = document.getElementById("dislikebtn1");
