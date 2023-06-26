@@ -41,7 +41,7 @@ function searchPosts(event) {
       var titleText = title.textContent.toLowerCase();
 
       if (titleText.includes(input)) {
-        posts[i].style.display = "block";
+        posts[i].style.display = "flex";
       } else {
         posts[i].style.display = "none";
       }
