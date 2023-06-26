@@ -30,31 +30,23 @@ $(window).on("scroll", function() {
 $(document).foundation();
 
 const searchBar = document.getElementById('searchBar');
+searchBar.addEventListener('input', filterPosts);
 
-// Add an event listener to the search bar input
-searchBar.addEventListener('input', function() {
-  // Get the search query
-  const searchQuery = searchBar.value.toLowerCase();
+function filterPosts() {
+  const searchValue = searchBar.value.toLowerCase();
+  const postContainers = document.getElementsByClassName('blog-post');
 
-  // Get all the post containers
-  const postContainers = document.querySelectorAll('[id^="postContainer"]');
+  for (let i = 0; i < postContainers.length; i++) {
+    const postContainer = postContainers[i];
+    const postTitle = postContainer.querySelector('.post-title a').textContent.toLowerCase();
 
-  // Loop through each post container and check if the title matches the search query
-  postContainers.forEach(function(container) {
-    // Get the post title within the current container
-    const postTitle = container.querySelector('.post-title a').textContent.toLowerCase();
-
-    // If the post title contains the search query, show the container; otherwise, hide it
-    if (postTitle.includes(searchQuery)) {
-      container.style.display = 'block';
+    if (postTitle.includes(searchValue)) {
+      postContainer.style.display = 'block';
     } else {
-      container.style.display = 'none';
+      postContainer.style.display = 'none';
     }
-  });
-});
-
-const searchInput = document.getElementById('searchBar');
-searchInput.addEventListener('keydown', handleSearch);
+  }
+}
 
 function clickLike1() {
   let likebtn = document.getElementById("likebtn1");
