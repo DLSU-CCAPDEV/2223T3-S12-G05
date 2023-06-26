@@ -1,10 +1,10 @@
 
 var isScrolling = false;
 
-$(window).on("scroll", function() {
+$(window).on("scroll", function () {
   if (!isScrolling) {
     isScrolling = true;
-    requestAnimationFrame(function() {
+    requestAnimationFrame(function () {
       if ($(window).scrollTop() > 50) {
         $(".navbar").addClass("shrink");
         $(".kanji").addClass("shrink");
@@ -28,7 +28,6 @@ $(window).on("scroll", function() {
 });
 
 $(document).foundation();
-
 
 function clickLike1() {
   let likebtn = document.getElementById("likebtn1");
@@ -237,27 +236,27 @@ function clickDislike4() {
 const new_comments_num = 0;
 function addComment() {
   /*
-  var comments = document.querySelector(".existing-comments");
+  var comments = document.querySelector(".all-commentbox .existing-comments");
   var new_comment = document.createElement("div");
-  new_comment.className = "comment"; 
+  new_comment.classList.add("comment"); 
   new_comment.id = "new-comment1";
   new_comments_num += 1;
 
   var authortimeDiv = document.createElement("div");
-  authortimeDiv.className = "comment-author-time";
+  authortimeDiv.classList.add("comment-author-time");
 
   var author_name = document.createElement("h5");
-  author_name.className = "author-name";
+  author_name.classList.add("author-name");
   author_name.innerHTML = "mbc21";
 
   var time = document.createElement("h6");
-  time.className = "time-submitted";
+  time.classList.add("time-submitted");
   time.innerHTML = "• Just now";
 
   var true_comment = document.createElement("div");
-  true_comment.className = "true-comment";
+  true_comment.classList.add("true-comment");
   var content = document.createElement("p");
-  content.className = "comment-content";
+  content.classList.add("comment-content");
   
   var user_comment = document.getElementById("comment-box").value;
   content.innerHTML = user_comment;
@@ -269,20 +268,21 @@ function addComment() {
   new_comment.appendChild(true_comment);
   comments.prepend(new_comment);
   */
-  var author_name = document.querySelector("#new-comment .author-name");
+  var author_name = document.querySelector(".comment-author-time .author-name");
   author_name.innerHTML = "mbc21";
 
-  var time = document.querySelector("#new-comment .comment-content");
+  var time = document.querySelector(".comment-author-time .time-submitted");
   time.innerHTML = "• Just now";
 
-  var user_comment = document.querySelector("#new-comment .comment-content");
-  user_comment.innerHTML = document.getElementById("comment-box").value;
+  var content = document.querySelector("#new-comment .comment-content");
+  var user_input = document.getElementById("comment-box").value;
+  content.innerHTML = user_input;
 
   var comment_num = document.querySelector(".comment-bar .comment-num");
-  comment_num.innerHTML = parseInt(comment_num.innerHTML) + 1; 
+  comment_num.innerHTML = parseInt(comment_num.innerHTML) + 1;
 }
 
-function editPostPopup(){
+function editPostPopup() {
   var blur = document.getElementById('blur');
   blur.classList.toggle('active');
 
@@ -293,19 +293,19 @@ function editPostPopup(){
   p.classList.toggle('active');
 }
 
-function toggle(){
-  var blur=document.getElementById('blur');
+function toggle() {
+  var blur = document.getElementById('blur');
   blur.classList.toggle('active');
 
-  var blur2=document.getElementById('blur2')
+  var blur2 = document.getElementById('blur2')
   blur2.classList.toggle('active');
 
-  var p =document.getElementById('popup_login');
+  var p = document.getElementById('popup_login');
   p.classList.toggle('active');
 }
 
-function toggle2(){
-  var r=document.getElementById('popup-reg');
+function toggle2() {
+  var r = document.getElementById('popup-reg');
   r.classList.toggle('active');
 }
 
@@ -317,85 +317,85 @@ function createPostPage() {
 
 const dropArea = document.querySelector(".drag-upload");
 dragText = dropArea.querySelector("header"),
-btn = dropArea.querySelector("button"),
-input = dropArea.querySelector("input");
+  btn = dropArea.querySelector("button"),
+  input = dropArea.querySelector("input");
 
 let file;
 
-btn.onclick = ()=>{
+btn.onclick = () => {
   input.click();
 }
 
-input.addEventListener("change", function(){
+input.addEventListener("change", function () {
   file = this.files[0];
   show();
   dropArea.classList.add("active");
 })
 
-dropArea.addEventListener("dragover", ()=>{
+dropArea.addEventListener("dragover", () => {
   event.preventDefault();
   console.log("File is over dragArea");
   dropArea.classList.add("active");
 
-  dragText.textContent ="Release to Upload File"
+  dragText.textContent = "Release to Upload File"
 });
 
-dropArea.addEventListener("dragleave", ()=>{
+dropArea.addEventListener("dragleave", () => {
   console.log("File is outside drag area");
   dropArea.classList.remove("active");
 
   dragText.textContent = "Drag & Drop to Upload File";
 });
 
-dropArea.addEventListener("drop", (event)=>{
+dropArea.addEventListener("drop", (event) => {
   event.preventDefault();
   file = event.dataTransfer.files[0];
   show();
 });
 
-function show(){
+function show() {
   let fileType = file.type;
   console.log(fileType);
 
   let allowed = ["image/jpeg", "image/jpg", "image/png"];
 
-  if(allowed.includes(fileType)){
+  if (allowed.includes(fileType)) {
     let reader = new FileReader();
-    reader.onload = ()=>{
+    reader.onload = () => {
       let fileURL = reader.result;
       console.log(fileURL);
       let imgTag = `<img src="${fileURL}" alt="">`;
-      dropArea.innerHTML= imgTag;
+      dropArea.innerHTML = imgTag;
 
     }
     reader.readAsDataURL(file);
-  }else{
+  } else {
     alert("Invalid");
     dropArea.classList.remove("active");
   }
 }
 
-function toImgUpload(){
+function toImgUpload() {
   var tf = document.getElementById("text-area-container");
   var iu = document.getElementById("img-upload");
 
- 
-  if(tf.style.display=="none"){
+
+  if (tf.style.display == "none") {
     tf.style.display = "block";
-    iu.style.display="none";
-  }else{
+    iu.style.display = "none";
+  } else {
     tf.style.display = "none";
-    iu.style.display="flex";
+    iu.style.display = "flex";
   }
 
 }
 
-function cancel(){
+function cancel() {
   var i = document.getElementById("img");
 
-  if (i.innerHTML=="Text"){
+  if (i.innerHTML == "Text") {
     i.innerHTML = "Image";
-  } else{
+  } else {
     i.innerHTML = "Text";
-  } 
+  }
 }
