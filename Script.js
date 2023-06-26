@@ -29,24 +29,29 @@ $(window).on("scroll", function() {
 
 $(document).foundation();
 
-function handleSearch(event) {
-  if (event.key === 'Enter') {
-    const searchInput = document.getElementById('searchBar');
-    const searchTerm = searchInput.value.toLowerCase();
+const searchBar = document.getElementById('searchBar');
 
-    const postContainers = document.getElementsByClassName('grid-x align-center');
+// Add an event listener to the search bar input
+searchBar.addEventListener('input', function() {
+  // Get the search query
+  const searchQuery = searchBar.value.toLowerCase();
 
-    for (let i = 0; i < postContainers.length; i++) {
-      const postContainer = postContainers[i];
-      const postTitle = postContainer.querySelector('.post-title a');
+  // Get all the post containers
+  const postContainers = document.querySelectorAll('[id^="postContainer"]');
 
-      if (postTitle && postTitle.innerText.toLowerCase().includes(searchTerm)) {
-        const postURL = postTitle.getAttribute('href');
-        window.open(postURL, '_blank');
-      }
+  // Loop through each post container and check if the title matches the search query
+  postContainers.forEach(function(container) {
+    // Get the post title within the current container
+    const postTitle = container.querySelector('.post-title a').textContent.toLowerCase();
+
+    // If the post title contains the search query, show the container; otherwise, hide it
+    if (postTitle.includes(searchQuery)) {
+      container.style.display = 'block';
+    } else {
+      container.style.display = 'none';
     }
-  }
-}
+  });
+});
 
 const searchInput = document.getElementById('searchBar');
 searchInput.addEventListener('keydown', handleSearch);
