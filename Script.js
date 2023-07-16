@@ -312,15 +312,15 @@ function addComment() {
   /*
   var comments = document.querySelector(".all-commentbox .existing-comments");
   var new_comment = document.createElement("div");
-  new_comment.classList.add("comment"); 
+  new_comment.className = "comment"; 
   new_comment.id = "new-comment1";
   new_comments_num += 1;
 
   var authortimeDiv = document.createElement("div");
-  authortimeDiv.classList.add("comment-author-time");
+  authortimeDiv.className = "comment-author-time";
 
   var author_name = document.createElement("h5");
-  author_name.classList.add("author-name");
+  author_name.className = "author-name";
   author_name.innerHTML = "mbc21";
 
   var time = document.createElement("h6");
