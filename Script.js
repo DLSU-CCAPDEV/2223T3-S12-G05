@@ -307,54 +307,42 @@ function clickDislike5() {
   }
 }
 
-const new_comments_num = 0;
-function addComment() {
-  /*
-  var comments = document.querySelector(".all-commentbox .existing-comments");
-  var new_comment = document.createElement("div");
-  new_comment.className = "comment"; 
-  new_comment.id = "new-comment1";
-  new_comments_num += 1;
+let new_comments_num = 0;
+const postCommentBtn = document.querySelector(".create-comment #postCommentBtn");
+  postCommentBtn.addEventListener("click", function addComment() {
+    const comments = document.querySelector(".all-comment-box .existing-comments");
+    const new_comment = document.createElement("div");
+    new_comment.className = "comment";
+    new_comment.id = "new-comment" + new_comments_num;
+    new_comments_num += 1;
+    comments.prepend(new_comment);
 
-  var authortimeDiv = document.createElement("div");
-  authortimeDiv.className = "comment-author-time";
+    const authortimeDiv = document.createElement("div");
+    authortimeDiv.className = "comment-author-time";
+    new_comment.appendChild(authortimeDiv);
 
-  var author_name = document.createElement("h5");
-  author_name.className = "author-name";
-  author_name.innerHTML = "mbc21";
+    const author_name = document.createElement("h5");
+    author_name.className = "author-name";
+    author_name.innerHTML = "mbc21";
+    authortimeDiv.appendChild(author_name);
 
-  var time = document.createElement("h6");
-  time.classList.add("time-submitted");
-  time.innerHTML = "• Just now";
+    const time = document.createElement("h6");
+    time.className = "time-submitted";
+    time.innerHTML = "• Just now";
+    authortimeDiv.appendChild(time);
 
-  var true_comment = document.createElement("div");
-  true_comment.classList.add("true-comment");
-  var content = document.createElement("p");
-  content.classList.add("comment-content");
+    const true_comment = document.createElement("div");
+    true_comment.className = "true-comment";
+    new_comment.appendChild(true_comment);
+
+    const content = document.createElement("p");
+    content.className = "comment-content";
+    const user_comment = document.querySelector("#comment-box").value;
+    content.innerHTML = user_comment;
+    true_comment.appendChild(content);
+  }
+);
   
-  var user_comment = document.getElementById("comment-box").value;
-  content.innerHTML = user_comment;
-  
-  authortimeDiv.appendChild(author_name);
-  authortimeDiv.appendChild(time);
-  true_comment.appendChild(content);
-  new_comment.appendChild(authortimeDiv);
-  new_comment.appendChild(true_comment);
-  comments.prepend(new_comment);
-  */
-  var author_name = document.querySelector(".comment-author-time .author-name");
-  author_name.innerHTML = "mbc21";
-
-  var time = document.querySelector(".comment-author-time .time-submitted");
-  time.innerHTML = "• Just now";
-
-  var content = document.querySelector("#new-comment .comment-content");
-  var user_input = document.getElementById("comment-box").value;
-  content.innerHTML = user_input;
-
-  var comment_num = document.querySelector(".comment-bar .comment-num");
-  comment_num.innerHTML = parseInt(comment_num.innerHTML) + 1;
-}
 
 function editPostPopup() {
   var blur = document.getElementById('blur');
