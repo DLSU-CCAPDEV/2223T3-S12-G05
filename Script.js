@@ -341,7 +341,7 @@ const postCommentBtn = document.querySelector(".create-comment #postCommentBtn")
     content.innerHTML = user_comment;
     true_comment.appendChild(content);
   }
-);
+)
   
 
 function editPostPopup() {
