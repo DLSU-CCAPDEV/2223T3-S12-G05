@@ -194,6 +194,7 @@
     box-sizing: border-box;
 }
 
+#popup_editComment,
 #popup_editPost{
     position: fixed;
     margin-top: 20px;
@@ -208,6 +209,7 @@
     opacity: 0;
     visibility: hidden;
 }
+#popup_editComment.active,
 #popup_editPost.active{
     top: 50%;
     visibility: visible;
@@ -221,11 +223,13 @@
     font-size: 14px;
 }
 
+.editComment-buttons,
 .editPost-buttons{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+#popup_editComment #deleteCommentBtn,
 #popup_editPost #deletePostBtn {
     display: flex;
     margin-right: auto;
@@ -241,6 +245,7 @@
     margin-bottom: 3px;
     font-size: 15px;
 }
+#popup_editComment #cancelCommentBtn,
 #popup_editPost #cancelPostBtn{
     display: flex;
     margin-left: auto;
@@ -256,6 +261,7 @@
     margin-bottom: 3px;
     font-size: 15px;
 }
+#popup_editComment #editCommentBtn,
 #popup_editPost #editPostBtn{
     display: flex;
     margin-left: 5px;
@@ -271,7 +277,9 @@
     margin-bottom: 3px;
     font-size: 15px;
 }
-
+#popup_editComment #cancelCommentBtn:hover,
+#popup_editComment #editCommentBtn:hover,
+#popup_editComment #deleteCommentBtn:hover,
 #popup_editPost #cancelPostBtn:hover,
 #popup_editPost #editPostBtn:hover,
 #popup_editPost #deletePostBtn:hover {

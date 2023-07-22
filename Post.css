@@ -71,10 +71,19 @@
     transition: 0.4s ease-in-out;
 }
 
+.comment {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+}
+.comment-div {
+    padding: 7px;
+}
 .comment-author-time {
     display: flex;
     justify-content: flex-start;
-    align-content:space-around;
+    align-content: space-around;
     flex-direction: row;
 }
 .author-name {
@@ -85,6 +94,7 @@
 .time-submitted {
     align-self: baseline;
     margin: 5px;
+    margin-right: 20px;
     color: var(--dark-gray);
 }
 .true-comment {
@@ -97,7 +107,7 @@
     padding-left: 15px;
     margin-left: 15px;
     margin-top: 2px;
-    margin-bottom: 20px;
+    margin-bottom: 2px;
 }
 .true-comment .comment-content {
     align-self: center;

@@ -148,32 +148,76 @@
               </div>
             </div>
             
+            <hr>
             <div class="comment" id="old-comment1">
-              <div class="comment-author-time">
-                <h5 class="author-name">ComSci_talker</h5>
-                <h6 class="time-submitted">• 15 minutes ago</h6>
+              <div class="comment-div">
+                <div class="comment-author-time">
+                  <h5 class="author-name">ComSci_talker</h5>
+                  <h6 class="time-submitted">• 15 minutes ago</h6>
+                </div>
+                <div class="true-comment">
+                  <p class="comment-content">
+                    Now, this might be the most arguable statement I've heard in my lifetime!
+                    While I am also an avid fan of "BlueLock" because of its innovative story in terms
+                    of breaking the mold on sports anime, your points and arguments cannot be any less objective.
+                    More than that, you failed to even mention other sports anime other than Haikyuu. I do agree 
+                    that the volleyball anime does not drive interest through action like other Japanese animations, 
+                    but that does not mean that you could compare the anime's main protagonist to Goku, a completely non-related
+                    anime character, and get away with it!
+                  </p>
+                </div>
               </div>
-              <div class="true-comment">
-                <p class="comment-content">
-                  Now, this might be the most arguable statement I've heard in my lifetime!
-                  While I am also an avid fan of "BlueLock" because of its innovative story in terms
-                  of breaking the mold on sports anime, your points and arguments cannot be any less objective.
-                  More than that, you failed to even mention other sports anime other than Haikyuu. I do agree 
-                  that the volleyball anime does not drive interest through action like other Japanese animations, 
-                  but that does not mean that you could compare the anime's main protagonist to Goku, a completely non-related
-                  anime character, and get away with it!
-                </p>
+              <!--like column of every post-->
+              <div class="like-column">
+                <div>
+                  <button type="button" class="like-button" aria-pressed="false" id="likebtn3" onmousedown="clickLike3()">
+                    <i class="fa-solid fa-caret-up"></i>
+                  </button>
+                </div>
+                <div class="like-num">
+                  <span id="like-num3">-11</span>
+                </div>
+                <div>
+                  <button type="button" class="dislike-button" aria-pressed="false" id="dislikebtn3"
+                    onmousedown="clickDislike3()">
+                    <i class="fa-solid fa-caret-down"></i>
+                  </button>
+                </div>
               </div>
             </div>
+
+            <hr>
             <div class="comment" id="old-comment2">
-              <div class="comment-author-time">
-                <h5 class="author-name">xQcCow</h5>
-                <h6 class="time-submitted">• 5 minutes ago</h6>
+              <div class="comment-div">
+                <div class="comment-author-time">
+                  <h5 class="author-name">mbc21</h5>
+                  <h6 class="time-submitted">• 5 minutes ago</h6>
+                  <button type="button">
+                    <i class="bi-pencil-square" href="#" onclick="editCommentPopup()"></i>
+                  </button>
+                </div>
+                <div class="true-comment">
+                  <p class="comment-content">
+                    you uhhhh bad
+                  </p>
+                </div>
               </div>
-              <div class="true-comment">
-                <p class="comment-content">
-                  you uhhhh bad
-                </p>
+              <!--like column of every post-->
+              <div class="like-column">
+                <div>
+                  <button type="button" class="like-button" aria-pressed="false" id="likebtn3" onmousedown="clickLike3()">
+                    <i class="fa-solid fa-caret-up"></i>
+                  </button>
+                </div>
+                <div class="like-num">
+                  <span id="like-num3">-11</span>
+                </div>
+                <div>
+                  <button type="button" class="dislike-button" aria-pressed="false" id="dislikebtn3"
+                    onmousedown="clickDislike3()">
+                    <i class="fa-solid fa-caret-down"></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -184,7 +228,30 @@
 
         </div>
       </div>
-          
+    
+    <!--Edit Comment popup-->
+    <div id="popup_editComment">
+
+      <div class="popup">
+
+        <div class="close" href="#" onclick="editCommentPopup()">&times;</div>
+
+        <div class="editPost-form">
+          <h1>Edit Comment</h1>
+          <div class="elements">
+            <label for="editComment-box">Content:</label>
+            <textarea id="editComment-box" class="editBody-box" rows="6" placeholder="Change Comment" required></textarea>
+
+            <div class="editComment-buttons">
+              <button id="deleteCommentBtn" onclick="deleteComment()">Delete</button>
+              <button id="cancelCommentBtn" href="#" onclick="editCommentPopup()">Cancel</button>
+              <button id="editCommentBtn" onclick="editComment()">Edit Comment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!--Login popup-->
     <div id="popup_login">
 

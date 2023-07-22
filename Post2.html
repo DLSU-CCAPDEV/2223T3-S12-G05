@@ -98,7 +98,7 @@
                   <img class="thumbnail" src="PFPs and Posts/img1.jpeg">
                 </div>
 
-                <!--The comment of every post-->
+                <!--The comment bar of every post-->
                 <div class="comment-bar">
                   <div class="comment-button">
                     <button type="button">
@@ -124,6 +124,8 @@
           </form>
 
           <div class="existing-comments">
+
+
             <div class="comment" id="new-comment">
               <div class="comment-author-time">
                 <h5 class="author-name"></h5>
@@ -135,15 +137,35 @@
               </div>
             </div>
             
+            <hr>
             <div class="comment" id="old-comment1">
-              <div class="comment-author-time">
-                <h5 class="author-name">slater_the_obvious</h5>
-                <h6 class="time-submitted">• 2 hours ago</h6>
-              </div>
-              <div class="true-comment">
-                <p class="comment-content">
-                  watch hunterXhunter
-                </p>
+              <div class="comment-div">
+                <div class="comment-author-time">
+                  <h5 class="author-name">slater_the_obvious</h5>
+                  <h6 class="time-submitted">• 2 hours ago</h6>
+                </div>
+                <div class="true-comment">
+                  <p class="comment-content">
+                    watch hunterXhunter
+                  </p>
+                </div>
+              </div>  
+              <!--like column of every post-->
+              <div class="like-column">
+                <div>
+                  <button type="button" class="like-button" aria-pressed="false" id="likebtn3" onmousedown="clickLike3()">
+                    <i class="fa-solid fa-caret-up"></i>
+                  </button>
+                </div>
+                <div class="like-num">
+                  <span id="like-num3">-11</span>
+                </div>
+                <div>
+                  <button type="button" class="dislike-button" aria-pressed="false" id="dislikebtn3"
+                    onmousedown="clickDislike3()">
+                    <i class="fa-solid fa-caret-down"></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>

@@ -373,6 +373,33 @@ function editPost() {
   editPostPopup();
 }
 
+
+function editCommentPopup() {
+  var blur = document.getElementById('blur');
+  blur.classList.toggle('active');
+  var blur2 = document.getElementById('blur2');
+  blur2.classList.toggle('active');
+
+  var ep = document.getElementById('popup_editComment');
+  ep.classList.toggle('active');
+}
+
+function deleteComment() {
+  var x = document.getElementById("old-comment2"); //to be changed
+  
+  x.remove();
+  editCommentPopup();
+}
+
+function editComment() {
+  var new_body = document.querySelector("#editComment-box").value;
+  var edited_body = document.querySelector("#post1-body");
+
+  edited_body.innerHTML = new_body;
+
+  editCommentPopup();
+}
+
 function toggle() {
   var blur = document.getElementById('blur');
   blur.classList.toggle('active');
