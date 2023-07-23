@@ -1,7 +1,8 @@
 const dotenv = require('dotenv');
 const express = require('express');
 
-const controller = require('./controllers/controller.js');
+// import module `routes` from `./routes/routes.js`
+const routes = require('./routes/routes.js');
 const app = express();
 
 dotenv.config();
@@ -10,9 +11,8 @@ hostname = process.env.HOSTNAME;
 
 app.set('view engine', 'hbs');
 
-//home page
-app.get('/Yonde*', controller.getYonde);
-app.get('/', controller.getYonde);
+// define the paths contained in `./routes/routes.js`
+app.use('/', routes);
 
 //display static
 app.use('/assets', express.static('assets'));
