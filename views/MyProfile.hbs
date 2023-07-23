@@ -52,7 +52,7 @@
             </div>
         </nav>
 
-        <div class="bg">
+        <div class="bg" id="blur2">
             <div class="grid-container">
                 <div class="grid-x align-center">
                     <div class="profile-banner-container">
@@ -174,5 +174,72 @@
                 </div>
             </div>
         </div>
+
+         <!--Login popup-->
+    <div id="popup_login">
+
+      <div class="popup">
+
+        <div class="close" href="#" onclick="toggle()">&times;</div>
+
+        <div class="login-form">
+          <h1>Welcome back</h1>
+          <div class="elements">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password">
+
+            <div class="check">
+              <input type="checkbox" id="remember">
+              <label for="remember">Remember for 3 weeks</label>
+            </div>
+
+            <button id="submit">
+              <a style="color: white;" href="/mbc21_login">
+                Login
+              </a>
+            </button>
+
+            <p class="signup">
+              <a style="color: #1a340d;" href="/mbc21_login">
+                Don't have an account?
+              </a>
+              <a href="#" onclick="toggle2()" class="signup" id="link">
+                Sign Up
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--Register popup-->
+      <div class="register" id="popup-reg">
+        <div class="close" href="#" onclick="toggle2()">&times;</div>
+
+        <div class="reg-form">
+          <h1>Sign Up</h1>
+
+          <div class="elements">
+            <label for="email">E-mail Address</label>
+            <input type="text" id="email" placeholder="Enter your e-mail address">
+
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password">
+
+            <button id="submit">Register</button>
+
+            <p class="login">Already have an account? <a class="login" id="link" href="#" onclick="toggle2()"> Log
+                In</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     </body>
 </html>
