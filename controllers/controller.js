@@ -4,6 +4,8 @@ const controller = {
         res.render('Yonde');
     },
 
+    
+
 }
 
 //export controller object when module is imported
