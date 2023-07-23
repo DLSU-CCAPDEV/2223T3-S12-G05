@@ -16,7 +16,7 @@ app.get('/Yonde*', controller.getYonde);
 app.get('/', controller.getYonde);
 
 app.get('/MyProfile', controller.getMyProfile);
-
+app.get('/Post', controller.getPost);
 /*
     exports the object `app` (defined above)
     when another script exports from this file

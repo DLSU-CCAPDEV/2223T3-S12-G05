@@ -17,9 +17,9 @@ app.use('/', routes);
 //display static
 app.use('/assets', express.static('assets'));
 
-app.get('/MyProfile', controller.getMyProfile);
+//app.get('/MyProfile', controller.getMyProfile);
 
-app.get('/Post', controller.getPost);
+//app.get('/Post', controller.getPost);
 
 app.listen(port,hostname, function(){
     console.log('Server running at: ');
