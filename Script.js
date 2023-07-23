@@ -656,12 +656,12 @@ function toImgUpload() {
 
 }
 
-function cancel() {
+function cancel(){
   var i = document.getElementById("img");
 
-  if (i.innerHTML == "Text") {
+  if (i.innerHTML=="Text"){
     i.innerHTML = "Image";
-  } else {
+  } else{
     i.innerHTML = "Text";
-  }
+  } 
 }
