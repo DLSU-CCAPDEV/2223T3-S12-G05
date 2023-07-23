@@ -1,0 +1,15 @@
+{
+  "name": "2223t3-s12-g05-1",
+  "version": "1.0.0",
+  "description": "Yonde is a sports themed anime forum wherin sports anime enthusiasts can interact with each other within a community of like-minded people.\r Translated from the Japanese word \"read\", our website draws inspiration from Reddit, Facebook, and other community forums on the internet.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "hbs": "^4.2.0"
+  }
+}
