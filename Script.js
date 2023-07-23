@@ -51,78 +51,81 @@ function searchPosts(event) {
 
 // APPEND POSTS
 // Function to create a new post and append it at the top of the grid-container
+
 function createPost() {
+  let postCounter = 0;
+  postCounter++;
+
   // Get input data from the form
   const title = document.getElementById('post-title').value;
   const text = document.getElementById('text-box').value;
 
   // Generate the HTML structure for the new post
   const newPostHTML = `
-    <div class="post-container grid-x align-center">
-    <div class="cell medium-8">
-      <!--like column of every post-->
-      <div class="like-column">
-        <div>
-          <button type="button" class="like-button" aria-pressed="false" onclick="clickLike1()">
-            <i class="fa-solid fa-caret-up"></i>
-          </button>
-        </div>
-        <div class="like-num">
-          <span id="like-num1">0</span>
-        </div>
-        <div>
-          <button type="button" class="dislike-button" aria-pressed="false""
-            onmousedown="clickDislike1()">
-            <i class="fa-solid fa-caret-down"></i>
-          </button>
-        </div>
-      </div>
-      <div class="blog-post" style="width: max-content;">
-        <a href="Post.html"></a>
-        <div class="d-flex justify-content-between align-items-center">
-          <a href="mbc21.html">
-            <div class="d-flex align-items-center">
-              <img class="avatar-image" src="PFPs and Posts/pfp1.png" id="pfp1">
-              <span class="avatar-name">Posted by mbc21 2 days ago</span>
-            </div>
-          </a>
-          <!--
-        <button type="button">
-          <i class="bi-pencil-square" href="#" onclick="editPostPopup()"></i>
+  <div class="post-container grid-x align-center">
+  <div class="cell medium-8">
+    <!--like column of every post-->
+    <div class="like-column">
+      <div>
+        <button type="button" class="like-button" aria-pressed="false" id="likebtn${postCounter}" onclick="clickLike(${postCounter})">
+          <i class="fa-solid fa-caret-up"></i>
         </button>
-        -->
       </div>
+      <div class="like-num">
+        <span id="like-num${postCounter}">0</span>
+      </div>
+      <div>
+        <button type="button" class="dislike-button" aria-pressed="false" id="dislikebtn${postCounter}" onmousedown="clickDislike(${postCounter})">
+          <i class="fa-solid fa-caret-down"></i>
+        </button>
+      </div>
+    </div>
+    <div class="blog-post" style="width: max-content;">
+      <a href="Post.html"></a>
+      <div class="d-flex justify-content-between align-items-center">
+        <a href="mbc21.html">
+          <div class="d-flex align-items-center">
+            <img class="avatar-image" src="PFPs and Posts/pfp1.png" id="pfp1">
+            <span class="avatar-name">Posted by mbc21 2 days ago</span>
+          </div>
+        </a>
+        <!--
+      <button type="button">
+        <i class="bi-pencil-square" href="#" onclick="editPostPopup()"></i>
+      </button>
+      -->
+    </div>
 
-        <div class="d-flex flex-column">
-          <div class="row">
-            <div class="col">
-              <div class="post-title">
-                <a href="Post.html" style="color: #1a340d;">
-                  ${title}
-                </a>
-              </div>
-              <divclass="post-text">
-                ${text}
-              </div>
+      <div class="d-flex flex-column">
+        <div class="row">
+          <div class="col">
+            <div class="post-title">
+              <a id="post1-title" href="Post.html" style="color: #1a340d;">
+                ${title}
+              </a>
             </div>
+            <div id="post1-body" class="post-text">
+              ${text}
+            </div>
+          </div>
 
-            <!--The comment and like bar of every post-->
-            <div class="comment-bar">
-              <div class="comment-button">
-                <button type="button">
-                  <a href="Post.html" style="color: #1a340d">
-                    <i class="fa-solid fa-message"></i>
-                    <span class="comment-num">0</span>
-                    <span> Comments </span>
-                  </a>
-                </button>
-              </div>
+          <!--The comment and like bar of every post-->
+          <div class="comment-bar">
+            <div class="comment-button">
+              <button type="button">
+                <a href="Post.html" style="color: #1a340d">
+                  <i class="fa-solid fa-message"></i>
+                  <span class="comment-num">0</span>
+                  <span> Comments </span>
+                </a>
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
     `;
 
   // Create a new div element to hold the post content
@@ -144,13 +147,13 @@ function createPost() {
 // Function to handle the "Post" button click
 function onPostButtonClick() {
   createPost();
-} s
+}
 
-
-function clickLike1() {
-  let likebtn = document.getElementById("likebtn1");
-  let dislikebtn = document.getElementById("dislikebtn1");
-  let likenum = document.getElementById("like-num1");
+// Function to handle the like button click for a specific post
+function clickLike(postId) {
+  const likebtn = document.getElementById(`likebtn${postId}`);
+  const dislikebtn = document.getElementById(`dislikebtn${postId}`);
+  const likenum = document.getElementById(`like-num${postId}`);
 
   if (dislikebtn.ariaPressed == "false") {
     if (likebtn.ariaPressed == "false") {
@@ -173,10 +176,11 @@ function clickLike1() {
   }
 }
 
-function clickDislike1() {
-  let likebtn = document.getElementById("likebtn1");
-  let dislikebtn = document.getElementById("dislikebtn1");
-  let likenum = document.getElementById("like-num1");
+// Function to handle the dislike button click for a specific post
+function clickDislike(postId) {
+  const likebtn = document.getElementById(`likebtn${postId}`);
+  const dislikebtn = document.getElementById(`dislikebtn${postId}`);
+  const likenum = document.getElementById(`like-num${postId}`);
 
   if (likebtn.ariaPressed == "false") {
     if (dislikebtn.ariaPressed == "false") {
@@ -199,10 +203,13 @@ function clickDislike1() {
   }
 }
 
-function clickLike2() {
-  let likebtn = document.getElementById("likebtn2");
-  let dislikebtn = document.getElementById("dislikebtn2");
-  let likenum = document.getElementById("like-num2");
+
+/* */
+
+function clickLike01() {
+  let likebtn = document.getElementById("likebtn01");
+  let dislikebtn = document.getElementById("dislikebtn01");
+  let likenum = document.getElementById("like-num01");
 
   if (dislikebtn.ariaPressed == "false") {
     if (likebtn.ariaPressed == "false") {
@@ -224,10 +231,11 @@ function clickLike2() {
     dislikebtn.ariaPressed = "false";
   }
 }
-function clickDislike2() {
-  let likebtn = document.getElementById("likebtn2");
-  let dislikebtn = document.getElementById("dislikebtn2");
-  let likenum = document.getElementById("like-num2");
+
+function clickDislike01() {
+  let likebtn = document.getElementById("likebtn01");
+  let dislikebtn = document.getElementById("dislikebtn01");
+  let likenum = document.getElementById("like-num01");
 
   if (likebtn.ariaPressed == "false") {
     if (dislikebtn.ariaPressed == "false") {
@@ -250,10 +258,10 @@ function clickDislike2() {
   }
 }
 
-function clickLike3() {
-  let likebtn = document.getElementById("likebtn3");
-  let dislikebtn = document.getElementById("dislikebtn3");
-  let likenum = document.getElementById("like-num3");
+function clickLike02() {
+  let likebtn = document.getElementById("likebtn02");
+  let dislikebtn = document.getElementById("dislikebtn02");
+  let likenum = document.getElementById("like-num02");
 
   if (dislikebtn.ariaPressed == "false") {
     if (likebtn.ariaPressed == "false") {
@@ -275,10 +283,10 @@ function clickLike3() {
     dislikebtn.ariaPressed = "false";
   }
 }
-function clickDislike3() {
-  let likebtn = document.getElementById("likebtn3");
-  let dislikebtn = document.getElementById("dislikebtn3");
-  let likenum = document.getElementById("like-num3");
+function clickDislike02() {
+  let likebtn = document.getElementById("likebtn02");
+  let dislikebtn = document.getElementById("dislikebtn02");
+  let likenum = document.getElementById("like-num02");
 
   if (likebtn.ariaPressed == "false") {
     if (dislikebtn.ariaPressed == "false") {
@@ -301,10 +309,10 @@ function clickDislike3() {
   }
 }
 
-function clickLike4() {
-  let likebtn = document.getElementById("likebtn4");
-  let dislikebtn = document.getElementById("dislikebtn4");
-  let likenum = document.getElementById("like-num4");
+function clickLike03() {
+  let likebtn = document.getElementById("likebtn03");
+  let dislikebtn = document.getElementById("dislikebtn03");
+  let likenum = document.getElementById("like-num03");
 
   if (dislikebtn.ariaPressed == "false") {
     if (likebtn.ariaPressed == "false") {
@@ -326,10 +334,10 @@ function clickLike4() {
     dislikebtn.ariaPressed = "false";
   }
 }
-function clickDislike4() {
-  let likebtn = document.getElementById("likebtn4");
-  let dislikebtn = document.getElementById("dislikebtn4");
-  let likenum = document.getElementById("like-num4");
+function clickDislike03() {
+  let likebtn = document.getElementById("likebtn03");
+  let dislikebtn = document.getElementById("dislikebtn03");
+  let likenum = document.getElementById("like-num03");
 
   if (likebtn.ariaPressed == "false") {
     if (dislikebtn.ariaPressed == "false") {
@@ -352,10 +360,61 @@ function clickDislike4() {
   }
 }
 
-function clickLike5() {
-  let likebtn = document.getElementById("likebtn5");
-  let dislikebtn = document.getElementById("dislikebtn5");
-  let likenum = document.getElementById("like-num5");
+function clickLike04() {
+  let likebtn = document.getElementById("likebtn04");
+  let dislikebtn = document.getElementById("dislikebtn04");
+  let likenum = document.getElementById("like-num04");
+
+  if (dislikebtn.ariaPressed == "false") {
+    if (likebtn.ariaPressed == "false") {
+      likebtn.style.color = "#1a340d";
+      var x = parseInt(likenum.innerHTML) + 1;
+      likenum.innerHTML = x;
+      likebtn.ariaPressed = "true";
+    } else if (likebtn.ariaPressed == "true") {
+      likebtn.style.color = "#b8b8b8";
+      var x = parseInt(likenum.innerHTML) - 1;
+      likenum.innerHTML = x;
+      likebtn.ariaPressed = "false";
+    }
+  } else if (dislikebtn.ariaPressed == "true") {
+    likebtn.style.color = "#b8b8b8";
+    dislikebtn.style.color = "#b8b8b8";
+    var x = parseInt(likenum.innerHTML) + 1;
+    likenum.innerHTML = x;
+    dislikebtn.ariaPressed = "false";
+  }
+}
+function clickDislike04() {
+  let likebtn = document.getElementById("likebtn04");
+  let dislikebtn = document.getElementById("dislikebtn04");
+  let likenum = document.getElementById("like-num04");
+
+  if (likebtn.ariaPressed == "false") {
+    if (dislikebtn.ariaPressed == "false") {
+      dislikebtn.style.color = "red";
+      var x = parseInt(likenum.innerHTML) - 1;
+      likenum.innerHTML = x;
+      dislikebtn.ariaPressed = "true";
+    } else if (dislikebtn.ariaPressed == "true") {
+      dislikebtn.style.color = "#b8b8b8";
+      var x = parseInt(likenum.innerHTML) + 1;
+      likenum.innerHTML = x;
+      dislikebtn.ariaPressed = "false";
+    }
+  } else if (likebtn.ariaPressed == "true") {
+    likebtn.style.color = "#b8b8b8";
+    dislikebtn.style.color = "#b8b8b8";
+    var x = parseInt(likenum.innerHTML) - 1;
+    likenum.innerHTML = x;
+    likebtn.ariaPressed = "false";
+  }
+}
+
+function clickLike05() {
+  let likebtn = document.getElementById("likebtn05");
+  let dislikebtn = document.getElementById("dislikebtn05");
+  let likenum = document.getElementById("like-num05");
 
   if (dislikebtn.ariaPressed == "false") {
     if (likebtn.ariaPressed == "false") {
@@ -378,10 +437,10 @@ function clickLike5() {
   }
 }
 
-function clickDislike5() {
-  let likebtn = document.getElementById("likebtn5");
-  let dislikebtn = document.getElementById("dislikebtn5");
-  let likenum = document.getElementById("like-num5");
+function clickDislike05() {
+  let likebtn = document.getElementById("likebtn05");
+  let dislikebtn = document.getElementById("dislikebtn05");
+  let likenum = document.getElementById("like-num05");
 
   if (likebtn.ariaPressed == "false") {
     if (dislikebtn.ariaPressed == "false") {
@@ -597,12 +656,12 @@ function toImgUpload() {
 
 }
 
-function cancel() {
+function cancel(){
   var i = document.getElementById("img");
 
-  if (i.innerHTML == "Text") {
+  if (i.innerHTML=="Text"){
     i.innerHTML = "Image";
-  } else {
+  } else{
     i.innerHTML = "Text";
-  }
+  } 
 }
