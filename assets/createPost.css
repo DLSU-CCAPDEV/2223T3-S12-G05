@@ -1,0 +1,442 @@
+@import url(https://fonts.google.com/noto/specimen/Noto+Sans+JP?preview.text=呼んで&preview.text_type=custom);
+@import url(https://fonts.google.com/specimen/Geologica?preview.text=Yonde&preview.size=52&preview.text_type=custom);
+
+:root {
+    --dark-green: #1a340d;
+    --light-green: #7a938c;
+    --light-gray: #f1f1f1;
+    --gray: #b8b8b8;
+    --dark-gray: #818181;
+    --main-font: 'Geologica', sans-serif;
+}
+
+.postBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    margin: 30px 0px;
+    width: 85%;
+    height: auto;
+    padding: 10px 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 50px;
+    border-color: var(--dark-green);
+
+    color: var(--dark-green);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.line {
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: calc(100% + 40px);
+    height: 2px;
+    margin-left: -20px;
+    margin-right: -20px;
+
+    background-color: var(--dark-green);
+}
+
+.text-box {
+    width: 100%;
+    height: 150px;
+    resize: none;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    font-weight: 200;
+    margin-bottom: 5px;
+}
+
+.imageButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: var(--gray);
+    color: white;
+    font-weight: 200;
+    width: 1.2in;
+    height: 0.8cm;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 15px;
+}
+
+.imageButton:hover {
+    background-color: transparent;
+    color: var(--dark-gray);
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--dark-gray);
+    transition: 0.4s ease-in-out;
+}
+
+
+
+@media (max-width: 768px) {
+    .bg {
+        background-image: none;
+    }
+
+    .cell.medium-8 {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+.imageBox {
+    width: 100%;
+    height: 190px;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--dark-gray);
+}
+
+.postButton {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: var(--dark-green);
+    color: white;
+    font-weight: bold;
+    width: 1.2in;
+    height: 0.8cm;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 15px;
+}
+
+.postButton:hover {
+    background-color: transparent;
+    color: var(--dark-green);
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--dark-green);
+    transition: 0.4s ease-in-out;
+}
+
+.drag-upload{
+    border: 2px dashed var(--dark-green);
+    height: 190px;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.drag-upload .cloud{
+    font-size: 50px;
+    color: var(--dark-green);
+}
+
+.drag-upload header{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dark-green);
+}
+
+.drag-upload span{
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--dark-green);
+    margin: 10px 0 15px 0;
+}
+
+.drag-upload button{
+    padding: 10px 25px;
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: var(--dark-green);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.drag-upload button:hover{
+    background-color: transparent;
+    color: var(--dark-green);
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--dark-green);
+    transition: 0.4s ease-in-out;
+}
+
+.drag-upload.active{
+    border: 2px solid var(--dark-green);
+}
+
+.drag-upload img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.tf{
+    width: 100%;
+    height: 150px;
+}
+
+#popup-reg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 303px;
+    margin:auto;
+
+    padding: 20px 20px;
+    background: white;
+    box-shadow: 2px 2px 5px 5px var(--dark-green);
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+#popup_login{
+    position:absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 380px;
+    padding: 20px 30px;
+    background: white;
+    box-shadow: 2px 2px 5px 5px var(--dark-green);
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: var(--light-green);
+    color: #eee;
+    line-height: 15px;
+    text-align: center;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#email{
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 14px;
+}
+
+.reg-form h1{
+    text-align: center;
+    color: var(--dark-green);
+    margin: 10px 0px 20px;
+    font-size: 20px;
+    font-family: var(--main-font);
+    font-weight: 1000;
+}
+
+.popup h1{
+    text-align: center;
+    color: var(--dark-green);
+    margin: 10px 0px 20px;
+    font-size: 25px;
+    font-family: var(--main-font);
+    font-weight: 900;
+}
+
+.login-form .elements{
+    margin: 15px 0px;
+    font-family: var(--main-font);
+    font-size: 14px;
+}
+
+.elements label{
+    font-size: 14px;
+    color: black;
+    font-family: var(--main-font);
+    font-weight: bold;
+    line-height: 1.4em;
+}
+
+.login-form .elements #username, 
+.login-form .elements #password {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 14px;
+}
+
+.reg-form .elements #username,
+.reg-form .elements #password,
+.reg-form .elements #email{
+    margin-top: 2px;
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding: 4px;
+    border-radius: 20px;
+    line-height: 5px;
+}
+
+#email::-webkit-input-placeholder
+{
+    font-family: var(--main-font);
+    font-weight: 1px;
+    font-size: 10px;
+}
+
+.register .elements #username::-webkit-input-placeholder,
+.register .elements #password::-webkit-input-placeholder{
+    font-family: var(--main-font);
+    font-weight: 1px;
+    font-size: 10px;
+}
+
+.register #submit{
+    font-size: 12px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+.reg-form .elements label{
+    font-family: var(--main-font);
+    font-size: 12px;
+    line-height: 8px;
+}
+
+
+#username::-webkit-input-placeholder,
+#password::-webkit-input-placeholder{
+    font-family: var(--main-font);
+    font-weight: 1px;
+    font-size: 12px;
+}
+
+.check{
+    margin-right: 1px;
+    padding: 0;
+    display: flex;
+    padding-bottom: 0.5em;
+}
+
+.elements .check input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    height: 18px;
+    width: 18px;
+    background-color: white;
+    border: 2px solid rgb(196, 193, 193);
+    border-radius: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check input[type="checkbox"]:after{
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 1000;
+    font-size: 12px;
+    color: white;
+    display: none;
+}
+
+.check input[type="checkbox"]:checked{
+    background-color: var(--dark-green);
+}
+
+.check input[type="checkbox"]:checked:after{
+    display: block;
+}
+
+ #submit{
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-size: 16px;
+    background: var(--dark-green);
+    color: var(--light-gray);
+    border-radius: 13px;
+    cursor: pointer;
+    font-family: var(--main-font);
+    font-weight: bold;
+}
+
+.signup{
+    font-family: var(--main-font);
+    font-size: 11px;
+    color: var(--dark-green);
+    font-weight: bold;
+    text-align: center;
+    padding-top: 2.5rem;
+}
+
+.login{
+    font-family: var(--main-font);
+    font-size: 8.5px;
+    color: var(--dark-green);
+    font-weight: bold;
+    text-align: center;
+    padding-top: 1rem;
+    margin-bottom: 1.5px;
+}
+
+.signup:hover{
+    color: var(--dark-green);
+}
+
+.login:hover{
+    color: var(--dark-green);
+}
+
+#link{
+    text-decoration: underline;
+    color: var(--dark-green);
+}
+
+#blur.active, #blur2.active{
+    filter: blur(5px);
+    pointer-events: none;
+    user-select: none;
+}
+
+#popup_login.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transform: 0s;
+}
+
+#popup-reg.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transform: 0s;
+}
+
+.reg-form .elements #email,
+.reg-form .elements #username,
+.reg-form .elements #password{
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 8.5px;
+    border-radius: 10px;
+}

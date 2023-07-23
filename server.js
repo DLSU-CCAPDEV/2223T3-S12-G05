@@ -14,6 +14,8 @@ app.set('view engine', 'hbs');
 app.get('/Yonde', controller.getYonde);
 app.get('/', controller.getYonde);
 
+app.use('/assets', express.static('assets'));
+
 app.listen(port,hostname, function(){
     console.log('Server running at: ');
     console.log('http://' + hostname + ':' + port);
