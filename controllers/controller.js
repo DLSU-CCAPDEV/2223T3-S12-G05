@@ -6,6 +6,10 @@ const controller = {
 
     getMyProfile: function(req, res){
         res.render('MyProfile');
+    },
+
+    getPost: function(req, res){
+        res.render('Post');
     }
 
 }

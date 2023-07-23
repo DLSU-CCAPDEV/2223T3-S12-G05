@@ -86,7 +86,7 @@ function createPost() {
         <a href="/MyProfile">
           <div class="d-flex align-items-center">
             <img class="avatar-image" src="/assets/PFPs and Posts/pfp1.png" id="pfp1">
-            <span class="avatar-name">Posted by mbc21 2 days ago</span>
+            <span class="avatar-name">Posted by mbc21 Just Now </span>
           </div>
         </a>
         <!--
