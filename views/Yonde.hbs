@@ -60,7 +60,34 @@
 
   <div class="bg" id="blur2">
     <div id="grid-container" class="grid-container" id="cont">
+       <!-- CREATE POST -->
+      <div class="grid-x align-center">
+        <div class="postBox">
+          Create Post
+          <div class="line"></div>
+          <input id="post-title" type="text" placeholder="Title" style="font-weight: 200;">
 
+          <div class="tf" id="text-area-container">
+            <textarea id="text-box" class="text-box" placeholder="Text" id="text-field"></textarea>
+          </div>
+
+          <div class="drag-upload" id="img-upload" style="display:none">
+            <div class="cloud"><i class="fas fa-cloud-upload-alt"></i> </div>
+            <header>Drag & Drop to Upload File</header>
+            <span>OR</span>
+
+            <button>Browse File</button>
+            <input id="img-post" type="file" hidden>
+          </div>
+
+          <button type="button" class="imageButton" id="img" href="#" onclick="toImgUpload(); cancel();">
+            Image
+          </button>
+
+          <button class="postButton" onclick="onPostButtonClick()">Post</button>
+        </div>
+      </div>
+      
       <div id="old-container">
         <!--Post-->
         <div id="post1" class="post-container grid-x align-center">
