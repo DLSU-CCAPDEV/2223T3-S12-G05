@@ -61,10 +61,30 @@
     <div class="grid-container" id="cont">
 
       <div class="grid-x align-center">
-        <button class="create-button" type="button" onclick="createPostPage()">
-          <i class="fa-solid fa-pen" style="font-size: 10px; margin-right: 10px;"></i>
+        <div class="postBox">
           Create Post
-        </button>
+          <div class="line"></div>
+          <input id="post-title" type="text" placeholder="Title" style="font-weight: 200; margin-bottom: 5px;">
+
+          <div class="tf" id="text-area-container">
+            <textarea id="text-box" class="text-box" placeholder="Text" id="text-field"></textarea>
+          </div>
+
+          <div class="drag-upload" id="img-upload" style="display:none">
+            <div class="cloud"><i class="fas fa-cloud-upload-alt"></i> </div>
+            <header>Drag & Drop to Upload File</header>
+            <span>OR</span>
+
+            <button>Browse File</button>
+            <input id="img-post" type="file" hidden>
+          </div>
+
+          <button type="button" class="imageButton" id="img" href="#" onclick="toImgUpload(); cancel();">
+            Image
+          </button>
+
+          <button class="postButton">Post</button>
+        </div>
       </div>
 
       <!--Post-->
