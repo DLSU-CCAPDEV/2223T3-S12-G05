@@ -11,6 +11,14 @@ const controller = {
 
     getPost: function(req, res){
         res.render('Post');
+    },
+
+    getLogIn: function(req, res){
+        res.render('mbc21_login');
+    },
+
+    getProf: function(req, res){
+        res.render('mbc21_logprof');
     }
 
 }

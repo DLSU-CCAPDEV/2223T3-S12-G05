@@ -17,6 +17,8 @@ app.get('/', controller.getYonde);
 
 app.get('/MyProfile', controller.getMyProfile);
 app.get('/Post', controller.getPost);
+app.get('/mbc21_login', controller.getLogIn);
+app.get('/mbc21_logprof', controller.getProf);
 /*
     exports the object `app` (defined above)
     when another script exports from this file
