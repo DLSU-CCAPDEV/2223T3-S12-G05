@@ -83,7 +83,7 @@ function createPost() {
     <div class="blog-post" style="width: max-content;">
       <a href="Post.html"></a>
       <div class="d-flex justify-content-between align-items-center">
-        <a href="mbc21.html">
+        <a href="/MyProfile">
           <div class="d-flex align-items-center">
             <img class="avatar-image" src="/assets/PFPs and Posts/pfp1.png" id="pfp1">
             <span class="avatar-name">Posted by mbc21 2 days ago</span>

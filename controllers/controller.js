@@ -4,7 +4,9 @@ const controller = {
         res.render('Yonde');
     },
 
-    
+    getMyProfile: function(req, res){
+        res.render('MyProfile');
+    }
 
 }
 
