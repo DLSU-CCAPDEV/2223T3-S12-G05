@@ -49,6 +49,103 @@ function searchPosts(event) {
   }
 }
 
+// APPEND POSTS
+// Function to create a new post and append it at the top of the grid-container
+function createPost() {
+  // Get input data from the form
+  const title = document.getElementById('post-title').value;
+  const text = document.getElementById('text-box').value;
+
+  // Generate the HTML structure for the new post
+  const newPostHTML = `
+    <div class="post-container grid-x align-center">
+    <div class="cell medium-8">
+      <!--like column of every post-->
+      <div class="like-column">
+        <div>
+          <button type="button" class="like-button" aria-pressed="false" onclick="clickLike1()">
+            <i class="fa-solid fa-caret-up"></i>
+          </button>
+        </div>
+        <div class="like-num">
+          <span id="like-num1">0</span>
+        </div>
+        <div>
+          <button type="button" class="dislike-button" aria-pressed="false""
+            onmousedown="clickDislike1()">
+            <i class="fa-solid fa-caret-down"></i>
+          </button>
+        </div>
+      </div>
+      <div class="blog-post" style="width: max-content;">
+        <a href="Post.html"></a>
+        <div class="d-flex justify-content-between align-items-center">
+          <a href="mbc21.html">
+            <div class="d-flex align-items-center">
+              <img class="avatar-image" src="PFPs and Posts/pfp1.png" id="pfp1">
+              <span class="avatar-name">Posted by mbc21 2 days ago</span>
+            </div>
+          </a>
+          <!--
+        <button type="button">
+          <i class="bi-pencil-square" href="#" onclick="editPostPopup()"></i>
+        </button>
+        -->
+      </div>
+
+        <div class="d-flex flex-column">
+          <div class="row">
+            <div class="col">
+              <div class="post-title">
+                <a href="Post.html" style="color: #1a340d;">
+                  ${title}
+                </a>
+              </div>
+              <divclass="post-text">
+                ${text}
+              </div>
+            </div>
+
+            <!--The comment and like bar of every post-->
+            <div class="comment-bar">
+              <div class="comment-button">
+                <button type="button">
+                  <a href="Post.html" style="color: #1a340d">
+                    <i class="fa-solid fa-message"></i>
+                    <span class="comment-num">0</span>
+                    <span> Comments </span>
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    `;
+
+  // Create a new div element to hold the post content
+  const newPostDiv = document.createElement('div');
+  newPostDiv.innerHTML = newPostHTML;
+
+  // Get the container for posts and the first post in that container
+  const postContainer = document.getElementById('old-container');
+  const firstPost = postContainer.firstChild;
+
+  // Insert the new post before the first post in the container
+  postContainer.insertBefore(newPostDiv, firstPost);
+
+  // Clear the form fields after post creation
+  document.getElementById('post-title').value = '';
+  document.getElementById('text-box').value = '';
+}
+
+// Function to handle the "Post" button click
+function onPostButtonClick() {
+  createPost();
+} s
+
 
 function clickLike1() {
   let likebtn = document.getElementById("likebtn1");
@@ -309,40 +406,40 @@ function clickDislike5() {
 
 let new_comments_num = 0;
 const postCommentBtn = document.querySelector(".create-comment #postCommentBtn");
-  postCommentBtn.addEventListener("click", function addComment() {
-    const comments = document.querySelector(".all-comment-box .existing-comments");
-    const new_comment = document.createElement("div");
-    new_comment.className = "comment";
-    new_comment.id = "new-comment" + new_comments_num;
-    new_comments_num += 1;
-    comments.prepend(new_comment);
+postCommentBtn.addEventListener("click", function addComment() {
+  const comments = document.querySelector(".all-comment-box .existing-comments");
+  const new_comment = document.createElement("div");
+  new_comment.className = "comment";
+  new_comment.id = "new-comment" + new_comments_num;
+  new_comments_num += 1;
+  comments.prepend(new_comment);
 
-    const authortimeDiv = document.createElement("div");
-    authortimeDiv.className = "comment-author-time";
-    new_comment.appendChild(authortimeDiv);
+  const authortimeDiv = document.createElement("div");
+  authortimeDiv.className = "comment-author-time";
+  new_comment.appendChild(authortimeDiv);
 
-    const author_name = document.createElement("h5");
-    author_name.className = "author-name";
-    author_name.innerHTML = "mbc21";
-    authortimeDiv.appendChild(author_name);
+  const author_name = document.createElement("h5");
+  author_name.className = "author-name";
+  author_name.innerHTML = "mbc21";
+  authortimeDiv.appendChild(author_name);
 
-    const time = document.createElement("h6");
-    time.className = "time-submitted";
-    time.innerHTML = "• Just now";
-    authortimeDiv.appendChild(time);
+  const time = document.createElement("h6");
+  time.className = "time-submitted";
+  time.innerHTML = "• Just now";
+  authortimeDiv.appendChild(time);
 
-    const true_comment = document.createElement("div");
-    true_comment.className = "true-comment";
-    new_comment.appendChild(true_comment);
+  const true_comment = document.createElement("div");
+  true_comment.className = "true-comment";
+  new_comment.appendChild(true_comment);
 
-    const content = document.createElement("p");
-    content.className = "comment-content";
-    const user_comment = document.querySelector("#comment-box").value;
-    content.innerHTML = user_comment;
-    true_comment.appendChild(content);
-  }
+  const content = document.createElement("p");
+  content.className = "comment-content";
+  const user_comment = document.querySelector("#comment-box").value;
+  content.innerHTML = user_comment;
+  true_comment.appendChild(content);
+}
 )
-  
+
 
 function editPostPopup() {
   var blur = document.getElementById('blur');
@@ -356,7 +453,7 @@ function editPostPopup() {
 
 function deletePost() {
   var x = document.getElementById("post1"); //to be changed
-  
+
   x.remove();
   editPostPopup();
 }
@@ -386,7 +483,7 @@ function editCommentPopup() {
 
 function deleteComment() {
   var x = document.getElementById("old-comment2"); //to be changed
-  
+
   x.remove();
   editCommentPopup();
 }
@@ -500,12 +597,12 @@ function toImgUpload() {
 
 }
 
-function cancel(){
+function cancel() {
   var i = document.getElementById("img");
 
-  if (i.innerHTML=="Text"){
+  if (i.innerHTML == "Text") {
     i.innerHTML = "Image";
-  } else{
+  } else {
     i.innerHTML = "Text";
-  } 
+  }
 }
