@@ -577,7 +577,7 @@ function createPostPage() {
 }
 
 function backHome() {
-  window.location.href = "Yonde.html"
+  window.location.href = "/Yonde"
 }
 //upload photo
 

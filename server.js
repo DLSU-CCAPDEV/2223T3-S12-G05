@@ -11,7 +11,7 @@ hostname = process.env.HOSTNAME;
 app.set('view engine', 'hbs');
 
 //home page
-app.get('/Yonde', controller.getYonde);
+app.get('/Yonde*', controller.getYonde);
 app.get('/', controller.getYonde);
 
 //display static
