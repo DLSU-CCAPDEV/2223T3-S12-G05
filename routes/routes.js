@@ -6,11 +6,10 @@ const controller = require('../controllers/controller.js');
 
 const app = express();
 
-
 /*
-    execute function getYonde()
+    execute functions
     defined in object `controller` in `../controllers/controller.js`
-    when a client sends an HTTP GET request for `/`
+    when a client sends an HTTP GET request
 */
 app.get('/Yonde*', controller.getYonde);
 app.get('/', controller.getYonde);
