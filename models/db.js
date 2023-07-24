@@ -13,7 +13,7 @@ const options = {
 
 //defines an object which contains necessary database functions 
 const database = {
-        //connects to database
+    //connects to database
     connect: async function () {
         await mongoose.connect(url, options, function(err) {
             if (err) throw err;
