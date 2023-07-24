@@ -11,14 +11,25 @@ var UserSchema = new mongoose.Schema({
         type: String,
     },
     email: {
-        type: Number,
+        type: String,
         required: true
     },
     password: {
         type: String,
         required: true
     },
-    
+    followerNo: {
+        type: Number,
+        required: true
+    },
+    followingNo: {
+        type: Number,
+        required: true
+    },
+    dateJoined: {
+        type: Date,
+        required: true
+    }
 });
 
 /*
