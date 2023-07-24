@@ -59,7 +59,7 @@ var PostSchema = new mongoose.Schema({
 });
 
 /*
-    exports a mongoose.model object based on `UserSchema` (defined above)
+    exports a mongoose.model object based on `PostSchema` (defined above)
     when another script exports from this file
     This model executes CRUD operations
     to collection `posts` -> plural of the argument `Post`
