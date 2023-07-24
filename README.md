@@ -10,6 +10,6 @@ For MCO2, navigate to the project folder, run the command `npm install` to initi
 Upon running the command, your Command Prompt should display the following statement: 
 
 Server running at: 
-http://127.0.0.1:3000
+http://localhost:3000
 
 Go to the link to access he web application.

@@ -7,18 +7,32 @@ var UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    profilepic: {
-        type: String,
-    },
     email: {
-        type: Number,
+        type: String,
         required: true
     },
     password: {
         type: String,
         required: true
     },
-    
+    profilepic: {
+        type: String,
+    },
+    coverpic: {
+        type: String,
+    },
+    followerNo: {
+        type: Number,
+        required: true
+    },
+    followingNo: {
+        type: Number,
+        required: true
+    },
+    dateJoined: {
+        type: Date,
+        default: Date.now
+    }
 });
 
 /*

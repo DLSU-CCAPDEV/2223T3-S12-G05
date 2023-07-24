@@ -15,6 +15,9 @@ hostname = process.env.HOSTNAME;
 
 app.set('view engine', 'hbs');
 
+// parses incoming requests with urlencoded payloads
+app.use(express.urlencoded({extended: true}));
+
 // define the paths contained in `./routes/routes.js`
 app.use('/', routes);
 
