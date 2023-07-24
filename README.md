@@ -4,4 +4,12 @@ Translated from the Japanese word "read", our website draws inspiration from Red
 
 by Cruz, De Castro, Exconde, Martin (MCO Project Group 5)
 
-for MCO1, open "Yonde.html" in your browser
+For MCO1, open "Yonde.html" in your browser
+
+For MCO2, navigate to the project folder, run the command `npm install` to initialize and install all necessary modules used in the project, and then run the command `node server.js` or `npx supervisor server.js`.
+Upon running the command, your Command Prompt should display the following statement: 
+
+Server running at: 
+http://127.0.0.1:3000
+
+Go to the link to access he web application.
