@@ -16,7 +16,19 @@ var PostSchema = new mongoose.Schema({
             type: String
         }
     },
-    commentNum: {
+    datePosted: {
+        type: Date,
+        default: Date.now
+    },
+    title: {
+        type: String,
+        required: true
+    },
+    body: {
+        type: String,
+        required: true
+    },
+    likeNum: {
         type: Number,
         required: true
     },
@@ -48,14 +60,6 @@ var PostSchema = new mongoose.Schema({
             }
 		}
 	],
-    likeNum: {
-        type: Number,
-        required: true
-    },
-    datePosted: {
-        type: Date,
-        default: Date.now
-    }
 });
 
 /*
