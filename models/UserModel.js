@@ -7,9 +7,6 @@ var UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    profilepic: {
-        type: String,
-    },
     email: {
         type: String,
         required: true
@@ -17,6 +14,12 @@ var UserSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true
+    },
+    profilepic: {
+        type: String,
+    },
+    coverpic: {
+        type: String,
     },
     followerNo: {
         type: Number,
