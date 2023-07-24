@@ -11,14 +11,12 @@ const options = {
     useNewUrlParser: true
 };
 
-// defines an object which contains necessary database functions
+//defines an object which contains necessary database functions 
 const database = {
-    /*
-        connects to database
-    */
+    //connects to database
     connect: async function () {
-        await mongoose.connect(url, options, function(error) {
-            if (error) throw error;
+        await mongoose.connect(url, options, function(err) {
+            if (err) throw err;
             console.log('Connected to: ' + url);
         })
     },

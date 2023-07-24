@@ -2,7 +2,7 @@ const dotenv = require('dotenv');
 const express = require('express');
 const hbs = require('hbs');
 
-// import daabase from `./models/db.js`
+// import database from `./models/db.js`
 //const db = require("./models/db.js");
 
 // import module `routes` from `./routes/routes.js`
@@ -16,7 +16,7 @@ hostname = process.env.HOSTNAME;
 app.set('view engine', 'hbs');
 
 // parses incoming requests with urlencoded payloads
-app.use(express.urlencoded({extended: true}));
+//app.use(express.urlencoded({extended: true}));
 
 // define the paths contained in `./routes/routes.js`
 app.use('/', routes);

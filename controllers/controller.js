@@ -42,11 +42,11 @@ const controller = {
     },
 
     gettanjiPost: function(req, res){
-        res.render ('Post4');
+        res.render('Post4');
     },
 
     getMe: function(req,res){
-        res.render  ('Meee');
+        res.render('Meee');
     },
 
     getMePost: function(req,res){
