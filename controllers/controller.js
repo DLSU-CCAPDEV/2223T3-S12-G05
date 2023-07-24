@@ -19,6 +19,38 @@ const controller = {
 
     getProf: function(req, res){
         res.render('mbc21_logprof');
+    },
+
+    getNoName: function(req, res){
+        res.render('noName456');
+    },
+
+    getNoNamePost: function(req, res){
+        res.render('Post2');
+    },
+
+    getUserNotCry: function(req, res){
+        res.render('userNotCry');
+    },
+
+    getUserNotCryPost: function (req, res){
+        res.render('Post3');
+    },
+
+    gettanjinaur: function(req, res){
+        res.render('tanjiNaur');
+    },
+
+    gettanjiPost: function(req, res){
+        res.render ('Post4');
+    },
+
+    getMe: function(req,res){
+        res.render  ('Meee');
+    },
+
+    getMePost: function(req,res){
+        res.render('Post5');
     }
 
 }

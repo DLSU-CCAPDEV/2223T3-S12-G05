@@ -14,18 +14,20 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
 
-        <link rel="stylesheet" type="text/css" href="Navbar.css">
-        <link rel="stylesheet" type="text/css" href="Body.css">
-        <link rel="stylesheet" type="text/css" href="createPost.css">
-        <link rel="stylesheet" type="text/css" href="profile.css">
-        <script src="Script.js"></script>
+        <link rel="stylesheet" type="text/css" href="/assets/Navbar.css">
+   <link rel="stylesheet" type="text/css" href="/assets/Body.css">
+   <link rel="stylesheet" type="text/css" href="/assets/createPost.css">
+   <link rel="stylesheet" type="text/css" href="/assets/profile.css">
+  <link rel="stylesheet" type="text/css" href="/assets/Post.css">
+   <script src="/assets/Script.js"></script>
+
 
         <title>Yonde</title>
     </head>
 
     <body>
         <nav class="navbar navbar-expand-lg sticky-top" id="blur">
-            <a class="navbar-brand" href="Yonde.html" style="color: white;">
+            <a class="navbar-brand" href="/Yonde" style="color: white;">
                 Yonde
                 <span class="kanji">読んで</span>
                 <span class="tagline">A Sports Anime Forum</span>
@@ -43,7 +45,7 @@
 
                 <ul class="navbar-nav d-flex justify-content-between">
                     <li class="nav-item btn-underline active">
-                        <a class="nav-link" href="Yonde.html">Home</a>
+                        <a class="nav-link" href="/Yonde">Home</a>
                     </li>
                     <li class="nav-item" id="loginNavItem">
                         <a class="nav-link rounded-pill btn-primary" href="#" onclick="toggle()">Login</a>
@@ -56,28 +58,28 @@
             <div class="grid-container">
                 <div class="grid-x align-center">
                     <div class="profile-banner-container">
-                        <img class="profile-banner" src="PFPs and Posts/meee_banner.jpg">
+                        <img class="profile-banner" src="/assets/PFPs and Posts/tanjiNaur_banner.jpg">
                     </div>
                     <div class="green-bg"></div>
                     <div class="profile-head flex-row">
-                        <img class="profile-img" src="PFPs and Posts/pfp4.jpg">
+                        <img class="profile-img" src="/assets/PFPs and Posts/pfp3.png">
                         <div class="profile-head-content">
                             <div class="profile-head-top-content align-middle">
                                 <div class="profile-name space-between">
-                                    <a href="mbc21.html">
-                                        <span class="profile-username">Meee</span>
-                                        <span class="profile-id">@itsMeee</span>
+                                    <a href="/tanjiNaur">
+                                        <span class="profile-username">tanjiNaur</span>
+                                        <span class="profile-id">@tanjiNaur</span>
                                     </a>
                                 </div>
                             </div>
                             <div class="profile-bottom space-between justify-content-between">
                                 <div class="profile-bio-container">
-                                    <span class="profile-bio">welcome to my profile!</span>
+                                    <span class="profile-bio">demon SLAYYYaur</span>
                                 </div>
                                 <div class="profile-stats">
-                                    <span class="profile-join">Joined June 2023</span>
-                                    <span class="profile-follow-stats"><span class="follow-num">127</span>
-                                        Following <span class="follow-num">7</span> Followers</span></span>
+                                    <span class="profile-join">Joined December 2022</span>
+                                    <span class="profile-follow-stats"><span class="follow-num">102</span>
+                                        Following <span class="follow-num">121</span> Followers</span></span>
                                 </div>
                             </div>
                         </div>
@@ -86,7 +88,7 @@
                         <div class="profile-nav">
                             <ul class="nav navbar-nav nav-justified profile-navbar">
                                 <li class="nav-item nav-link pf-nav-active">
-                                    <a class="pf-nav-item-active" href="Meee.html">Posts</a>
+                                    <a class="pf-nav-item-active" href="/tanjiNaur">Posts</a>
                                 </li>
                                 <li class="nav-item nav-link btn-underline">
                                     <a class="profile-nav-item" href="#">Comments</a>
@@ -103,65 +105,65 @@
                             <!--Post-->
                             <div class="grid-x align-center">
                                 <div class="cell medium-8">
-                                  <!--like column of every post-->
-                                  <div class="like-column">
-                                    <div>
-                                      <button type="button" class="like-button" aria-pressed="false" id="likebtn4" onmousedown="clickLike4()">
-                                        <i class="fa-solid fa-caret-up"></i>
-                                      </button>
-                                    </div>
-                                    <div class="like-num">
-                                      <span id="like-num4">7</span>
-                                    </div>
-                                    <div>
-                                      <button type="button" class="dislike-button" aria-pressed="false" id="dislikebtn4" onmousedown="clickDislike4()">
-                                        <i class="fa-solid fa-caret-down"></i>
-                                      </button>
-                                    </div>
-                                  </div>
-                                  <div class="blog-post">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                      <a href="Meee.html">
-                                        <div class="d-flex align-items-center">
-                                          <img class="avatar-image" src="PFPs and Posts/pfp4.jpg" id="pfp3">
-                                          <span class="avatar-name">Posted by itsMeee&nbsp;15 seconds ago</span>
-                                        </div>
-                                      </a>
-                        
-                                      <!--Edit post button goes here-->
-                                      
-                                    </div>
-                        
-                                    <div class="d-flex flex-column">
-                                      <div class="row">
-                                        <div class="col">
-                                          <div class="post-title">
-                                            <a href="Post5.html" style="color: #1a340d;">
-                                              Haikyuu!!
-                                            </a>
-                                          </div>
-                                          <div class="post-text">
-                                            I would love to hear your thoughts on "Haikyuu!!" and any other sports anime recommendations you might have.
-                                          </div>
-                                        </div>
-                        
-                                        <!--The comment bar of every post-->
-                                        <div class="comment-bar">
-                                          <div class="comment-button">
-                                            <button type="button">
-                                              <a href="Post5.html" style="color: #1a340d">
-                                              <i class="fa-solid fa-message"></i>
-                                              <span class="comment-num">0</span>
-                                              <span> Comments </span>
-                                              </a>
+                                    <!--like column of every post-->
+                                    <div class="like-column">
+                                        <div>
+                                            <button type="button" class="like-button" aria-pressed="false" id="likebtn4" onmousedown="clickLike4()">
+                                                <i class="fa-solid fa-caret-up"></i>
                                             </button>
-                                          </div>
                                         </div>
-                                      </div>
+                                        <div class="like-num">
+                                            <span id="like-num4">0</span>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="dislike-button" aria-pressed="false" id="dislikebtn4" onmousedown="clickDislike4()">
+                                                <i class="fa-solid fa-caret-down"></i>
+                                            </button>
+                                        </div>
                                     </div>
-                                  </div>
+                                    <div class="blog-post">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <a href="/tanjiNaur">
+                                                <div class="d-flex align-items-center">
+                                                    <img class="avatar-image" src="/assets/PFPs and Posts/pfp3.png" id="pfp3">
+                                                    <span class="avatar-name">Posted by tanjiNaur&nbsp;2 seconds ago</span>
+                                                </div>
+                                            </a>
+
+                                            <!--Edit post button goes here-->
+
+                                        </div>
+
+                                        <div class="d-flex flex-column">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="post-title">
+                                                        <a href="/Post4" style="color: #1a340d;">
+                                                            Hi! Can't decide on what to draw next so suggest what you'd like to see,
+                                                            anw enjoy this for the meantime
+                                                        </a>
+                                                    </div>
+                                                    <img class="thumbnail" src="/assets/PFPs and Posts/img2.jpg">
+                                                </div>
+
+                                                <!--The comment bar of every post-->
+                                                <div class="comment-bar">
+                                                    <div class="comment-button">
+                                                        <button type="button">
+                                                            <a href="/Post4" style="color: #1a340d">
+                                                                <i class="fa-solid fa-message"></i>
+                                                                <span class="comment-num">0</span>
+                                                                <span> Comments </span>
+                                                            </a>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                              </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>

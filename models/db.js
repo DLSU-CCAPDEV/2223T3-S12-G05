@@ -22,6 +22,4 @@ const database = {
     },
 }
 
-
-
-module.exports = database;
+module.exports = mongoose;
