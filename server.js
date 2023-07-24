@@ -3,7 +3,7 @@ const express = require('express');
 const hbs = require('hbs');
 
 // import daabase from `./models/db.js`
-const db = require("./models/db.js");
+//const db = require("./models/db.js");
 
 // import module `routes` from `./routes/routes.js`
 const routes = require('./routes/routes.js');

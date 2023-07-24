@@ -1,4 +1,4 @@
 const mongoose = require('mongoose');
 
 
-module.exports = database;
+module.exports = mongoose;
