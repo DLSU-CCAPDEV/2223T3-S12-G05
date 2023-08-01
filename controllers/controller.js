@@ -1,6 +1,6 @@
 const controller = {
 
-    /*executes the Yonde homepage */
+    /*executes the Yonde pages*/
     getYonde: function(req, res){
         res.render('Yonde');
     },
