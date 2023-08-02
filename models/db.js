@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const User = require('./UserModel.js');
 const Post = require('./PostModel.js');
 
-const url = 'mongodb://localhost:3000';
+const url = 'mongodb://localhost:3000'; //change
 
 // additional connection options
 const options = {
@@ -22,4 +22,4 @@ const database = {
     },
 }
 
-module.exports = mongoose;
+module.exports = database;
