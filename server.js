@@ -15,14 +15,17 @@ hostname = process.env.HOSTNAME;
 
 app.set('view engine', 'hbs');
 
+//display static
+app.use('/assets', express.static('assets'));
+
+// Parse request body as json
+app.use(express.json());
+
 // parses incoming requests with urlencoded payloads
 //app.use(express.urlencoded({extended: true}));
 
 // define the paths contained in `./routes/routes.js`
 app.use('/', routes);
-
-//display static
-app.use('/assets', express.static('assets'));
 
 // if the route is not defined in the server, render `../views/error.hbs`
 // always defined as the last middleware
