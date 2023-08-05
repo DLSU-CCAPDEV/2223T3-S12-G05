@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const User = require('./UserModel.js');
 const Post = require('./PostModel.js');
 
-const url = process.env.DB_URL ?? "";
+const url = "mongodb+srv://yonde_admin:yondeSP0RT5@yondedb.oyehcxx.mongodb.net/?retryWrites=true&w=majority";
 
 // additional connection options
 const options = {
@@ -13,98 +13,52 @@ const options = {
 
 const database = {
 
-    connect: function () {
-        mongoose.connect(url, options, function(error) {
-            if(error) throw error;
-            console.log('Connected to: ' + url);
-        });
+
+    connect: async function () {
+        await mongoose.connect(url, options);
+        console.log('Connected to: ' + url);
     },
 
-    insertOne: function(model, doc, callback) {
-        model.create(doc, function(error, result) {
-            if(error) { 
-                console.log(error);
-                return callback(false);
-            }
-            console.log('Added ' + result);
-            return callback(true);
-        });
+
+    insertOne: async function(model, doc) {
+        return await model.create(doc);
     },
 
-    insertMany: function(model, docs, callback) {
-        model.insertMany(docs, function(error, result) {
-            if(error) { 
-                console.log(error);
-                return callback(false);
-            }
-            console.log('Added ' + result);
-            return callback(true);
-        });
+
+    insertMany: async function(model, docs) {
+        return await model.insertMany(docs);
     },
 
-    findOne: function(model, query, projection, callback) {
-        model.findOne(query, projection, function(error, result) {
-            if(error) { 
-                console.log(error);
-                return callback(false);
-            }
-            return callback(result);
-        });
+
+    findOne: async function(model, query, projection) {
+        return await model.findOne(query, projection);
     },
 
-    findMany: function(model, query, projection, callback) {
-        model.find(query, projection, function(error, result) {
-            if(error) { 
-                console.log(error);
-                return callback(false);
-            }
-            return callback(result);
-        });
+
+    findMany: async function(model, query, projection) {
+        return await model.find(query, projection);
     },
 
-    updateOne: function(model, filter, update, callback) {
-        model.updateOne(filter, update, function(error, result) {
-            if(error) { 
-                console.log(error);
-                return callback(false);
-            }
-            console.log('Document modified: ' + result.nModified);
-            return callback(true);
-        });
+
+    updateOne: async function(model, filter, update) {
+        return await model.updateOne(filter, update);
     },
 
-    updateMany: function(model, filter, update, callback) {
-        model.updateMany(filter, update, function(error, result) {
-            if(error) { 
-                console.log(error);
-                return callback(false);
-            }
-            console.log('Documents modified: ' + result.nModified);
-            return callback(true);
-        });
+
+    updateMany: async function(model, filter, update) {
+        return await model.updateMany(filter, update);
     },
 
-    deleteOne: function(model, conditions, callback) {
-        model.deleteOne(conditions, function (error, result) {
-            if(error) { 
-                console.log(error);
-                return callback(false);
-            }
-            console.log('Document deleted: ' + result.deletedCount);
-            return callback(true);
-        });
+
+    deleteOne: async function(model, conditions) {
+        return await model.deleteOne(conditions);
     },
 
-    deleteMany: function(model, conditions, callback) {
-        model.deleteMany(conditions, function (error, result) {
-            if(error) { 
-                console.log(error);
-                return callback(false);
-            }
-            console.log('Document deleted: ' + result.deletedCount);
-            return callback(true);
-        });
+
+    deleteMany: async function(model, conditions) {
+        return await model.deleteMany(conditions);
     }
+
 }
 
 module.exports = database;

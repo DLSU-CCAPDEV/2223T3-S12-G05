@@ -52,7 +52,13 @@
 
         </li>
         <li class="nav-item" id="loginNavItem">
-          <a class="nav-link rounded-pill btn-primary" href="#" onclick="toggle()">Login</a>
+          {{#if username}}
+            <a class="nav-link" href="#">
+              <img class="logged-in-img" src="/assets/PFPs and Posts/nopfp.png">
+            </a>
+          {{else}}
+            <a class="nav-link rounded-pill btn-primary" href="#" onclick="toggle()">Login</a>
+          {{/if}}
         </li>
       </ul>
     </div>
@@ -457,7 +463,7 @@
 
       <div class="popup">
 
-        <div class="close" href="#" onclick="toggle()">&times;</div>
+        <div class="close" href="/mbc21_login" onclick="toggle()">&times;</div>
 
         <div class="login-form">
           <h1>Welcome back</h1>
@@ -492,30 +498,31 @@
       </div>
 
       <!--Register popup-->
-      <div class="register" id="popup-reg">
-        <div class="close" href="#" onclick="toggle2()">&times;</div>
+          <div class="register" id="popup-reg">
+            <div class="close" href="#" onclick="toggle2()">&times;</div>
 
-        <div class="reg-form">
-          <h1>Sign Up</h1>
+            <div class="reg-form">
+              <h1>Sign Up</h1>
 
-          <div class="elements">
-            <label for="email">E-mail Address</label>
-            <input type="text" id="email" placeholder="Enter your e-mail address">
+              <div class="elements">
+                <form id="signup" method="post">
+                  <label for="email">E-mail Address</label>
+                  <input type="text" id="email" placeholder="Enter your e-mail address">
 
-            <label for="username">Username</label>
-            <input type="text" id="username" placeholder="Enter your username">
+                  <label for="username">Username</label>
+                  <input type="text" id="username" placeholder="Enter your username">
 
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Enter password">
+                  <label for="password">Password</label>
+                  <input type="password" id="password" placeholder="Enter password">
 
-            <button id="submit">Register</button>
-
-            <p class="login">Already have an account? <a class="login" id="link" href="#" onclick="toggle2()"> Log
-                In</a>
-            </p>
+                  <input type="submit" id="submit" value="Register">
+                </form>
+                <p class="login">Already have an account? <a class="login" id="link" href="#" onclick="toggle2()"> Log
+                    In</a>
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
     </div>
 
 

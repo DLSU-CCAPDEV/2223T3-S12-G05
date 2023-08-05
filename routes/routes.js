@@ -4,6 +4,9 @@ const express = require('express');
 // import module `controller` from `../controllers/controller.js`
 const controller = require('../controllers/controller.js');
 
+// import module `signUpController` from `../controllers/signUpController.js`
+const signUpController = require('../controllers/signUpController.js');
+
 const app = express();
 
 /*
@@ -13,6 +16,10 @@ const app = express();
 */
 app.get('/Yonde*', controller.getYonde);
 app.get('/', controller.getYonde);
+
+app.get('/login', controller.getLogIn);
+app.get('/signup', signUpController.getSignUp);
+app.post('/signup', signUpController.postSignUp);
 
 app.get('/MyProfile', controller.getMyProfile);
 app.get('/Post', controller.getPost);

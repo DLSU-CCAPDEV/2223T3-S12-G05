@@ -3,7 +3,7 @@ const express = require('express');
 const hbs = require('hbs');
 
 // import database from `./models/db.js`
-//const db = require("./models/db.js");
+const db = require("./models/db.js");
 
 // import module `routes` from `./routes/routes.js`
 const routes = require('./routes/routes.js');
@@ -22,7 +22,7 @@ app.use('/assets', express.static('assets'));
 app.use(express.json());
 
 // parses incoming requests with urlencoded payloads
-//app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: true}));
 
 // define the paths contained in `./routes/routes.js`
 app.use('/', routes);
@@ -34,7 +34,7 @@ app.use(function (req, res) {
 });
 
 // connects to the database
-//db.connect();
+db.connect();
 
 app.listen(port,hostname, function(){
     console.log('Server running at: ');

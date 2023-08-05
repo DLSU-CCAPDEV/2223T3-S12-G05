@@ -9,6 +9,22 @@ const controller = {
         res.render('MyProfile');
     },
 
+    getSuccess: function (req, res) {
+
+        /*
+            when passing values using HTTP GET method
+            the values are stored in the req.query object
+            Example url: `http://localhost/success?fName=A&lName=B&idNum=123`
+            To retrieve the value of parameter `fName`: req.query.fName
+        */
+        var details = {
+            username: req.query.username
+        };
+
+        // render `../views/success.hbs`
+        res.render('success', details);
+    },
+
     getPost: function(req, res){
         res.render('Post');
     },

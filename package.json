@@ -4,7 +4,8 @@
   "description": "Yonde is a sports themed anime forum wherin sports anime enthusiasts can interact with each other within a community of like-minded people.\r Translated from the Japanese word \"read\", our website draws inspiration from Reddit, Facebook, and other community forums on the internet.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,5 +15,6 @@
     "hbs": "^4.2.0",
     "mongodb": "^5.7.0",
     "mongoose": "^7.4.0"
-  }
+  },
+  "devDependencies": {}
 }
