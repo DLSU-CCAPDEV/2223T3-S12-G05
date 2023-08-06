@@ -149,10 +149,9 @@ const loginController = {
                 };
 
                 /*
-                    render `../views/login.hbs`
-                    display the errors
+                     display the errors
                 */
-                res.render('login', details);
+                alert("ID Number and/or Password is incorrect.");
             }
         });
     }
