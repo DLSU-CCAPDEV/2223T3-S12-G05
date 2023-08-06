@@ -15,6 +15,9 @@ const validation = require('../helpers/validation.js');
 
 const app = express();
 
+const createPost = require('../controllers/postController.js');
+const postController = require('../controllers/postController.js');
+
 /*
     execute functions
     defined in object `controller` in `../controllers/controller.js`
@@ -52,6 +55,10 @@ app.get('/Post4', controller.gettanjiPost);
 
 app.get('/Meee', controller.getMe);
 app.get('/Post5', controller.getMePost);
+
+app.post('/create-post', postController.createPost);
+app.get('/profile', profileController.getProfile);
+
 /*
     exports the object `app` (defined above)
     when another script exports from this file
