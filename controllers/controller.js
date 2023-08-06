@@ -15,7 +15,7 @@ const controller = {
             when passing values using HTTP GET method
             the values are stored in the req.query object
             Example url: `http://localhost/success?fName=A&lName=B&idNum=123`
-            To retrieve the value of parameter `fName`: req.query.fName
+            To retrieve the value of parameter `username`: req.query.username
         */
         var details = {
             username: req.query.username
