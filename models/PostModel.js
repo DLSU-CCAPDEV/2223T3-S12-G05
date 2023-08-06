@@ -5,7 +5,8 @@ var mongoose = require('mongoose');
 var PostSchema = new mongoose.Schema({
     postId: {
         type: Number,
-        required: true
+        required: true,
+        unique: true
     },
     author: {
         username: {
@@ -36,7 +37,8 @@ var PostSchema = new mongoose.Schema({
 		{
 			commentId: {
 				type: Number,
-				required: false
+				required: false,
+                unique: true
 			},
 
 			author: {

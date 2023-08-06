@@ -13,10 +13,14 @@ const options = {
 
 const database = {
 
-
+    /*
+        connects to database
+    */
     connect: async function () {
-        await mongoose.connect(url, options);
-        console.log('Connected to: ' + url);
+        await mongoose.connect(url, options, function(error) {
+            if (error) throw error;
+            console.log('Connected to: ' + url);
+        })
     },
 
 

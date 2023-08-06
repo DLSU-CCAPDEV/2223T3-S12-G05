@@ -7,6 +7,9 @@ const controller = require('../controllers/controller.js');
 // import module `signUpController` from `../controllers/signUpController.js`
 const signUpController = require('../controllers/signUpController.js');
 
+// import module `profileController` from `../controllers/profileController.js`
+const profileController = require('../controllers/profileController.js');
+
 const app = express();
 
 /*
@@ -21,7 +24,16 @@ app.get('/login', controller.getLogIn);
 app.get('/signup', signUpController.getSignUp);
 app.post('/signup', signUpController.postSignUp);
 
-app.get('/MyProfile', controller.getMyProfile);
+/*
+    execute function getProfile()
+    defined in object `profileController` in `../controllers/profileController.js`
+    when a client sends an HTTP GET request for `/profile/:username`
+    where `username` is a parameter
+*/
+app.get('/profile/:username', profileController.getProfile);
+
+app.get('/MyProfile', controller.getMyProfile); //to delete
+
 app.get('/Post', controller.getPost);
 app.get('/mbc21_login', controller.getLogIn);
 app.get('/mbc21_logprof', controller.getProf);
