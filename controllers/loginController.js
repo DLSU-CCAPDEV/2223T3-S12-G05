@@ -110,7 +110,7 @@ const loginController = {
                             which calls getProfile() method
                             defined in `./profileController.js`
                         */
-                        res.redirect('/profile/' + user.username);
+                        res.redirect('/mbc21_login.hbs');
                     }
 
                     /*
