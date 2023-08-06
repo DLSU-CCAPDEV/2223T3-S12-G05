@@ -54,7 +54,7 @@ $(document).ready(function () {
                 check if the <input> field calling this function
                 is the `pw` <input> field
             */
-            if(field.is($('#pw')))
+            if(field.is($('.reg-form #password')))
                 // remove the error message in `idNumError`
                 $('#pwError').text('');
 
@@ -72,7 +72,7 @@ $(document).ready(function () {
                 check if the <input> field calling this function
                 is the `password` <input> field
             */
-            if(field.is($('#pw')))
+            if(field.is($('.reg-form #password')))
                 // display appropriate error message
                 alert(`Passwords should contain at least 8
                     characters.`);
