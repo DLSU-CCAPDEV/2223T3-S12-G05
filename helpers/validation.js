@@ -42,13 +42,12 @@ const validation = {
 				console.log(username);
 			
 				return new Promise(async function(resolve, reject) {
-					await db.findOne(User, {username: username}, 'username', function(error, result) {
-						if (error || result) {
-							reject(new Error('Username is already registered'));
-						}
-						
-						resolve(true);
-					});	
+					var result = await db.findOne(User, {username: username}, 'username');
+                    if (result != null) {
+                        reject(new Error('Username is already registered'));
+                    }
+                    
+                    resolve(true);
 				});
 			}),
 
@@ -57,13 +56,12 @@ const validation = {
 				console.log(email);
 			
 				return new Promise(async function(resolve, reject) {
-					await db.findOne(User, {email: email}, 'email', function(error, result) {
-						if (error || result) {
-							reject(new Error('Email is already registered'));
-						}
-						
-						resolve(true);
-					});	
+					var result = await db.findOne(User, {email: email}, 'email');
+                    if (result != null) {
+                        reject(new Error('Email is already registered'));
+                    }
+                    
+                    resolve(true);
 				});
 			})
         ];
