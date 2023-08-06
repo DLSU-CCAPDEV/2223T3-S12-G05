@@ -56,4 +56,6 @@ app.get('/Post5', controller.getMePost);
     exports the object `app` (defined above)
     when another script exports from this file
 */
+
+app.get("/Yonde", postController.createPost);
 module.exports = app;
