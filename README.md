@@ -17,7 +17,7 @@ http://localhost:10000
 Connected to: mongodb+srv://yonde_admin:yondeSP0RT5@yondedb.oyehcxx.mongodb.net/?retryWrites=true&w=majority
 
 For MCO3, go to the following link to access the web application:
-https://yonde-dsms.onrender.com
+https://yonde-4n4t.onrender.com
 
 
 Dependencies used:
