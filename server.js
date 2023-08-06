@@ -24,14 +24,14 @@ hostname = process.env.HOSTNAME;
 
 app.set('view engine', 'hbs');
 
-//display static
-app.use('/assets', express.static('assets'));
-
 // Parse request body as json
 app.use(express.json());
 
 // parses incoming requests with urlencoded payloads
 app.use(express.urlencoded({extended: true}));
+
+//display static
+app.use('/assets', express.static('assets'));
 
 // connects to the database
 db.connect();
