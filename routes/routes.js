@@ -18,8 +18,8 @@ const validation = require('../helpers/validation.js');
 
 const app = express();
 
-const createPost = require('../controllers/postController.js');
-const postController = require('../controllers/postController.js');
+//onst createPost = require('../controllers/postController.js');
+//const postController = require('../controllers/postController.js');
 
 /*
     execute functions
@@ -67,5 +67,5 @@ app.get('/profile', profileController.getProfile);
     when another script exports from this file
 */
 
-app.get("/Yonde", postController);
+//app.get("/Yonde", postController);
 module.exports = app;
