@@ -13,7 +13,7 @@ For MCO1, open "Yonde.html" in your browser
 For MCO2, navigate to the project folder, run the command `npm install` to initialize and install all necessary modules used in the project, and then run the command `node server.js` or `npx supervisor server.js`.
 Upon running the command, your Command Prompt should display the following statement...
 Server running at: 
-http://localhost:3000
+http://localhost:10000
 Connected to: mongodb+srv://yonde_admin:yondeSP0RT5@yondedb.oyehcxx.mongodb.net/?retryWrites=true&w=majority
 
 For MCO3, go to the following link to access the web application:
