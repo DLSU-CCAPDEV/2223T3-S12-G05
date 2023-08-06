@@ -20,7 +20,7 @@ const loginController = {
     getLogIn: function (req, res) {
 
         // checks if a user is logged-in by checking the session data
-        if(req.session.idNum) {
+        if(req.session.username) {
 
             /*
                 redirects the client to `/profile` using HTTP GET,
@@ -29,7 +29,7 @@ const loginController = {
                 which calls getProfile() method
                 defined in `./profileController.js`
             */
-            res.redirect('/profile/' + req.session.idNum);
+            res.redirect('/profile/' + req.session.username);
         }
 
         // else if a user is not yet logged-in
@@ -61,24 +61,22 @@ const loginController = {
             Example: the value entered in <input type="text" name="idNum">
             can be retrieved using `req.body.idNum`
         */
-        var idNum = req.body.idNum;
-        var pw = req.body.pw;
+        var username = req.body.username;
+        var password = req.body.password;
 
         /*
             calls the function findOne()
             defined in the `database` object in `../models/db.js`
             this function finds a document from collection `users`
-            where `idNum` is equal to `idNum`
+            where `username` is equal to `username`
         */
-        db.findOne(User, {idNum: idNum}, '', function (result) {
+        db.findOne(User, {username: username}, '', function (result) {
 
-            // if a user with `idNum` equal to `idNum` exists
+            // if a user with `username` equal to `username` exists
             if(result) {
 
                 var user = {
-                    fName: result.fName,
-                    lName: result.lName,
-                    idNum: result.idNum
+                    username: result.username
                 };
 
                 /*
@@ -86,7 +84,7 @@ const loginController = {
                     to check if the password entered by the user
                     is equal to the hashed password in the database
                 */
-                bcrypt.compare(pw, result.pw, function(err, equal) {
+                bcrypt.compare(password, result.password, function(err, equal) {
 
                     /*
                         if the entered password
@@ -95,16 +93,14 @@ const loginController = {
                     if(equal) {
 
                         /*
-                            stores `user.idNum` to `req.session.idNum`
-                            stores `user.fName` to `req.session.name`
+                            stores `user.username` to `req.session.username`
 
                             these values are stored to the `req.session` object
                             to indicate that a user is logged-in
                             these values will be removed
                             if the user logs-out from the web application
                         */
-                        req.session.idNum = user.idNum;
-                        req.session.name = user.fName;
+                        req.session.username = user.username;
 
                         /*
                             redirects the client to `/profile/idNum`
@@ -114,7 +110,7 @@ const loginController = {
                             which calls getProfile() method
                             defined in `./profileController.js`
                         */
-                        res.redirect('/profile/' + user.idNum);
+                        res.redirect('/profile/' + user.username);
                     }
 
                     /*
@@ -133,10 +129,9 @@ const loginController = {
                         };
 
                         /*
-                            render `../views/login.hbs`
                             display the errors
                         */
-                        res.render('login', details);
+                        alert("ID Number and/or Password is incorrect.");
                     }
                 });
             }
@@ -154,10 +149,9 @@ const loginController = {
                 };
 
                 /*
-                    render `../views/login.hbs`
-                    display the errors
+                     display the errors
                 */
-                res.render('login', details);
+                alert("ID Number and/or Password is incorrect.");
             }
         });
     }

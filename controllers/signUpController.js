@@ -73,7 +73,7 @@ const signupController = {
                 render `../views/signup.hbs`
                 display the errors defined in the object `details`
             */
-            res.render('signup', details);
+            alert("Error signing up. Please try again.");
         }
 
         else {

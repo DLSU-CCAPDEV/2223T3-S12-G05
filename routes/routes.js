@@ -10,6 +10,9 @@ const signUpController = require('../controllers/signUpController.js');
 // import module `profileController` from `../controllers/profileController.js`
 const profileController = require('../controllers/profileController.js');
 
+// import module `postController` from `../controllers/postController.js`
+const postController = require('../controllers/postController.js');
+
 // import module `validation` from `../helpers/validation.js`
 const validation = require('../helpers/validation.js');
 
@@ -64,5 +67,5 @@ app.get('/profile', profileController.getProfile);
     when another script exports from this file
 */
 
-app.get("/Yonde", postController.createPost);
+app.get("/Yonde", postController);
 module.exports = app;
