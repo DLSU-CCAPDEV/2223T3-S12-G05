@@ -18,9 +18,40 @@ const profileController = {
 
         // query where `username` is equal to URL parameter `username`
         var query = {username: req.params.username};
+        var details = {};
 
         // fields to be returned
-        var projection = 'username email password profilepic coverpic followerNo followingNo';
+        var projection = 'username email profilepic coverpic followerNo followingNo';
+
+        // checks if a user is logged-in by checking the session data
+        if(req.session.username) {
+
+            /*
+                sets `details.flag` to true
+                to display the profile and logout tabs in the nav bar
+
+                sets the value of `details.name` to `req.session.name`
+                to display the name of the logged-in user
+                in the profile tab of the nav bar
+
+                sets the value of `details.uidNum` to `req.session.idNum`
+                to provide the link the profile of the logged-in user
+                in the profile tab of the nav bar
+
+                these values are rendered in `../views/partials/header.hbs`
+            */
+            details.flag = true;
+            details.username = req.session.username;
+  
+        }
+
+        // else if a user is not yet logged-in
+        else
+            /*
+                sets `details.flag` to false
+                to hide the profile and logout tabs in the nav bar
+            */
+            details.flag = false;
 
         /*
             calls the function findOne()
@@ -39,7 +70,7 @@ const profileController = {
             var details = {
                 username: result.username,
                 email: result.email,
-                password: result.password,
+
                 profilepic: result.profilepic,
                 coverpic: result.coverpic,
                 followerNo: result.followerNo,
