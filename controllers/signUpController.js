@@ -1,3 +1,7 @@
+const { validationResult } = require('express-validator');
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+
 // import module `database` from `../models/db.js`
 const db = require('../models/db.js');
 
@@ -39,30 +43,15 @@ const signupController = {
     },
 
     /*
-        executed when the client sends an HTTP GET request `/getCheckID`
+        executed when the client sends an HTTP GET request `/getCheckUsername`
         as defined in `../routes/routes.js`
+    */
+    getCheckUsername: async function (req, res) {
+        var username = req.query.username;
 
-    getCheckID: async function (req, res) {
-
-        /*
-            when passing values using HTTP GET method
-            the values are stored in `req.query` object
-            Example url: `http://localhost/getCheckID?idNum=11312345`
-            To retrieve the value of parameter `idNum`: `req.query.idNum`
-        /*
-        var idNum = req.query.idNum;
-
-        /*
-            calls the function findOne()
-            defined in the `database` object in `../models/db.js`
-            searches for a single document based on the model `User`
-            sends an empty string to the user if there are no match
-            otherwise, sends an object containing the `idNum`
-        *
-        var result = await db.findOne(User, {idNum: idNum}, 'idNum');
+        var result = await db.findOne(User, {username: username}, 'username');
         res.send(result);
     }
-    */
 }
 
 module.exports = signupController;

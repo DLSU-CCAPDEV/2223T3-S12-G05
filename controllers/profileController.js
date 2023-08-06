@@ -17,7 +17,7 @@ const profileController = {
     getProfile: async function (req, res) {
 
         // query where `username` is equal to URL parameter `username`
-        var query = {idNum: req.params.username};
+        var query = {username: req.params.username};
 
         // fields to be returned
         var projection = 'username email password profilepic coverpic followerNo followingNo';

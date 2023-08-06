@@ -10,6 +10,9 @@ const signUpController = require('../controllers/signUpController.js');
 // import module `profileController` from `../controllers/profileController.js`
 const profileController = require('../controllers/profileController.js');
 
+// import module `validation` from `../helpers/validation.js`
+const validation = require('../helpers/validation.js');
+
 const app = express();
 
 /*
@@ -22,8 +25,8 @@ app.get('/', controller.getYonde);
 
 app.get('/login', controller.getLogIn);
 app.get('/signup', signUpController.getSignUp);
-app.post('/signup', signUpController.postSignUp);
-
+app.post('/signup', validation.signupValidation(), signUpController.postSignUp);
+app.get('/getCheckUsername', signUpController.getCheckUsername);
 /*
     execute function getProfile()
     defined in object `profileController` in `../controllers/profileController.js`
